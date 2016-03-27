@@ -12,3 +12,26 @@ Text Domain: april
 
 Simple responsive theme based on Bootstrap 4.0
 */
+// Core variables and mixins
+@import "../bower_components/bootstrap/scss/variables";
+
+@import "../bower_components/bootstrap/scss/mixins/clearfix";
+@import "../bower_components/bootstrap/scss/mixins/breakpoints";
+@import "../bower_components/bootstrap/scss/mixins/hover";
+@import "../bower_components/bootstrap/scss/mixins/grid-framework";
+@import "../bower_components/bootstrap/scss/mixins/grid";
+@import "../bower_components/bootstrap/scss/mixins/tab-focus";
+
+// Reset and dependencies
+@import "../bower_components/bootstrap/scss/normalize";
+@import "../bower_components/bootstrap/scss/print";
+
+// Core CSS
+@import "../bower_components/bootstrap/scss/reboot";
+@import "../bower_components/bootstrap/scss/type";
+@import "../bower_components/bootstrap/scss/images";
+@import "../bower_components/bootstrap/scss/code";
+@import "../bower_components/bootstrap/scss/grid";
+@import "../bower_components/bootstrap/scss/tables";
+@import "../bower_components/bootstrap/scss/forms";
+@import "../bower_components/bootstrap/scss/buttons";
