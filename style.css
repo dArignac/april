@@ -2147,6 +2147,22 @@ a.bg-danger:focus, a.bg-danger:hover { background-color: #c9302c; }
 
 @media print { .hidden-print { display: none !important; } }
 
+body { font-family: "museo-sans", sans-serif; font-weight: 300; }
+
 header { border: none; position: relative; }
 
 header::after { content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
+
+header .navbar { padding-left: 0; padding-right: 0; }
+
+header ul.nav { font-size: 0.85rem; }
+
+header ul.nav > li { border-bottom: 1px solid #ccc; }
+
+header ul.nav li { list-style: none; padding: 0.3rem 0 0.25rem 0; }
+
+header ul.nav li a { color: #333; }
+
+header ul.nav li span.toggler { cursor: pointer; position: relative; }
+
+header ul.nav li span.toggler::before { content: "\f107"; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit; color: #000; position: absolute; top: 0; left: -1rem; }
