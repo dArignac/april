@@ -6,6 +6,8 @@ if ( ! function_exists( ( 'april_theme_setup' ) ) ) {
 	function april_theme_setup() {
 
 		include 'include/customizer.php';
+		// TODO remove if not necessary - https://github.com/dArignac/april/issues/5
+		include 'menu/walker.php';
 
 		load_theme_textdomain( 'april', get_template_directory() . '/languages' );
 
@@ -36,7 +38,12 @@ function april_load_scripts_and_styles() {
 	// default stylesheet
 	wp_enqueue_style( 'april-style', get_stylesheet_uri() );
 
-	// TODO: necessary?
+	// Bootstrap required scripts
+	// TODO make dist friendly - https://github.com/dArignac/april/issues/4
+	wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.js', array('jquery', 'tether'), '4.0.0a2', false );
+
+	// TODO: necessary - https://github.com/dArignac/april/issues/6
 	// enqueue comment-reply script only on posts & pages with comments open ( included in WP core )
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -65,3 +72,17 @@ if ( ! function_exists( 'april_get_content_template' ) ) {
 		}
 	}
 }
+
+/**
+ * Adds the bootstrap navbar classes to a menu item.
+ * @param $classes
+ * @param $item
+ * @param $args
+ * @param $depth
+ * @return array
+ */
+function april_nav_menu_css_class($classes, $item, $args, $depth ) {
+	$classes[] = 'nav-item';
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'april_nav_menu_css_class');
