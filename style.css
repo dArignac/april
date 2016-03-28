@@ -2146,3 +2146,7 @@ a.bg-danger:focus, a.bg-danger:hover { background-color: #c9302c; }
 @media print { .visible-print-inline-block { display: inline-block !important; } }
 
 @media print { .hidden-print { display: none !important; } }
+
+header { border: none; position: relative; }
+
+header::after { content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }

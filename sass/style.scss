@@ -12,6 +12,10 @@ Text Domain: april
 
 Simple responsive theme based on Bootstrap 4.0
 */
+// Variables
+@import "variables";
+
+// Bootstrap
 // Core variables and mixins
 //@import "../bower_components/bootstrap/scss/variables";
 //@import "../bower_components/bootstrap/scss/mixins";
@@ -41,3 +45,6 @@ Simple responsive theme based on Bootstrap 4.0
 //@import "../bower_components/bootstrap/scss/utilities-responsive";
 // TODO select only relevant ones - https://github.com/dArignac/april/issues/3
 @import "../bower_components/bootstrap/scss/bootstrap";
+
+// theme styles
+@import "theme";
