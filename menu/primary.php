@@ -1,9 +1,5 @@
 <div class="row">
 	<div class="col-sm-12">
-		<nav class="navbar">
-			<div class="navbar-brand">TODO LOGO and NAME</div>
-			<button class="navbar-toggler pull-sm-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">&#9776;</button>
-		</nav>
 		<div class="collapse" id="collapsingNavbar">
 			<?php
 				wp_nav_menu(
