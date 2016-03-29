@@ -18,9 +18,11 @@ header {
 		background: $header-line-color;
 	}
 
-	.navbar {
-		padding-left: 0;
-		padding-right: 0;
+	.top {
+		h1 {
+			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
 	}
 
 	ul.nav {
