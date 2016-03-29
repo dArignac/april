@@ -43,6 +43,8 @@ function april_load_scripts_and_styles() {
 	// default stylesheet
 	wp_enqueue_style( 'april-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'april-script', get_template_directory_uri() . '/js/april.js', array('jquery') );
+
 	// Bootstrap required scripts
 	// TODO make dist friendly - https://github.com/dArignac/april/issues/4
 	wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );

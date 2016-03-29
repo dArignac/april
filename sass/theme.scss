@@ -43,7 +43,7 @@ header {
 				position: relative;
 
 				&::before {
-					content: "\f107";
+					content: "\f150";
 					font-family: FontAwesome;
 					font-style: normal;
 					font-weight: normal;
@@ -52,6 +52,10 @@ header {
 					position: absolute;
 					top: 0;
 					left: -1rem;
+				}
+
+				&.open::before {
+					content: "\f151";
 				}
 			}
 		}
