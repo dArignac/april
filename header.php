@@ -27,6 +27,7 @@
 							<?php echo get_bloginfo( 'name' ); ?>
 						</a>
 					</h1>
+					<?php if ( get_bloginfo( 'description' ) ): ?><p><?php echo get_bloginfo( 'description' ); ?></p><?php endif; ?>
 				</div>
 				<div class="col-sm-2 col-xs-2">
 					<button class="navbar-toggler pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">&#9776;</button>
