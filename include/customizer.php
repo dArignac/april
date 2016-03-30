@@ -36,12 +36,12 @@ function april_theme_customize ( $wp_customize ) {
 	);
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	// START: Typekit Kit ID //////////////////////////////////////////////////////////////////////////////////////////
+	// START: Typekit Settings ////////////////////////////////////////////////////////////////////////////////////////
 	// section
 	$wp_customize->add_section(
-		'april_typekit_kit_id',
+		'april_typekit',
 		array(
-			'title'    => __( 'Typekit ID', 'april' ),
+			'title'    => __( 'Typekit Settings', 'april' ),
 			'priority' => 35
 		)
 	);
@@ -57,13 +57,49 @@ function april_theme_customize ( $wp_customize ) {
 	$wp_customize->add_control(
 		'typekit_kit_id',
 		array(
-			'label'    => __( 'Typekit Kit ID, see https://typekit.com/account/kits', 'april' ),
-			'section'  => 'april_typekit_kit_id',
+			'label'    => __( 'Kit ID', 'april' ),
+			'section'  => 'april_typekit',
 			'settings' => 'typekit_kit_id',
 			'type'     => 'input'
 		)
 	);
-	// END: Typekit Kit ID
+	// settings
+	$wp_customize->add_setting(
+		'typekit_font_family',
+		array(
+			'sanitize_callback' => 'esc_attr',
+			'transport'         => 'postMessage'
+		)
+	);
+	// control
+	$wp_customize->add_control(
+		'typekit_font_family',
+		array(
+			'label'    => __( 'font-family for <body>', 'april' ),
+			'section'  => 'april_typekit',
+			'settings' => 'typekit_font_family',
+			'type'     => 'input'
+		)
+	);
+	// settings
+	$wp_customize->add_setting(
+		'typekit_font_weight',
+		array(
+			'sanitize_callback' => 'esc_attr',
+			'transport'         => 'postMessage'
+		)
+	);
+	// control
+	$wp_customize->add_control(
+		'typekit_font_weight',
+		array(
+			'label'    => __( 'font-weight for <body>', 'april' ),
+			'section'  => 'april_typekit',
+			'settings' => 'typekit_font_weight',
+			'type'     => 'input'
+		)
+	);
+	// END: Typekit Settings
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 

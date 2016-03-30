@@ -43,6 +43,26 @@ function april_load_scripts_and_styles() {
 	// default stylesheet
 	wp_enqueue_style( 'april-style', get_stylesheet_uri() );
 
+	// typekit css depending on settings
+	if ( $typekitKidId ) {
+		$typekitCSS = '';
+		$typekitFontFamily = get_theme_mod( 'typekit_font_family' );
+		$typekitFontWeight = get_theme_mod( 'typekit_font_weight' );
+		if ( $typekitFontFamily ) {
+			$typekitCSS = 'body { font-family: "' . $typekitFontFamily . '";';
+
+			if ( $typekitFontWeight ) {
+				$typekitCSS .= 'font-weight: ' . intval($typekitFontWeight) . ';';
+			}
+
+			$typekitCSS .= '}';
+		}
+		if ( $typekitCSS ) {
+			wp_add_inline_style( 'april-style', $typekitCSS );
+		}
+	}
+
+	// april scripts
 	wp_enqueue_script( 'april-script', get_template_directory_uri() . '/js/april.js', array('jquery') );
 
 	// Bootstrap required scripts
