@@ -2173,5 +2173,6 @@ header ul.nav li span.toggler::before { content: "\f150"; font-family: FontAweso
 
 header ul.nav li span.toggler.open::before { content: "\f151"; }
 
-@media (max-width: 543px) { body > .container { padding-left: 0.1em; padding-right: 0.1em; }
-  body > .container header .topline { margin-bottom: 0.1em; margin-top: 0.1em; } }
+@media (max-width: 543px) { header .topline { margin-bottom: 0.1em; margin-top: 0.1em; } }
+
+@media (max-width: 543px) { body > .container { padding-left: 0.1em; padding-right: 0.1em; } }

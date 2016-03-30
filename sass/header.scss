@@ -67,3 +67,12 @@ header {
 		}
 	}
 }
+
+@include media-breakpoint-down(xs) {
+	header {
+		.topline {
+			margin-bottom: 0.1em;
+			margin-top: 0.1em;
+		}
+	}
+}
