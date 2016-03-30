@@ -1,0 +1,15 @@
+@include media-breakpoint-down(xs) {
+	body {
+		& > .container {
+			padding-left: 0.1em;
+			padding-right: 0.1em;
+
+			header {
+				.topline {
+					margin-bottom: 0.1em;
+					margin-top: 0.1em;
+				}
+			}
+		}
+	}
+}
