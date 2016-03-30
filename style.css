@@ -2165,6 +2165,8 @@ header ul.nav > li { border-bottom: 1px solid #ccc; }
 
 header ul.nav li { list-style: none; padding: 0.3rem 0 0.25rem 0; }
 
+header ul.nav li ul { padding-left: 1em; }
+
 header ul.nav li a { color: #333; }
 
 header ul.nav li span.toggler { cursor: pointer; position: relative; }

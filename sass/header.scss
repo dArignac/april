@@ -40,6 +40,10 @@ header {
 			list-style: none;
 			padding: $navigation-padding;
 
+			ul {
+				padding-left: 1em;
+			}
+
 			a {
 				color: $navigation-font-color;
 			}
