@@ -13,21 +13,20 @@
 		<header>
 			<?php do_action( 'header_before' ); ?>
 			<div class="row topline">
-				<?php
-					$cssHeadline = 'col-sm-10 col-xs-10';
-				?>
-				<?php if ( get_theme_mod( 'logo_upload' ) ): $cssHeadline = 'col-sm-9 hidden-xs-down'; ?>
-					<div class="col-sm-1 col-xs-10 logo">
-						<img src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+				<div class="col-sm-10 col-xs-10 media">
+					<?php if ( get_theme_mod( 'logo_upload' ) ): ?>
+						<div class="media-left">
+							<img class="media-object" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+						</div>
+					<?php endif; ?>
+					<div class="media-body hidden-xs-down">
+						<h1 class="media-heading">
+							<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
+								<?php echo get_bloginfo( 'name' ); ?>
+							</a>
+						</h1>
+						<?php if ( get_bloginfo( 'description' ) ): ?><p><?php echo get_bloginfo( 'description' ); ?></p><?php endif; ?>
 					</div>
-				<?php endif; ?>
-				<div class="headline <?php echo $cssHeadline; ?>">
-					<h1>
-						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
-							<?php echo get_bloginfo( 'name' ); ?>
-						</a>
-					</h1>
-					<?php if ( get_bloginfo( 'description' ) ): ?><p><?php echo get_bloginfo( 'description' ); ?></p><?php endif; ?>
 				</div>
 				<div class="col-sm-2 col-xs-2">
 					<button class="navbar-toggler pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">&#9776;</button>
