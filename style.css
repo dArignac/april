@@ -2153,7 +2153,15 @@ header { border: none; position: relative; }
 
 header::after { content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
 
-header .top h1 { font-size: 1.5rem; margin-bottom: 0; }
+header .topline { margin-bottom: 0.5em; margin-top: 0.5em; }
+
+header .topline .logo { padding-right: 0; }
+
+header .topline .logo + .headline { padding-left: 0; }
+
+header .topline h1 { font-size: 1.5rem; margin-bottom: 0; }
+
+header .topline p { color: #aaa; font-size: 0.8rem; margin-bottom: 0; }
 
 header ul.nav { font-size: 0.85rem; }
 

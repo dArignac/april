@@ -18,9 +18,26 @@ header {
 		background: $header-line-color;
 	}
 
-	.top {
+	.topline {
+		margin-bottom: 0.5em;
+		margin-top: 0.5em;
+
+		.logo {
+			padding-right: 0;
+		}
+
+		.logo + .headline {
+			padding-left: 0;
+		}
+
 		h1 {
 			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
+
+		p {
+			color: $header-font-color-lighter;
+			font-size: 0.8rem;
 			margin-bottom: 0;
 		}
 	}
