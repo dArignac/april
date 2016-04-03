@@ -3,14 +3,18 @@ header {
 	border: none;
 	position: relative;
 
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: -999px;
-		right: -999px;
-		height: 1px;
-		background: $header-line-color;
+	& > div {
+		margin-bottom: 2em;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -999px;
+			right: -999px;
+			height: 1px;
+			background: $header-line-color;
+		}
 	}
 
 	.topline {
