@@ -2171,9 +2171,9 @@ header ul.nav li a { color: #333; }
 
 header ul.nav li span.toggler { cursor: pointer; position: relative; }
 
-header ul.nav li span.toggler::before { content: "\f150"; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit; color: #333; position: absolute; top: 0; left: -1rem; }
+header ul.nav li span.toggler::before { content: "\f196"; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit; color: #333; position: absolute; top: 0; left: -1rem; }
 
-header ul.nav li span.toggler.open::before { content: "\f151"; }
+header ul.nav li span.toggler.open::before { content: "\f147"; }
 
 @media (max-width: 543px) { header .topline { margin-bottom: 0.1em; margin-top: 0.1em; } }
 
