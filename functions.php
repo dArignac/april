@@ -49,7 +49,7 @@ function april_load_scripts_and_styles() {
 		$typekitFontFamily = get_theme_mod( 'typekit_font_family' );
 		$typekitFontWeight = get_theme_mod( 'typekit_font_weight' );
 		if ( $typekitFontFamily ) {
-			$typekitCSS = 'body { font-family: "' . $typekitFontFamily . '";';
+			$typekitCSS = 'body, h1 { font-family: "' . $typekitFontFamily . '";';
 
 			if ( $typekitFontWeight ) {
 				$typekitCSS .= 'font-weight: ' . intval($typekitFontWeight) . ';';
