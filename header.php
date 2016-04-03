@@ -8,8 +8,9 @@
 </head>
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
-	<?php do_action( 'body_top' ); ?>
 	<div class="container">
+
+		<?php do_action( 'body_top' ); ?>
 		<header>
 			<?php do_action( 'header_before' ); ?>
 			<div class="row topline">
