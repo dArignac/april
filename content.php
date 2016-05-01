@@ -6,6 +6,7 @@
 			<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
 		</h1>
 		<?php get_template_part( 'content/post-meta' ); ?>
+		<?php get_template_part( 'content/featured-image' ); ?>
 	</article>
 
 	<?php do_action( 'post_after' ); ?>

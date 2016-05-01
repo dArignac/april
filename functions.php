@@ -7,6 +7,8 @@ if ( ! function_exists( ( 'april_theme_setup' ) ) ) {
 	 */
 	function april_theme_setup() {
 
+		add_theme_support( 'post-thumbnails' ); // featured images
+
 		include 'include/customizer.php';
 		// TODO remove if not necessary - https://github.com/dArignac/april/issues/5
 		include 'menu/walker.php';
