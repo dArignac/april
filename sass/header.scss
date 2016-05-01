@@ -13,7 +13,7 @@ header {
 			left: -999px;
 			right: -999px;
 			height: 1px;
-			background: $header-line-color;
+			background: $brand-info;
 		}
 	}
 
@@ -21,14 +21,7 @@ header {
 		margin-bottom: 2em;
 		margin-top: 2em;
 
-		h1 {
-			font-size: 1.5rem;
-			margin-bottom: 0;
-		}
-
-		p {
-			color: $header-line-color;
-			font-size: 0.8rem;
+		h2 {
 			margin-bottom: 0;
 		}
 	}

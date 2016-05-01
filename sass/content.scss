@@ -1,0 +1,12 @@
+.row {
+	article {
+		a {
+			border: 0;
+			text-decoration: none;
+
+			&:hover, &:focus {
+				border-bottom: 1px solid $link-border-bottom-color;
+			}
+		}
+	}
+}

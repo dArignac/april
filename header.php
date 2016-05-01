@@ -29,7 +29,7 @@
 									<?php echo get_bloginfo( 'name' ); ?>
 								</a>
 							</h1>
-							<?php if ( get_bloginfo( 'description' ) ): ?><p><?php echo get_bloginfo( 'description' ); ?></p><?php endif; ?>
+							<?php if ( get_bloginfo( 'description' ) ): ?><h2><?php echo get_bloginfo( 'description' ); ?></h2><?php endif; ?>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-2">

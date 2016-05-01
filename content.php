@@ -2,7 +2,10 @@
 	<?php do_action( 'post_before' ); ?>
 
 	<article class="col-sm-12">
-		<?php the_title(); ?>
+		<h1 class="text-xs-center">
+			<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+		</h1>
+		<?php get_template_part( 'content/post-meta' ); ?>
 	</article>
 
 	<?php do_action( 'post_after' ); ?>
