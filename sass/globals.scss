@@ -10,7 +10,7 @@ h1 {
 		text-decoration: none;
 
 		&:hover, &:focus {
-			border-bottom: 1px solid $link-border-bottom-color;
+			border-bottom: 1px solid $brand-accent;
 			text-decoration: none;
 		}
 	}
@@ -33,7 +33,7 @@ a {
 	text-decoration: none;
 
 	&:hover, &:focus {
-		border-bottom: 1px solid $link-border-bottom-color;
+		border-bottom: 1px solid $brand-accent;
 		text-decoration: none;
 	}
 }
@@ -54,6 +54,6 @@ a.continue-reading {
 
 	&:hover, &:active, &:focus {
 		color: white;
-		background: $brand-info;
+		background: $brand-secondary;
 	}
 }

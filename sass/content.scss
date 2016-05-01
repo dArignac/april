@@ -24,6 +24,24 @@ article {
 	}
 }
 
-.screen-reader-text {
-	display: none;
+nav.navigation {
+	.screen-reader-text {
+		display: none;
+	}
+
+	font-size: 1.2rem;
+
+	.nav-links {
+		.page-numbers {
+			margin: 0 0.5em;
+
+			&.current {
+				color: $brand-accent;
+			}
+		}
+
+		a {
+			font-weight: 300;
+		}
+	}
 }
