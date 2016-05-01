@@ -2191,6 +2191,8 @@ article .comments { font-size: 0.8rem; margin-bottom: 1.5em; text-transform: upp
 
 article .comments a { font-weight: 300; }
 
+.screen-reader-text { display: none; }
+
 h1 { font-size: 1.5rem; font-weight: 300; margin-bottom: 0; }
 
 h1 a { border: 0; font-weight: 300; text-decoration: none; }
