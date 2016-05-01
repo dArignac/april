@@ -7,6 +7,7 @@
 		</h1>
 		<?php get_template_part( 'content/post-meta' ); ?>
 		<?php get_template_part( 'content/featured-image' ); ?>
+		<?php the_excerpt(); ?>
 	</article>
 
 	<?php do_action( 'post_after' ); ?>

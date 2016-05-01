@@ -9,4 +9,9 @@
 	endif;
 ?>
 
+<?php
+	// TODO styling
+	the_posts_pagination();
+?>
+
 <?php get_footer();
