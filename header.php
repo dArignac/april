@@ -39,7 +39,7 @@
 				<?php get_template_part( 'menu/primary' ); ?>
 				<div class="row">
 					<div class="col-sm-12"><!-- TODO WIDGETS --></div>
-					
+				</div>
 				<?php do_action( 'header_after' ); ?>
 
 			</div>
