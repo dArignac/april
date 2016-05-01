@@ -34,7 +34,7 @@
 							</div>
 						</div>
 						<div class="col-sm-2 col-xs-2">
-							<button class="navbar-toggler pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">&#9776;</button>
+							<button class="navbar-toggler pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar"><i class="fa fa-bars"></i></button>
 						</div>
 					</div>
 					<?php get_template_part( 'menu/primary' ); ?>
