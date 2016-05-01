@@ -1,9 +1,10 @@
-			<?php do_action( 'main_after' ); ?>
+				<?php do_action( 'main_after' ); ?>
 
-			<?php wp_footer(); ?>
+				<?php wp_footer(); ?>
 
-		<?php do_action( 'body_bottom' ); ?>
+			<?php do_action( 'body_bottom' ); ?>
 
+			</div>
 		</div>
 	</body>
 </html>
