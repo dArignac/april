@@ -34,5 +34,26 @@ a {
 
 	&:hover, &:focus {
 		border-bottom: 1px solid $link-border-bottom-color;
+		text-decoration: none;
+	}
+}
+
+a.continue-reading {
+	background: $brand-primary;
+	border: none;
+	color: white;
+	display: inline-block;
+	margin: 0 1.5em 0 0;
+	padding: 1em 1.5em;
+	-webkit-transition: background 0.1s ease-in-out;
+	transition: background 0.1s ease-in-out;
+
+	&:link, &:visited {
+		color: white;
+	}
+
+	&:hover, &:active, &:focus {
+		color: white;
+		background: $brand-info;
 	}
 }

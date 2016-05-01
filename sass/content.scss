@@ -12,4 +12,14 @@ article {
 			margin: 0;
 		}
 	}
+
+	.comments {
+		font-size: 0.8rem;
+		margin-bottom: 1.5em;
+		text-transform: uppercase;
+
+		a {
+			font-weight: 300;
+		}
+	}
 }
