@@ -1,3 +1,4 @@
+// basic styles
 h1 {
 	font-size: 1.5rem;
 	font-weight: 300;
@@ -5,6 +6,7 @@ h1 {
 
 	a {
 		border: 0;
+		font-weight: 300;
 		text-decoration: none;
 
 		&:hover, &:focus {
@@ -19,4 +21,18 @@ h2 {
 	font-size: 0.8rem;
 	font-weight: 300;
 	text-transform: uppercase;
+
+	a {
+		font-weight: 300;
+	}
+}
+
+a {
+	border: 0;
+	font-weight: 500;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		border-bottom: 1px solid $link-border-bottom-color;
+	}
 }
