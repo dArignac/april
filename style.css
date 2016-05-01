@@ -2181,7 +2181,7 @@ header ul.nav li span.toggler.open::before { content: "\f147"; }
 
 .row article a:hover, .row article a:focus { border-bottom: 1px solid #099; }
 
-h1 { font-size: 1.5rem; margin-bottom: 0; }
+h1 { font-size: 1.5rem; font-weight: 300; margin-bottom: 0; }
 
 h1 a { border: 0; text-decoration: none; }
 
