@@ -101,6 +101,37 @@ function april_theme_customize ( $wp_customize ) {
 	);
 	// END: Typekit Settings
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// START: Display Settings ////////////////////////////////////////////////////////////////////////////////////////
+	// section
+	$wp_customize->add_section(
+		'april_display_settings',
+		array(
+			'title'    => __( 'Display Settings', 'april' ),
+			'priority' => 40
+		)
+	);
+	// settings
+	$wp_customize->add_setting(
+		'display_author',
+		array(
+			'sanitize_callback' => 'esc_attr',
+			'transport'         => 'postMessage',
+		)
+	);
+	// control
+	$wp_customize->add_control(
+		'display_author',
+		array(
+			'label'    => __( 'Display author on posts?', 'april' ),
+			'section'  => 'april_display_settings',
+			'settings' => 'display_author',
+			'type'     => 'checkbox',
+			'value'    => 1
+		)
+	);
+	// END: Display Settings
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
 add_action( 'customize_register', 'april_theme_customize' );
