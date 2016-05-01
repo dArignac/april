@@ -1,7 +1,15 @@
-.row {
-	article {
-		h2 {
-			margin: 5px 0;
+article {
+	margin-bottom: 3em;
+
+	h2 {
+		margin: 0.5em 0 1.5em 0;
+	}
+
+	figure {
+		margin: 0 0 1em;
+
+		.figure-img {
+			margin: 0;
 		}
 	}
 }
