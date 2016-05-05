@@ -101,3 +101,20 @@ if ( ! function_exists( 'april_get_content_template' ) ) {
 		}
 	}
 }
+
+
+function april_register_widget_areas() {
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Primary Sidebar', 'april' ),
+			'id'            => 'primary',
+			'description'   => __( 'Widgets in this area will be shown in the header dropdown.', 'april' ),
+			'before_widget' => '<div class="col-sm-4">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>'
+		)
+	);
+}
+add_action( 'widgets_init', 'april_register_widget_areas' );
