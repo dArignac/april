@@ -55,10 +55,9 @@ header {
 				position: relative;
 
 				&::before {
+					@extend .font-awesome;
+
 					content: "\f196";
-					font-family: FontAwesome;
-					font-style: normal;
-					font-weight: normal;
 					text-decoration: inherit;
 					color: $navigation-font-color;
 					position: absolute;

@@ -2173,7 +2173,7 @@ header ul.nav li a { color: #333; }
 
 header ul.nav li span.toggler { cursor: pointer; position: relative; }
 
-header ul.nav li span.toggler::before { content: "\f196"; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit; color: #333; position: absolute; top: 0; left: -1rem; }
+header ul.nav li span.toggler::before { content: "\f196"; text-decoration: inherit; color: #333; position: absolute; top: 0; left: -1rem; }
 
 header ul.nav li span.toggler.open::before { content: "\f147"; }
 
@@ -2213,15 +2213,25 @@ h2 { color: #333; font-size: 0.8rem; font-weight: 300; text-transform: uppercase
 
 h2 a { font-weight: 300; }
 
+.font-awesome, header ul.nav li span.toggler::before, a.post-comment-count::before { font-family: FontAwesome; font-style: normal; font-weight: normal; }
+
 a { border: 0; font-weight: 500; text-decoration: none; }
 
 a:hover, a:focus { border-bottom: 1px solid #099; text-decoration: none; }
 
-a.continue-reading, .post-tags a { background: #333; border: none; color: white; display: inline-block; margin: 0 1.5em 0 0; padding: 1em 1.5em; -webkit-transition: background 0.1s ease-in-out; transition: background 0.1s ease-in-out; }
+a.post-continue-reading, a.post-comment-count, .post-tags a { background: #333; border: none; color: white; display: inline-block; margin: 0 1.5em 0 0; padding: 1em 1.5em; -webkit-transition: background 0.1s ease-in-out; transition: background 0.1s ease-in-out; }
 
-a.continue-reading:link, .post-tags a:link, a.continue-reading:visited, .post-tags a:visited { color: white; }
+a.post-continue-reading:link, a.post-comment-count:link, .post-tags a:link, a.post-continue-reading:visited, a.post-comment-count:visited, .post-tags a:visited { color: white; }
 
-a.continue-reading:hover, .post-tags a:hover, a.continue-reading:active, .post-tags a:active, a.continue-reading:focus, .post-tags a:focus { color: white; background: #999; }
+a.post-continue-reading:hover, a.post-comment-count:hover, .post-tags a:hover, a.post-continue-reading:active, a.post-comment-count:active, .post-tags a:active, a.post-continue-reading:focus, a.post-comment-count:focus, .post-tags a:focus { color: white; background: #999; }
+
+a.post-comment-count { background: white; }
+
+a.post-comment-count::before { content: "\f075"; position: relative; left: -0.5rem; }
+
+a.post-comment-count:link, a.post-comment-count:visited { color: #333; }
+
+a.post-comment-count:hover, a.post-comment-count:active, a.post-comment-count:focus { color: #333; background: #999; }
 
 .post-tags a { background: #999; margin: 0 0.5em 0 0; padding: 0.1em 0.2em; }
 

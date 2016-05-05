@@ -27,6 +27,12 @@ h2 {
 	}
 }
 
+.font-awesome {
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+}
+
 a {
 	border: 0;
 	font-weight: 500;
@@ -38,7 +44,7 @@ a {
 	}
 }
 
-a.continue-reading {
+a.post-continue-reading {
 	background: $brand-primary;
 	border: none;
 	color: white;
@@ -58,8 +64,31 @@ a.continue-reading {
 	}
 }
 
+a.post-comment-count {
+	@extend a.post-continue-reading;
+
+	background: white;
+
+	&::before {
+		@extend .font-awesome;
+
+		content: "\f075";
+		position: relative;
+		left: -0.5rem;
+	}
+
+	&:link, &:visited {
+		color: $brand-primary;
+	}
+
+	&:hover, &:active, &:focus {
+		color: $brand-primary;
+		background: $brand-secondary;
+	}
+}
+
 .post-tags a {
-	@extend a.continue-reading;
+	@extend a.post-continue-reading;
 
 	background: $brand-secondary;
 	margin: 0 0.5em 0 0;
