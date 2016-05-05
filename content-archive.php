@@ -7,7 +7,9 @@
 			<h1 class="text-xs-center">
 				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
 			</h1>
-			<?php get_template_part( 'content/post-meta' ); ?>
+			<h2 class="text-xs-center">
+				<?php get_template_part( 'content/post-meta' ); ?>
+			</h2>
 		</div>
 
 		<div class="col-sm-12">
