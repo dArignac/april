@@ -2191,6 +2191,8 @@ article .comments { font-size: 0.8rem; margin-bottom: 1.5em; text-transform: upp
 
 article .comments a { font-weight: 300; }
 
+article .post-categories, article .post-tags { margin-top: 1em; }
+
 nav.navigation { font-size: 1.2rem; }
 
 nav.navigation .screen-reader-text { display: none; }
@@ -2215,10 +2217,12 @@ a { border: 0; font-weight: 500; text-decoration: none; }
 
 a:hover, a:focus { border-bottom: 1px solid #099; text-decoration: none; }
 
-a.continue-reading { background: #333; border: none; color: white; display: inline-block; margin: 0 1.5em 0 0; padding: 1em 1.5em; -webkit-transition: background 0.1s ease-in-out; transition: background 0.1s ease-in-out; }
+a.continue-reading, .post-tags a { background: #333; border: none; color: white; display: inline-block; margin: 0 1.5em 0 0; padding: 1em 1.5em; -webkit-transition: background 0.1s ease-in-out; transition: background 0.1s ease-in-out; }
 
-a.continue-reading:link, a.continue-reading:visited { color: white; }
+a.continue-reading:link, .post-tags a:link, a.continue-reading:visited, .post-tags a:visited { color: white; }
 
-a.continue-reading:hover, a.continue-reading:active, a.continue-reading:focus { color: white; background: #999; }
+a.continue-reading:hover, .post-tags a:hover, a.continue-reading:active, .post-tags a:active, a.continue-reading:focus, .post-tags a:focus { color: white; background: #999; }
+
+.post-tags a { background: #999; margin: 0 0.5em 0 0; padding: 0.1em 0.2em; }
 
 @media (max-width: 543px) { body > .container { padding-left: 0.2em; padding-right: 0.2em; } }

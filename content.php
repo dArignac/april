@@ -23,8 +23,9 @@
 		</div>
 
 		<?php do_action( 'post_after' ); ?>
-		
+
 		<?php get_template_part( 'content/post-categories' ); ?>
+		<?php get_template_part( 'content/post-tags' ); ?>
 
 	</div>
 </article>
