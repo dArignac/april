@@ -118,3 +118,32 @@ function april_register_widget_areas() {
 	);
 }
 add_action( 'widgets_init', 'april_register_widget_areas' );
+
+/**
+ * Filter the sidebar params for the primary sidebar.
+ * It adds the Bootstrap row HTML elements to place 3 widgets per row.
+ * @param $params
+ * @return mixed
+ */
+function april_dynamic_sidebar_params_for_primary($params) {
+	$widgets = get_option( 'sidebars_widgets' );
+	$widget_id = $params[0]['widget_id'];
+	$widget_index = array_search($widget_id, $widgets['primary']);
+
+	if ( $widget_index % 3 == 0 ) {
+		$params[0]['before_widget'] = '<div class="row">' . $params[0]['before_widget'];
+
+		// not the first widget but beginning of a new row, close the old one
+		if ( $widget_index > 0 ) {
+			$params[0]['before_widget'] = '</div>' . $params[0]['before_widget'];
+		}
+	}
+
+	// catch the last widget and close the row tag
+	if ( $widget_index == ( count( $widgets['primary'] ) - 1 ) ) {
+		$params[0]['after_widget'] = $params[0]['after_widget'] . '</div>';
+	}
+
+	return $params;
+}
+add_filter( 'dynamic_sidebar_params', 'april_dynamic_sidebar_params_for_primary' );

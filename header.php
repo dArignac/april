@@ -38,9 +38,7 @@
 						</div>
 					</div>
 					<?php get_template_part( 'menu/primary' ); ?>
-					<div class="row">
-						<?php get_sidebar( 'primary' ); ?>
-					</div>
+					<?php get_sidebar( 'primary' ); ?>
 					<?php do_action( 'header_after' ); ?>
 
 				</div>
