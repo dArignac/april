@@ -4,6 +4,6 @@
 	</aside>
 	<button id="widgets-primary-open" data-toggle="collapse" data-target="#widgets-primary" aria-expanded="false" aria-controls="widgets-primary">
 		<span class="sr-only"><?php echo __( 'Open sidebar', 'april' ) ?></span>
-		<i class="fa fa-angle-down"></i>
+		<i class="fa fa-plus"></i>
 	</button>
 <?php endif;

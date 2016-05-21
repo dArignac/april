@@ -13,12 +13,12 @@
         // adjust the toggler class on opening the primary widgets sidebar
         $('#widgets-primary').on({
             'show.bs.collapse': function () {
-                $('#widgets-primary-open').find('i').toggleClass('fa-angle-down');
-                $('#widgets-primary-open').find('i').toggleClass('fa-angle-up');
+                $('#widgets-primary-open').find('i').toggleClass('fa-plus');
+                $('#widgets-primary-open').find('i').toggleClass('fa-minus');
             },
             'hide.bs.collapse': function () {
-                $('#widgets-primary-open').find('i').toggleClass('fa-angle-down');
-                $('#widgets-primary-open').find('i').toggleClass('fa-angle-up');
+                $('#widgets-primary-open').find('i').toggleClass('fa-plus');
+                $('#widgets-primary-open').find('i').toggleClass('fa-minus');
             }
         });
     });
