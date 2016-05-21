@@ -102,7 +102,9 @@ if ( ! function_exists( 'april_get_content_template' ) ) {
 	}
 }
 
-
+/**
+ * Registers the primary widget area with 4 widgets in a row.
+ */
 function april_register_widget_areas() {
 
 	register_sidebar(
@@ -110,7 +112,7 @@ function april_register_widget_areas() {
 			'name'          => __( 'Primary Sidebar', 'april' ),
 			'id'            => 'primary',
 			'description'   => __( 'Widgets in this area will be shown in the header dropdown.', 'april' ),
-			'before_widget' => '<div class="col-sm-4">',
+			'before_widget' => '<div class="col-sm-3">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>'
@@ -121,7 +123,7 @@ add_action( 'widgets_init', 'april_register_widget_areas' );
 
 /**
  * Filter the sidebar params for the primary sidebar.
- * It adds the Bootstrap row HTML elements to place 3 widgets per row.
+ * It adds the Bootstrap row HTML elements to place 4 widgets per row.
  * @param $params
  * @return mixed
  */
@@ -130,7 +132,12 @@ function april_dynamic_sidebar_params_for_primary($params) {
 	$widget_id = $params[0]['widget_id'];
 	$widget_index = array_search($widget_id, $widgets['primary']);
 
-	if ( $widget_index % 3 == 0 ) {
+	// Extrawurst for UTC - be extra wide
+	if ( $params[0]['widget_name'] == 'Ultimate Tag Cloud' ) {
+		$params[0]['before_widget'] = '<div class="col-sm-6">';
+	}
+
+	if ( $widget_index % 4 == 0 ) {
 		$params[0]['before_widget'] = '<div class="row">' . $params[0]['before_widget'];
 
 		// not the first widget but beginning of a new row, close the old one
