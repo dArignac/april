@@ -2151,8 +2151,6 @@ body > .overflower { overflow: hidden; }
 
 header { border: none; position: relative; }
 
-header > div { margin-bottom: 2em; }
-
 header > div::after { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
 
 header .topline { margin-bottom: 2em; margin-top: 2em; }
@@ -2177,11 +2175,15 @@ header ul.nav li span.toggler::before { content: "\f196"; text-decoration: inher
 
 header ul.nav li span.toggler.open::before { content: "\f147"; }
 
-header aside { margin-bottom: 1em; margin-top: 1em; }
-
-header #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
-
 @media (max-width: 543px) { header .topline { margin-bottom: 0.1em; margin-top: 0.1em; } }
+
+aside { margin-bottom: 2em; position: relative; }
+
+aside::after { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
+
+aside #widgets-primary { padding-bottom: 2em; margin-top: 2em; }
+
+aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
 article { margin-bottom: 3em; }
 

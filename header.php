@@ -38,10 +38,11 @@
 						</div>
 					</div>
 					<?php get_template_part( 'menu/primary' ); ?>
-					<?php get_sidebar( 'primary' ); ?>
 					<?php do_action( 'header_after' ); ?>
 
 				</div>
 			</header>
+
+			<?php get_sidebar( 'primary' ); ?>
 
 			<?php do_action( 'main_before' ); ?>

@@ -4,7 +4,6 @@ header {
 	position: relative;
 
 	& > div {
-		margin-bottom: 2em;
 
 		&::after {
 			box-sizing: border-box;
@@ -72,9 +71,35 @@ header {
 		}
 	}
 
-	aside {
-		margin-bottom: 1em;
-		margin-top: 1em;
+}
+
+@include media-breakpoint-down(xs) {
+	header {
+		.topline {
+			margin-bottom: 0.1em;
+			margin-top: 0.1em;
+		}
+	}
+}
+
+aside {
+	margin-bottom: 2em;
+	position: relative;
+
+	&::after {
+		box-sizing: border-box;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: -999px;
+		right: -999px;
+		height: 1px;
+		background: $brand-secondary;
+	}
+
+	#widgets-primary {
+		padding-bottom: 2em;
+		margin-top: 2em;
 	}
 
 	#widgets-primary-open {
@@ -84,14 +109,5 @@ header {
 		padding: 0.25em 0.75em;
 		position: absolute;
 		top: 100%;
-	}
-}
-
-@include media-breakpoint-down(xs) {
-	header {
-		.topline {
-			margin-bottom: 0.1em;
-			margin-top: 0.1em;
-		}
 	}
 }
