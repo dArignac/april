@@ -2177,6 +2177,10 @@ header ul.nav li span.toggler::before { content: "\f196"; text-decoration: inher
 
 header ul.nav li span.toggler.open::before { content: "\f147"; }
 
+header aside { margin-bottom: 1em; margin-top: 1em; }
+
+header #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
+
 @media (max-width: 543px) { header .topline { margin-bottom: 0.1em; margin-top: 0.1em; } }
 
 article { margin-bottom: 3em; }

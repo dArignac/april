@@ -71,6 +71,20 @@ header {
 			}
 		}
 	}
+
+	aside {
+		margin-bottom: 1em;
+		margin-top: 1em;
+	}
+
+	#widgets-primary-open {
+		background: none;
+		border: 1px solid $brand-secondary;
+		border-top: 0;
+		padding: 0.25em 0.75em;
+		position: absolute;
+		top: 100%;
+	}
 }
 
 @include media-breakpoint-down(xs) {
