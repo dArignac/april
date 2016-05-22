@@ -2157,6 +2157,8 @@ header .topline { margin-bottom: 2em; margin-top: 2em; }
 
 header .topline h2 { margin-bottom: 0; }
 
+header .topline h1, header .topline h2 { line-height: 1.1 !important; }
+
 header ul.nav { font-size: 0.85rem; }
 
 header ul.nav > li { border-bottom: 1px solid #ccc; }
