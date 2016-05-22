@@ -1,15 +1,25 @@
 <article <?php post_class(); ?>>
 	<?php do_action( 'post_before' ); ?>
 
+	<?php
+		$display_post_categories = get_theme_mod( 'display_post_categories' );
+		$display_post_tags       = get_theme_mod( 'display_post_tags' );
+		$display_page_titles     = get_theme_mod( 'display_page_titles' );
+	?>
+
 	<div class="row">
 
 		<div class="col-sm-10 col-sm-offset-1">
-			<h1 class="text-xs-center">
-				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-			</h1>
-			<h2 class="text-xs-center">
-				<?php get_template_part( 'content/post-meta' ); ?>
-			</h2>
+			<?php if ( is_singular( 'post' ) || ( is_page() && $display_page_titles ) ) : ?>
+				<h1 class="text-xs-center">
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+				</h1>
+			<?php endif; ?>
+			<?php if ( ! is_page() ) : ?>
+				<h2 class="text-xs-center">
+					<?php get_template_part( 'content/post-meta' ); ?>
+				</h2>
+			<?php endif; ?>
 		</div>
 
 		<div class="col-sm-12">
@@ -26,10 +36,6 @@
 
 		<?php do_action( 'post_after' ); ?>
 
-		<?php
-		$display_post_categories = get_theme_mod( 'display_post_categories' );
-		$display_post_tags       = get_theme_mod( 'display_post_tags' );
-		?>
 		<?php if ( $display_post_categories ): ?>
 			<?php get_template_part( 'content/post-categories' ); ?>
 		<?php endif; ?>

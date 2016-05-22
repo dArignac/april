@@ -168,6 +168,25 @@ function april_theme_customize ( $wp_customize ) {
 			'value'    => 1
 		)
 	);
+	// settings
+	$wp_customize->add_setting(
+		'display_page_titles',
+		array(
+			'sanitize_callback' => 'esc_attr',
+			'transport'         => 'postMessage',
+		)
+	);
+	// control
+	$wp_customize->add_control(
+		'display_page_titles',
+		array(
+			'label'    => __( 'Display page titles on pages?', 'april' ),
+			'section'  => 'april_display_settings',
+			'settings' => 'display_page_titles',
+			'type'     => 'checkbox',
+			'value'    => 1
+		)
+	);
 	// END: Display Settings
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }

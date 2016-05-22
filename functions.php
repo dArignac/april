@@ -89,10 +89,8 @@ if ( ! function_exists( 'april_get_content_template' ) ) {
 	function april_get_content_template() {
 		if ( is_home() ) {
 			get_template_part( 'content', 'archive' );
-		} elseif ( is_singular( 'post' ) ) {
+		} elseif ( is_singular( 'post' ) || is_page() ) {
 			get_template_part( 'content' );
-		} elseif ( is_page() ) {
-			get_template_part( 'content', 'page' );
 		} elseif ( is_attachment() ) {
 			get_template_part( 'content', 'attachment' );
 		} elseif ( is_archive() ) {
