@@ -16,7 +16,8 @@ if ( ! function_exists( ( 'april_theme_setup' ) ) ) {
 		load_theme_textdomain( 'april', get_template_directory() . '/languages' );
 
 		register_nav_menus( array(
-			'primary' => __( 'Primary', 'april' )
+			'primary' => __( 'Primary', 'april' ),
+			'footer'  => __( 'Footer', 'april' )
 		) );
 	}
 }
@@ -127,7 +128,7 @@ add_action( 'widgets_init', 'april_register_widget_areas' );
  * @param $params
  * @return mixed
  */
-function april_dynamic_sidebar_params_for_primary($params) {
+function april_dynamic_sidebar_params_for_primary( $params ) {
 	$widgets = get_option( 'sidebars_widgets' );
 	$widget_id = $params[0]['widget_id'];
 	$widget_index = array_search($widget_id, $widgets['primary']);
@@ -154,3 +155,17 @@ function april_dynamic_sidebar_params_for_primary($params) {
 	return $params;
 }
 add_filter( 'dynamic_sidebar_params', 'april_dynamic_sidebar_params_for_primary' );
+
+/**
+ * Add Bootstrap navigation class to all menu items.
+ * This only applies for the footer though the adjustment is made for all menu items (also for primary)
+ * @param $sorted_menu_items the sorted items
+ * @return mixed
+ */
+function april_wp_nav_menu_objects( $sorted_menu_items ) {
+	foreach ( $sorted_menu_items as $item ) {
+		$item->classes[] = 'nav-item';
+	}
+	return $sorted_menu_items;
+}
+add_filter( 'wp_nav_menu_objects', 'april_wp_nav_menu_objects' );

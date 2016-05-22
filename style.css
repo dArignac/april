@@ -2151,8 +2151,6 @@ body > .overflower { overflow: hidden; }
 
 header { border: none; position: relative; }
 
-header > div::after { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
-
 header .topline { margin-bottom: 2em; margin-top: 2em; }
 
 header .topline h2 { margin-bottom: 0; }
@@ -2178,8 +2176,6 @@ header ul.nav li span.toggler.open::before { content: "\f147"; }
 @media (max-width: 543px) { header .topline { margin-bottom: 0.5em; margin-top: 0.5em; } }
 
 aside { margin-bottom: 2em; position: relative; }
-
-aside::after { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
 
 aside #widgets-primary { padding-bottom: 2em; margin-top: 2em; }
 
@@ -2209,6 +2205,10 @@ nav.navigation .nav-links .page-numbers.current { color: #099; }
 
 nav.navigation .nav-links a { font-weight: 300; }
 
+footer { margin-bottom: 2em; padding-top: 2em; position: relative; }
+
+footer::before { top: 0; }
+
 h1 { font-size: 1.5rem; font-weight: 300; margin-bottom: 0; }
 
 h1 a { border: 0; font-weight: 300; text-decoration: none; }
@@ -2220,6 +2220,8 @@ h2 { color: #333; font-size: 0.8rem; font-weight: 300; text-transform: uppercase
 h2 a { font-weight: 300; }
 
 .font-awesome, header ul.nav li span.toggler::before, a.post-comment-count::before { font-family: FontAwesome; font-style: normal; font-weight: normal; }
+
+.full-line, header > div::after, aside::after, footer::before { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
 
 a { border: 0; font-weight: 500; text-decoration: none; }
 

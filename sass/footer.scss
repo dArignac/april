@@ -1,0 +1,11 @@
+footer {
+	margin-bottom: $section-margin;
+	padding-top: $section-margin;
+	position: relative;
+
+	&::before {
+		@extend .full-line;
+
+		top: 0;
+	}
+}
