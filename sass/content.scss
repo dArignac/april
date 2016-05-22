@@ -1,3 +1,25 @@
+nav.navigation {
+	.screen-reader-text {
+		display: none;
+	}
+
+	font-size: 1.2rem;
+
+	.nav-links {
+		.page-numbers {
+			margin: 0 0.5em;
+
+			&.current {
+				color: $brand-accent;
+			}
+		}
+
+		a {
+			font-weight: 300;
+		}
+	}
+}
+
 article {
 	margin-bottom: 3em;
 
@@ -26,27 +48,5 @@ article {
 	.post-categories,
 	.post-tags {
 		margin-top: 1em;
-	}
-}
-
-nav.navigation {
-	.screen-reader-text {
-		display: none;
-	}
-
-	font-size: 1.2rem;
-
-	.nav-links {
-		.page-numbers {
-			margin: 0 0.5em;
-
-			&.current {
-				color: $brand-accent;
-			}
-		}
-
-		a {
-			font-weight: 300;
-		}
 	}
 }
