@@ -2149,6 +2149,8 @@ a.bg-danger:focus, a.bg-danger:hover { background-color: #c9302c; }
 
 body > .overflower { overflow: hidden; }
 
+.tagcloud a { font-weight: 300; }
+
 header { border: none; position: relative; }
 
 header .topline { margin-bottom: 2em; margin-top: 2em; }
