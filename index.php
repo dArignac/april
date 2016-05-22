@@ -13,8 +13,8 @@
 	<div class="col-sm-10 col-sm-offset-1 text-xs-center">
 		<?php the_posts_pagination(
 			array(
-				'prev_text' => '<i class="fa fa-angle-double-left" title="' . __( 'Previous', 'april' ) . '"></i>',
-				'next_text' => '<i class="fa fa-angle-double-right" title="' . __( 'Next', 'april' ) . '"></i>'
+				'prev_text' => '&ltrif;',
+				'next_text' => '&rtrif;'
 			)
 		); ?>
 	</div>
