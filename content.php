@@ -26,8 +26,16 @@
 
 		<?php do_action( 'post_after' ); ?>
 
-		<?php get_template_part( 'content/post-categories' ); ?>
-		<?php get_template_part( 'content/post-tags' ); ?>
+		<?php
+		$display_post_categories = get_theme_mod( 'display_post_categories' );
+		$display_post_tags       = get_theme_mod( 'display_post_tags' );
+		?>
+		<?php if ( $display_post_categories ): ?>
+			<?php get_template_part( 'content/post-categories' ); ?>
+		<?php endif; ?>
+		<?php if ( $display_post_tags ): ?>
+			<?php get_template_part( 'content/post-tags' ); ?>
+		<?php endif; ?>
 
 	</div>
 </article>

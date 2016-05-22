@@ -130,6 +130,44 @@ function april_theme_customize ( $wp_customize ) {
 			'value'    => 1
 		)
 	);
+	// settings
+	$wp_customize->add_setting(
+		'display_post_categories',
+		array(
+			'sanitize_callback' => 'esc_attr',
+			'transport'         => 'postMessage',
+		)
+	);
+	// control
+	$wp_customize->add_control(
+		'display_post_categories',
+		array(
+			'label'    => __( 'Display categories on posts?', 'april' ),
+			'section'  => 'april_display_settings',
+			'settings' => 'display_post_categories',
+			'type'     => 'checkbox',
+			'value'    => 1
+		)
+	);
+	// settings
+	$wp_customize->add_setting(
+		'display_post_tags',
+		array(
+			'sanitize_callback' => 'esc_attr',
+			'transport'         => 'postMessage',
+		)
+	);
+	// control
+	$wp_customize->add_control(
+		'display_post_tags',
+		array(
+			'label'    => __( 'Display tags on posts?', 'april' ),
+			'section'  => 'april_display_settings',
+			'settings' => 'display_post_tags',
+			'type'     => 'checkbox',
+			'value'    => 1
+		)
+	);
 	// END: Display Settings
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
