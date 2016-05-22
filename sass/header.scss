@@ -11,8 +11,8 @@ header {
 	}
 
 	.topline {
-		margin-bottom: 2em;
-		margin-top: 2em;
+		margin-bottom: $section-margin;
+		margin-top: $section-margin;
 
 		h2 {
 			margin-bottom: 0;
@@ -76,7 +76,7 @@ header {
 }
 
 aside {
-	margin-bottom: 2em;
+	margin-bottom: $section-margin;
 	position: relative;
 
 	&::after {
@@ -84,8 +84,8 @@ aside {
 	}
 
 	#widgets-primary {
-		padding-bottom: 2em;
-		margin-top: 2em;
+		padding-bottom: $section-margin;
+		margin-top: $section-margin;
 	}
 
 	#widgets-primary-open {
