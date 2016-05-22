@@ -33,6 +33,17 @@ h2 {
 	font-weight: normal;
 }
 
+.full-line {
+	box-sizing: border-box;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -999px;
+	right: -999px;
+	height: 1px;
+	background: $brand-secondary;
+}
+
 a {
 	border: 0;
 	font-weight: 500;
