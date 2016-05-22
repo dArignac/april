@@ -1,4 +1,8 @@
 // basic styles
+h1, h2, .h2, h3, h4, h5, h6 {
+	line-height: 1.5 !important;
+}
+
 h1 {
 	font-size: 1.5rem;
 	font-weight: 300;
@@ -16,7 +20,7 @@ h1 {
 	}
 }
 
-h2 {
+h2, .h2 {
 	color: $brand-primary;
 	font-size: 0.8rem;
 	font-weight: 300;

@@ -50,3 +50,14 @@ article {
 		margin-top: 1em;
 	}
 }
+
+section#comments {
+	article {
+		margin-bottom: 1em;
+
+		.date {
+			@extend .h2;
+			margin-bottom: 0;
+		}
+	}
+}

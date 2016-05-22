@@ -31,3 +31,5 @@
 
 	</div>
 </article>
+
+<?php comments_template(); ?>

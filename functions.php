@@ -169,3 +169,22 @@ function april_wp_nav_menu_objects( $sorted_menu_items ) {
 	return $sorted_menu_items;
 }
 add_filter( 'wp_nav_menu_objects', 'april_wp_nav_menu_objects' );
+
+
+if ( ! function_exists( ( 'april_comments_callback' ) ) ) {
+	/**
+	 * Comments template.
+	 * @param $comment
+	 * @param $args
+	 * @param $depth
+	 */
+	function april_comments_callback( $comment, $args, $depth ) {
+		?>
+		<article id="comment-<?php comment_ID(); ?>" class="comment row <?php echo get_comment_class(); ?>">
+			<div class="col-sm-10 col-sm-offset-1 author"><?php comment_author_link(); ?></div>
+			<div class="col-sm-10 col-sm-offset-1 date"><?php comment_date(); ?></div>
+			<div class="col-sm-10 col-sm-offset-1 text"><?php comment_text(); ?></div>
+		</article>
+		<?php
+	}
+}

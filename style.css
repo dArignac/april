@@ -190,7 +190,7 @@ output { display: inline-block; }
 
 [hidden] { display: none !important; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { margin-bottom: 0.5rem; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, section#comments article .date, .h3, .h4, .h5, .h6 { margin-bottom: 0.5rem; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
 
 h1 { font-size: 2.5rem; }
 
@@ -206,7 +206,7 @@ h6 { font-size: 1rem; }
 
 .h1 { font-size: 2.5rem; }
 
-.h2 { font-size: 2rem; }
+.h2, section#comments article .date { font-size: 2rem; }
 
 .h3 { font-size: 1.75rem; }
 
@@ -2185,6 +2185,16 @@ aside #widgets-primary { padding-bottom: 2em; margin-top: 2em; }
 
 aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
+nav.navigation { font-size: 1.2rem; }
+
+nav.navigation .screen-reader-text { display: none; }
+
+nav.navigation .nav-links .page-numbers { margin: 0 0.5em; }
+
+nav.navigation .nav-links .page-numbers.current { color: #099; }
+
+nav.navigation .nav-links a { font-weight: 300; }
+
 article { margin-bottom: 3em; }
 
 article h2 { margin: 0.5em 0 1.5em 0; }
@@ -2199,19 +2209,15 @@ article .comments a { font-weight: 300; }
 
 article .post-categories, article .post-tags { margin-top: 1em; }
 
-nav.navigation { font-size: 1.2rem; }
+section#comments article { margin-bottom: 1em; }
 
-nav.navigation .screen-reader-text { display: none; }
+section#comments article .date { margin-bottom: 0; }
 
-nav.navigation .nav-links .page-numbers { margin: 0 0.5em; }
-
-nav.navigation .nav-links .page-numbers.current { color: #099; }
-
-nav.navigation .nav-links a { font-weight: 300; }
-
-footer { margin-bottom: 2em; padding-top: 2em; position: relative; }
+footer { margin-bottom: 2em; margin-top: 2em; padding-top: 2em; position: relative; }
 
 footer::before { top: 0; }
+
+h1, h2, .h2, section#comments article .date, h3, h4, h5, h6 { line-height: 1.5 !important; }
 
 h1 { font-size: 1.5rem; font-weight: 300; margin-bottom: 0; }
 
@@ -2219,9 +2225,9 @@ h1 a { border: 0; font-weight: 300; text-decoration: none; }
 
 h1 a:hover, h1 a:focus { border-bottom: 1px solid #099; text-decoration: none; }
 
-h2 { color: #333; font-size: 0.8rem; font-weight: 300; text-transform: uppercase; }
+h2, .h2, section#comments article .date { color: #333; font-size: 0.8rem; font-weight: 300; text-transform: uppercase; }
 
-h2 a { font-weight: 300; }
+h2 a, .h2 a, section#comments article .date a { font-weight: 300; }
 
 .font-awesome, header ul.nav li span.toggler::before, a.post-comment-count::before { font-family: FontAwesome; font-style: normal; font-weight: normal; }
 
