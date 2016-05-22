@@ -69,5 +69,9 @@ section#comments {
 
 	.comment-form {
 		margin-top: $section-margin;
+
+		.required {
+			color: $brand-accent;
+		}
 	}
 }

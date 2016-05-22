@@ -2217,6 +2217,8 @@ section#comments article .quotelike .date { margin-bottom: 0; }
 
 section#comments .comment-form { margin-top: 2em; }
 
+section#comments .comment-form .required { color: #099; }
+
 footer { margin-bottom: 2em; margin-top: 2em; padding-top: 2em; position: relative; }
 
 footer::before { top: 0; }
