@@ -119,3 +119,10 @@ a.post-comment-count {
 		background: white;
 	}
 }
+
+blockquote,
+.quotelike {
+	border-left: 1px solid $brand-primary;
+	margin: 0 0 0 1em;
+	padding: 0 0 0 1em;
+}

@@ -190,7 +190,7 @@ output { display: inline-block; }
 
 [hidden] { display: none !important; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, section#comments article .quotelike .date, .h3, .h4, .h5, .h6 { margin-bottom: 0.5rem; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, section#comments article .date, .h3, .h4, .h5, .h6 { margin-bottom: 0.5rem; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
 
 h1 { font-size: 2.5rem; }
 
@@ -206,7 +206,7 @@ h6 { font-size: 1rem; }
 
 .h1 { font-size: 2.5rem; }
 
-.h2, section#comments article .quotelike .date { font-size: 2rem; }
+.h2, section#comments article .date { font-size: 2rem; }
 
 .h3 { font-size: 1.75rem; }
 
@@ -2213,9 +2213,7 @@ article .post-categories, article .post-tags { margin-top: 1em; }
 
 section#comments article { margin-bottom: 1em; }
 
-section#comments article .quotelike { border-left: 1px solid #333; margin: 0 0 0 1em; padding: 0 0 0 1em; }
-
-section#comments article .quotelike .date { margin-bottom: 0; }
+section#comments article .date { margin-bottom: 0; }
 
 section#comments .comment-form { margin-top: 2em; }
 
@@ -2225,7 +2223,7 @@ footer { margin-bottom: 2em; margin-top: 2em; padding-top: 2em; position: relati
 
 footer::before { top: 0; }
 
-h1, h2, .h2, section#comments article .quotelike .date, h3, h4, h5, h6 { line-height: 1.5 !important; }
+h1, h2, .h2, section#comments article .date, h3, h4, h5, h6 { line-height: 1.5 !important; }
 
 h1 { font-size: 1.5rem; font-weight: 300; margin-bottom: 0; }
 
@@ -2233,9 +2231,9 @@ h1 a { border: 0; font-weight: 300; text-decoration: none; }
 
 h1 a:hover, h1 a:focus { border-bottom: 1px solid #099; text-decoration: none; }
 
-h2, .h2, section#comments article .quotelike .date { color: #333; font-size: 0.8rem; font-weight: 300; text-transform: uppercase; }
+h2, .h2, section#comments article .date { color: #333; font-size: 0.8rem; font-weight: 300; text-transform: uppercase; }
 
-h2 a, .h2 a, section#comments article .quotelike .date a { font-weight: 300; }
+h2 a, .h2 a, section#comments article .date a { font-weight: 300; }
 
 .font-awesome, header ul.nav li span.toggler::before, a.post-comment-count::before { font-family: FontAwesome; font-style: normal; font-weight: normal; }
 
@@ -2262,5 +2260,7 @@ a.post-comment-count::before { content: "\f075"; position: relative; left: -0.5r
 a.post-comment-count:link, a.post-comment-count:visited { color: #333; }
 
 a.post-comment-count:hover, a.post-comment-count:active, a.post-comment-count:focus { color: #099; background: white; }
+
+blockquote, .quotelike { border-left: 1px solid #333; margin: 0 0 0 1em; padding: 0 0 0 1em; }
 
 @media (max-width: 543px) { body > .container { padding-left: 0.2em; padding-right: 0.2em; } }
