@@ -55,9 +55,15 @@ section#comments {
 	article {
 		margin-bottom: 1em;
 
-		.date {
-			@extend .h2;
-			margin-bottom: 0;
+		.quotelike {
+			border-left: 1px solid $brand-primary;
+			margin:0 0 0 1em;
+			padding:0 0 0 1em;
+
+			.date {
+				@extend .h2;
+				margin-bottom: 0;
+			}
 		}
 	}
 

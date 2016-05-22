@@ -181,9 +181,13 @@ if ( ! function_exists( ( 'april_comments_callback' ) ) ) {
 	function april_comments_callback( $comment, $args, $depth ) {
 		?>
 		<article id="comment-<?php comment_ID(); ?>" class="comment row <?php echo get_comment_class(); ?>">
-			<div class="col-sm-10 col-sm-offset-1 author"><?php comment_author_link(); ?></div>
-			<div class="col-sm-10 col-sm-offset-1 date"><?php comment_date(); ?></div>
-			<div class="col-sm-10 col-sm-offset-1 text"><?php comment_text(); ?></div>
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="quotelike">
+					<div class="author"><?php comment_author_link(); ?></div>
+					<div class="date"><?php comment_date(); ?></div>
+					<div class="text"><?php comment_text(); ?></div>
+				</div>
+			</div>
 		</article>
 		<?php
 	}
