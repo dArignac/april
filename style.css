@@ -2213,6 +2213,8 @@ section#comments article { margin-bottom: 1em; }
 
 section#comments article .date { margin-bottom: 0; }
 
+section#comments .comment-form { margin-top: 2em; }
+
 footer { margin-bottom: 2em; margin-top: 2em; padding-top: 2em; position: relative; }
 
 footer::before { top: 0; }

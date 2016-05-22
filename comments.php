@@ -21,8 +21,8 @@
 		<?php wp_list_comments( array( 'callback' => 'april_comments_callback' ) ); ?>
 
 		<div class="row">
-			<div class="col-sm-5 col-sm-offset-1 text-xs-left"><?php previous_comments_link( '&ltrif; ' . __( 'Newer comments', 'april' ) ) ?></div>
-			<div class="col-sm-5 text-xs-right"><?php next_comments_link( __( 'Older comments', 'april' ) . ' &rtrif;' ) ?></div>
+			<div class="col-sm-5 col-sm-offset-1 text-xs-left"><?php previous_comments_link( '&ltrif; ' . __( 'Older comments', 'april' ) ) ?></div>
+			<div class="col-sm-5 text-xs-right"><?php next_comments_link( __( 'Newer comments', 'april' ) . ' &rtrif;' ) ?></div>
 		</div>
 
 	<?php else : // this is displayed if there are no comments so far ?>
@@ -41,6 +41,40 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<!-- TODO enable -->
-	<?php //comment_form(); ?>
+	<div class="row comment-form">
+		<div class="col-sm-10 col-sm-offset-1">
+			<?php
+			$req       = get_option( 'require_name_email' );
+			$aria_req  = ( $req ? " aria-required='true'" : '' );
+			$html_req  = ( $req ? " required='required'" : '' );
+			$commenter = wp_get_current_commenter();
+			$fields =  array(
+				'author' => '<fieldset class="form-group">' .
+					'<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label>' .
+					'<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' />' .
+					'</fieldset>',
+				'email' => '<fieldset class="form-group">' .
+					'<label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label>' .
+					'<input id="email" class="form-control" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' />' .
+					'</fieldset>',
+				'url' => '<fieldset class="form-group">' .
+					'<label for="url">' . __( 'Website' ) . '</label>' .
+					'<input id="url" class="form-control" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" />' .
+					'</fieldset>',
+			);
+			$comment_field = '<fieldset class="form-group">' .
+				'<label for="comment">' . _x( 'Comment', 'noun' ) . '</label>' .
+				'<textarea id="comment" class="form-control" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea>' .
+				'</fieldset>';
+			?>
+			<?php comment_form(
+				array(
+					'comment_field'      => $comment_field,
+					'fields'             => $fields,
+					'title_reply_before' => '<h6>',
+					'title_reply_after'  => '</h6>',
+				)
+			); ?>
+		</div>
+	</div>
 </section>
