@@ -2165,7 +2165,9 @@ header ul.nav li { list-style: none; padding: 0.3rem 0 0.25rem 0; }
 
 header ul.nav li ul { padding-left: 1em; }
 
-header ul.nav li a { color: #333; }
+header ul.nav li a { border: 0; color: #333; }
+
+header ul.nav li a:hover, header ul.nav li a:focus { color: #099; }
 
 header ul.nav li span.toggler { cursor: pointer; position: relative; }
 
@@ -2223,13 +2225,13 @@ h2 a { font-weight: 300; }
 
 .full-line, header > div::after, aside::after, footer::before { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
 
-a { border: 0; font-weight: 500; text-decoration: none; }
+a { border: 0; border-bottom: 1px solid #999; color: #333; font-style: normal; font-weight: 500; text-decoration: none; }
 
 a:hover, a:focus { border-bottom: 1px solid #099; text-decoration: none; }
 
-.post-tags a { background: #999; margin: 0 0.5em 0 0; padding: 0.1em 0.2em; }
-
 @media (max-width: 543px) { a { border-bottom: 1px solid #099; } }
+
+.post-tags a { background: #999; margin: 0 0.5em 0 0; padding: 0.1em 0.2em; }
 
 a.post-continue-reading, .post-tags a, a.post-comment-count { background: #333; border: none; color: white; display: inline-block; margin: 0 1.5em 0 0; padding: 1em 1.5em; -webkit-transition: background 0.1s ease-in-out; transition: background 0.1s ease-in-out; }
 

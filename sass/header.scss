@@ -39,7 +39,12 @@ header {
 			}
 
 			a {
+				border: 0;
 				color: $navigation-font-color;
+
+				&:hover, &:focus {
+					color: $brand-accent;
+				}
 			}
 
 			span.toggler {
