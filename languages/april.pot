@@ -1,0 +1,180 @@
+# Copyright (C) 2016 Alexander Herrmann
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: April 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/april\n"
+"POT-Creation-Date: 2016-05-23 15:56:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: comments.php:8
+msgid "One response to %s"
+msgstr ""
+
+#: comments.php:11
+msgid "%1$s response to %2$s"
+msgid_plural "%1$s responses to %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:24
+msgid "Older comments"
+msgstr ""
+
+#: comments.php:25
+msgid "Newer comments"
+msgstr ""
+
+#: comments.php:37
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:53
+msgid "Name"
+msgstr ""
+
+#: comments.php:57
+msgid "Email"
+msgstr ""
+
+#: comments.php:61
+msgid "Website"
+msgstr ""
+
+#: comments.php:66
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: content/post-categories.php:3
+msgid "Published in:"
+msgstr ""
+
+#: content/post-categories.php:5
+msgid "View all posts in %s"
+msgstr ""
+
+#: content/post-comments-link.php:4
+msgid "Comments closed"
+msgstr ""
+
+#: content/post-comments-link.php:4 content/post-comments-link.php:8
+msgid "One Comment"
+msgstr ""
+
+#: content/post-comments-link.php:4 content/post-comments-link.php:8
+msgid "% Comments"
+msgstr ""
+
+#: content/post-comments-link.php:8
+msgid "Leave a Comment"
+msgstr ""
+
+#: content/post-meta.php:7
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: content/post-tags.php:18
+msgid "Tagged in:"
+msgstr ""
+
+#: content/post-tags.php:20
+msgid "View all posts with tag \"%s\""
+msgstr ""
+
+#: content-archive.php:22
+msgid "Continue reading"
+msgstr ""
+
+#: content.php:32
+msgid "Pages:"
+msgstr ""
+
+#: functions.php:19
+msgid "Primary"
+msgstr ""
+
+#: functions.php:20
+msgid "Footer"
+msgstr ""
+
+#: functions.php:111
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:113
+msgid "Widgets in this area will be shown in the header dropdown."
+msgstr ""
+
+#: include/customizer.php:13
+msgid "Logo"
+msgstr ""
+
+#: include/customizer.php:31
+msgid "Upload custom logo."
+msgstr ""
+
+#: include/customizer.php:44
+msgid "Typekit Settings"
+msgstr ""
+
+#: include/customizer.php:60
+msgid "Kit ID"
+msgstr ""
+
+#: include/customizer.php:78
+msgid "font-family for <body>"
+msgstr ""
+
+#: include/customizer.php:96
+msgid "font-weight for <body>"
+msgstr ""
+
+#: include/customizer.php:110
+msgid "Display Settings"
+msgstr ""
+
+#: include/customizer.php:126
+msgid "Display author on posts?"
+msgstr ""
+
+#: include/customizer.php:145
+msgid "Display categories on posts?"
+msgstr ""
+
+#: include/customizer.php:164
+msgid "Display tags on posts?"
+msgstr ""
+
+#: include/customizer.php:183
+msgid "Display page titles on pages?"
+msgstr ""
+
+#: sidebar-primary.php:5
+msgid "Open sidebar"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "April"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/dArignac/april"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Themes based on Bootstrap 4"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Alexander Herrmann"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/dArignac"
+msgstr ""
