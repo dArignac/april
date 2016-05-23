@@ -71,12 +71,6 @@ function april_load_scripts_and_styles() {
 	// TODO make dist friendly - https://github.com/dArignac/april/issues/4
 	wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.js', array('jquery', 'tether'), '4.0.0a2', false );
-
-	// TODO: necessary - https://github.com/dArignac/april/issues/6
-	// enqueue comment-reply script only on posts & pages with comments open ( included in WP core )
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'april_load_scripts_and_styles' );
 
