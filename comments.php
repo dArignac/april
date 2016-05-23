@@ -8,7 +8,7 @@
 						printf( __( 'One response to %s', 'april' ),  '&#8220;' . get_the_title() . '&#8221;' );
 					} else {
 						printf(
-							_n( '%1$s response to %2$s', '%1$s responses to %2$s', get_comments_number(), 'arpil' ),
+							_n( '%1$s response to %2$s', '%1$s responses to %2$s', get_comments_number(), 'april' ),
 							number_format_i18n( get_comments_number() ),
 							'&#8220;' . get_the_title() . '&#8221;'
 						);
