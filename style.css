@@ -2243,8 +2243,6 @@ a { border: 0; border-bottom: 1px solid #999; color: #333; font-style: normal; f
 
 a:hover, a:focus { border-bottom: 1px solid #099; text-decoration: none; }
 
-@media (max-width: 543px) { a { border-bottom: 1px solid #099; } }
-
 .post-tags a { background: #999; margin: 0 0.5em 0 0; padding: 0.1em 0.2em; }
 
 a.post-continue-reading, .post-tags a, a.post-comment-count { background: #333; border: none; color: white; display: inline-block; margin: 0 1.5em 0 0; padding: 1em 1.5em; -webkit-transition: background 0.1s ease-in-out; transition: background 0.1s ease-in-out; }
@@ -2263,4 +2261,5 @@ a.post-comment-count:hover, a.post-comment-count:active, a.post-comment-count:fo
 
 blockquote, .quotelike { border-left: 1px solid #333; margin: 0 0 0 1em; padding: 0 0 0 1em; }
 
-@media (max-width: 543px) { body > .container { padding-left: 0.2em; padding-right: 0.2em; } }
+@media (max-width: 543px) { body > .container { padding-left: 0.2em; padding-right: 0.2em; }
+  body a { border-bottom: 1px solid #099; } }

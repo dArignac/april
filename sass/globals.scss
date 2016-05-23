@@ -67,13 +67,6 @@ a {
 	}
 }
 
-// add underline if mobile to mark links
-@include media-breakpoint-down(xs) {
-	a {
-		border-bottom: 1px solid $brand-accent;
-	}
-}
-
 .post-tags a {
 	@extend a.post-continue-reading;
 
