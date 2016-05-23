@@ -15,36 +15,54 @@ Simple responsive theme based on Bootstrap 4.0
 // Variables
 @import "variables";
 
+// the following list is taken from the bootstrap.scss file in ../bower_components/bootstrap/scss/
+// all irrelevant ones are commented
+
 // Bootstrap
 // Core variables and mixins
-//@import "../bower_components/bootstrap/scss/variables";
-//@import "../bower_components/bootstrap/scss/mixins";
-//
-//// Reset and dependencies
-//@import "../bower_components/bootstrap/scss/normalize";
-//@import "../bower_components/bootstrap/scss/print";
-//
-//// Core CSS
-//@import "../bower_components/bootstrap/scss/reboot";
-//@import "../bower_components/bootstrap/scss/type";
-//@import "../bower_components/bootstrap/scss/images";
-//@import "../bower_components/bootstrap/scss/code";
-//@import "../bower_components/bootstrap/scss/grid";
-//@import "../bower_components/bootstrap/scss/tables";
-//@import "../bower_components/bootstrap/scss/forms";
-//@import "../bower_components/bootstrap/scss/buttons";
-//
-//// Components
-//@import "../bower_components/bootstrap/scss/nav";
-//@import "../bower_components/bootstrap/scss/navbar";
-//
-//// Utility classes
-//@import "../bower_components/bootstrap/scss/utilities";
+@import "../bower_components/bootstrap/scss/variables";
+@import "../bower_components/bootstrap/scss/mixins";
+
+// Reset and dependencies
+@import "../bower_components/bootstrap/scss/normalize";
+@import "../bower_components/bootstrap/scss/print";
+
+// Core CSS
+@import "../bower_components/bootstrap/scss/reboot";
+@import "../bower_components/bootstrap/scss/type";
+@import "../bower_components/bootstrap/scss/images";
+@import "../bower_components/bootstrap/scss/code";
+@import "../bower_components/bootstrap/scss/grid";
+@import "../bower_components/bootstrap/scss/tables";
+@import "../bower_components/bootstrap/scss/forms";
+@import "../bower_components/bootstrap/scss/buttons";
+
+// Components
+@import "../bower_components/bootstrap/scss/animation"; // for collapse
+//@import "../bower_components/bootstrap/scss/dropdown";
+//@import "../bower_components/bootstrap/scss/button-group";
+//@import "../bower_components/bootstrap/scss/input-group";
+//@import "../bower_components/bootstrap/scss/custom-forms";
+@import "../bower_components/bootstrap/scss/nav";
+@import "../bower_components/bootstrap/scss/navbar";
+//@import "../bower_components/bootstrap/scss/card";
+//@import "../bower_components/bootstrap/scss/breadcrumb";
+//@import "../bower_components/bootstrap/scss/pagination";
+//@import "../bower_components/bootstrap/scss/pager";
+//@import "../bower_components/bootstrap/scss/labels";
+//@import "../bower_components/bootstrap/scss/jumbotron";
+//@import "../bower_components/bootstrap/scss/alert";
+//@import "../bower_components/bootstrap/scss/progress";
+@import "../bower_components/bootstrap/scss/media"; // in header
+//@import "../bower_components/bootstrap/scss/list-group";
+//@import "../bower_components/bootstrap/scss/responsive-embed";
+//@import "../bower_components/bootstrap/scss/close";
+
+// Utility classes
+@import "../bower_components/bootstrap/scss/utilities";
 //@import "../bower_components/bootstrap/scss/utilities-background";
-//@import "../bower_components/bootstrap/scss/utilities-spacing";
-//@import "../bower_components/bootstrap/scss/utilities-responsive";
-// TODO select only relevant ones - https://github.com/dArignac/april/issues/3
-@import "../bower_components/bootstrap/scss/bootstrap";
+@import "../bower_components/bootstrap/scss/utilities-spacing";
+@import "../bower_components/bootstrap/scss/utilities-responsive";
 
 // theme styles
 @import "widgets";
