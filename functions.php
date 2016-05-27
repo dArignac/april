@@ -70,7 +70,9 @@ function april_load_scripts_and_styles() {
 
 	// Bootstrap required scripts
 	// TODO make dist friendly - https://github.com/dArignac/april/issues/4
+	// will be replaced with grunt script
 	wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );
+	// will be replaced with grunt script
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.js', array('jquery', 'tether'), '4.0.0a2', false );
 }
 add_action( 'wp_enqueue_scripts', 'april_load_scripts_and_styles' );

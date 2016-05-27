@@ -19,7 +19,9 @@ module.exports = function(grunt) {
             components: {
                 files: [
                     {expand: false, src: 'bower_components/font-awesome/css/font-awesome.min.css', dest: 'dist/css/font-awesome.min.css'},
-                    {expand: true, src: '**', 'cwd': 'bower_components/font-awesome/fonts', dest: 'dist/fonts/'}
+                    {expand: true, src: '**', 'cwd': 'bower_components/font-awesome/fonts', dest: 'dist/fonts/'},
+                    {expand: false, src: 'bower_components/tether/dist/js/tether.min.js', dest: 'dist/js/tether.min.js'},
+                    {expand: false, src: 'bower_components/bootstrap/dist/js/bootstrap.min.js', dest: 'dist/js/bootstrap.min.js'}
                 ]
             }
         },
@@ -55,10 +57,20 @@ module.exports = function(grunt) {
             }
         },
         sed: {
-            functions: {
+            fontawesome: {
                 path: 'dist/functions.php',
                 pattern: '/bower_components/font-awesome/css/font-awesome.css',
                 replacement: '/css/font-awesome.min.css'
+            },
+            tether: {
+                path: 'dist/functions.php',
+                pattern: '/bower_components/tether/dist/js/tether.js',
+                replacement: '/js/tether.min.js'
+            },
+            bootstrap: {
+                path: 'dist/functions.php',
+                pattern: '/bower_components/bootstrap/dist/js/bootstrap.js',
+                replacement: '/js/bootstrap.min.js'
             }
         }
     });
@@ -70,5 +82,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sed');
 
-    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'uglify', 'sed:functions']);
+    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'uglify', 'sed']);
 };
