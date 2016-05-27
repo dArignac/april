@@ -69,7 +69,6 @@ function april_load_scripts_and_styles() {
 	wp_enqueue_script( 'april-script', get_template_directory_uri() . '/js/april.js', array('jquery') );
 
 	// Bootstrap required scripts
-	// TODO make dist friendly - https://github.com/dArignac/april/issues/4
 	// will be replaced with grunt script
 	wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );
 	// will be replaced with grunt script
