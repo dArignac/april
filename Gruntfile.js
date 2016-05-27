@@ -21,7 +21,6 @@ module.exports = function(grunt) {
                 files: [
                     {expand: false, src: 'bower_components/font-awesome/css/font-awesome.min.css', dest: 'dist/css/font-awesome.min.css'},
                     {expand: true, src: '**', 'cwd': 'bower_components/font-awesome/fonts', dest: 'dist/fonts/'},
-                    {expand: false, src: 'bower_components/tether/dist/js/tether.js', dest: 'dist/js/tether.js'},
                 ]
             }
         },
@@ -51,9 +50,10 @@ module.exports = function(grunt) {
             bootstrap: {
                 src: [
                     'bower_components/bootstrap/js/dist/util.js',
-                    'bower_components/bootstrap/js/dist/collapse.js'
+                    'bower_components/bootstrap/js/dist/collapse.js',
+                    'js/<%= pkg.name %>.js'
                 ],
-                dest: 'dist/js/bootstrap.js'
+                dest: 'dist/js/<%= pkg.name %>.js'
             }
         },
         uglify: {
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= pkg.version %>, created <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'js/<%= pkg.name %>.js',
+                src: 'dist/js/<%= pkg.name %>.js',
                 dest: 'dist/js/<%= pkg.name %>.js'
             }
         },
@@ -73,13 +73,13 @@ module.exports = function(grunt) {
             },
             tether: {
                 path: 'dist/functions.php',
-                pattern: '/bower_components/tether/dist/js/tether.js',
-                replacement: '/js/tether.js'
+                pattern: 'wp_enqueue_script\\( \'tether\', get_template_directory_uri\\(\\) . \'/bower_components/tether/dist/js/tether.js\', array\\(\'jquery\'\\), \'1.2.0\', false \\);',
+                replacement: ''
             },
             bootstrap: {
                 path: 'dist/functions.php',
-                pattern: '/bower_components/bootstrap/dist/js/bootstrap.js',
-                replacement: '/js/bootstrap.js'
+                pattern: 'wp_enqueue_script\\( \'bootstrap\', get_template_directory_uri\\(\\) . \'/bower_components/bootstrap/dist/js/bootstrap.js\', array\\(\'jquery\', \'tether\'\\), \'4.0.0a2\', false \\);',
+                replacement: ''
             }
         }
     });

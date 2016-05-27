@@ -69,9 +69,8 @@ function april_load_scripts_and_styles() {
 	wp_enqueue_script( 'april-script', get_template_directory_uri() . '/js/april.js', array('jquery') );
 
 	// Bootstrap required scripts
-	// will be replaced with grunt script
+	// will be replaced by grunt script - it packages all into april.js
 	wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );
-	// will be replaced with grunt script
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.js', array('jquery', 'tether'), '4.0.0a2', false );
 }
 add_action( 'wp_enqueue_scripts', 'april_load_scripts_and_styles' );
