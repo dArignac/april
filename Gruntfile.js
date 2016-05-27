@@ -11,6 +11,7 @@ module.exports = function(grunt) {
                     {expand: true, src: 'content/**', dest: 'dist/'},
                     {expand: true, src: 'include/**', dest: 'dist/'},
                     {expand: true, src: 'languages/*.mo', dest: 'dist/'},
+                    {expand: true, src: 'menu/*.php', dest: 'dist/'},
                     {expand: true, src: '*.php', dest: 'dist/'},
                     {expand: true, src: '*.jpg', dest: 'dist/'},
                     {expand: true, src: 'LICENSE', dest: 'dist/'}
