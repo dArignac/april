@@ -40,6 +40,7 @@ function april_load_scripts_and_styles() {
 	}
 
 	// Font Awesome
+	// will be replaced with grunt script
 	wp_enqueue_style( 'april-font-awesome', get_template_directory_uri() . '/bower_components/font-awesome/css/font-awesome.css' );
 
 	// default stylesheet
