@@ -8,12 +8,18 @@ module.exports = function(grunt) {
         copy: {
             theme: {
                 files: [
-                    {expand: true, src: ['content/**'], dest: 'dist/'},
-                    {expand: true, src: ['include/**'], dest: 'dist/'},
-                    {expand: true, src: ['languages/*.mo'], dest: 'dist/'},
-                    {expand: true, src: ['*.php'], dest: 'dist/'},
-                    {expand: true, src: ['*.jpg'], dest: 'dist/'},
-                    {expand: true, src: ['LICENSE'], dest: 'dist/'}
+                    {expand: true, src: 'content/**', dest: 'dist/'},
+                    {expand: true, src: 'include/**', dest: 'dist/'},
+                    {expand: true, src: 'languages/*.mo', dest: 'dist/'},
+                    {expand: true, src: '*.php', dest: 'dist/'},
+                    {expand: true, src: '*.jpg', dest: 'dist/'},
+                    {expand: true, src: 'LICENSE', dest: 'dist/'}
+                ]
+            },
+            components: {
+                files: [
+                    {expand: false, src: 'bower_components/font-awesome/css/font-awesome.min.css', dest: 'dist/css/font-awesome.min.css'},
+                    {expand: true, src: '**', 'cwd': 'bower_components/font-awesome/fonts', dest: 'dist/fonts/'}
                 ]
             }
         },
@@ -47,6 +53,13 @@ module.exports = function(grunt) {
                 src: 'js/<%= pkg.name %>.js',
                 dest: 'dist/js/<%= pkg.name %>.js'
             }
+        },
+        sed: {
+            functions: {
+                path: 'dist/functions.php',
+                pattern: '/bower_components/font-awesome/css/font-awesome.css',
+                replacement: '/css/font-awesome.min.css'
+            }
         }
     });
 
@@ -55,6 +68,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-sed');
 
-    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'uglify']);
+    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'uglify', 'sed:functions']);
 };
