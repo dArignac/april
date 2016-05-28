@@ -4,6 +4,19 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         banner: '/*! <%= pkg.name %> <%= pkg.version %>, created <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        bannerwordpress: '/*\n' +
+            'Theme Name: April\n' +
+            'Theme URI: https://github.com/dArignac/april\n' +
+            'Author: Alexander Herrmann\n' +
+            'Author URI: https://github.com/dArignac\n' +
+            'Description: Themes based on Bootstrap 4\n' +
+            'Version: <%= pkg.version %>\n' +
+            'License: MIT\n' +
+            'License URI: http://choosealicense.com/licenses/mit/\n' +
+            'Tags: april, bootstrap, responsive\n' +
+            'Text Domain: april\n\n' +
+            'Simple responsive theme based on Bootstrap 4.0\n' +
+            '*/',
         clean: ['dist'],
         copy: {
             theme: {
@@ -43,6 +56,18 @@ module.exports = function(grunt) {
             target: {
                 files: {
                     'dist/style.css': ['dist/style.css']
+                }
+            }
+        },
+        // Worpress version information is within the style.css...
+        usebanner: {
+            dist: {
+                options: {
+                    position: 'top',
+                    banner: '<%= bannerwordpress %>'
+                },
+                files: {
+                    src: ['dist/style.css']
                 }
             }
         },
@@ -91,6 +116,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-sed');
+    grunt.loadNpmTasks('grunt-banner');
 
-    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'concat', 'uglify', 'sed']);
+    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'usebanner', 'concat', 'uglify', 'sed']);
 };
