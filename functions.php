@@ -162,6 +162,27 @@ function april_wp_nav_menu_objects( $sorted_menu_items ) {
 }
 add_filter( 'wp_nav_menu_objects', 'april_wp_nav_menu_objects' );
 
+/**
+ * Parse post content and attach the bootstrap class "img-fluid" to images to make them fluid within the column layout.
+ * @param $content
+ * @return string
+ */
+function april_the_content( $content ) {
+	$content = mb_convert_encoding( $content, 'HTML-ENTITIES', "UTF-8" );
+	$document = new DOMDocument();
+	libxml_use_internal_errors( true );
+	$document->loadHTML( utf8_decode( $content ) );
+
+	$imgs = $document->getElementsByTagName( 'img' );
+	foreach ( $imgs as $img ) {
+		$img->setAttribute( 'class', $img->getAttribute( 'class' ) . ' img-fluid' );
+	}
+
+	$html = $document->saveHTML();
+	return $html;
+}
+add_filter( 'the_content', 'april_the_content' );
+
 
 if ( ! function_exists( ( 'april_comments_callback' ) ) ) {
 	/**

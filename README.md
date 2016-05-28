@@ -20,3 +20,12 @@ grunt
 * the version number is the version in ``package.json``
     * as the ``style.css`` is created by sass and then minified, Grunt inserts the required Wordpress header into the minified ``style.css``
 * *the theme does not meet the Wordpress requirements for a theme yet* (haven't checked them)
+
+## Changelog
+* TBA
+    * Enhancements
+        * [#12](https://github.com/dArignac/april/issues/12) header image now links to home page 
+    * Bugfixes
+        * [#14](https://github.com/dArignac/april/issues/14) post images overflow column layout
+* 1.0.0
+    * initial release
