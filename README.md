@@ -22,7 +22,7 @@ grunt
 * *the theme does not meet the Wordpress requirements for a theme yet* (haven't checked them)
 
 ## Changelog
-* TBA
+* 1.0.1
     * Enhancements
         * [#12](https://github.com/dArignac/april/issues/12) header image now links to home page 
     * Bugfixes
