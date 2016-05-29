@@ -75,6 +75,7 @@ module.exports = function(grunt) {
             bootstrap: {
                 src: [
                     'bower_components/bootstrap/js/dist/util.js',
+                    'bower_components/bootstrap/js/dist/carousel.js',
                     'bower_components/bootstrap/js/dist/collapse.js',
                     'js/<%= pkg.name %>.js'
                 ],
