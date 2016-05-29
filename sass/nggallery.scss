@@ -1,0 +1,20 @@
+#carousel-april {
+	.carousel-control {
+		border: 0;
+		background: none;
+		color: $brand-primary;
+
+		&:hover, &:focus {
+			border: 0;
+			text-decoration: none;
+		}
+
+		.icon-prev::before {
+			content: "\25C2";
+		}
+
+		.icon-next::before {
+			content: "\25B8";
+		}
+	}
+}

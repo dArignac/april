@@ -58,6 +58,12 @@ Simple responsive theme based on Bootstrap 4.0
 //@import "../bower_components/bootstrap/scss/responsive-embed";
 //@import "../bower_components/bootstrap/scss/close";
 
+// Components w/ JavaScript
+//@import "../bower_components/bootstrap/scss/modal";
+//@import "../bower_components/bootstrap/scss/tooltip";
+//@import "../bower_components/bootstrap/scss/popover";
+@import "../bower_components/bootstrap/scss/carousel";
+
 // Utility classes
 @import "../bower_components/bootstrap/scss/utilities";
 //@import "../bower_components/bootstrap/scss/utilities-background";
@@ -68,6 +74,7 @@ Simple responsive theme based on Bootstrap 4.0
 @import "widgets";
 @import "header";
 @import "content";
+@import "nggallery";
 @import "footer";
 @import "globals";
 @import "responsive";
