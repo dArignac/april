@@ -1437,6 +1437,8 @@ article figure { margin: 0 0 1em; }
 
 article figure .figure-img { margin: 0; }
 
+article p { -webkit-margin-after: 0; }
+
 article .comments { font-size: 0.8rem; margin-bottom: 1.5em; text-transform: uppercase; }
 
 article .comments a { font-weight: 300; }
