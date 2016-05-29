@@ -4,7 +4,7 @@ Theme URI: https://github.com/dArignac/april
 Author: Alexander Herrmann
 Author URI: https://github.com/dArignac
 Description: Themes based on Bootstrap 4
-Version: 1.0.0
+Version: 1.0
 License: MIT
 License URI: http://choosealicense.com/licenses/mit/
 Tags: april, bootstrap, responsive
@@ -1381,7 +1381,7 @@ a.text-danger:focus, a.text-danger:hover { color: #c9302c; }
 
 @media print { .hidden-print { display: none !important; } }
 
-.tagcloud a { font-weight: 300; }
+.tagcloud a { font-weight: 300 !important; }
 
 header { border: none; position: relative; }
 

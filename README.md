@@ -25,6 +25,8 @@ grunt
 * TBA
     * Enhancements
         * [#16](https://github.com/dArignac/april/issues/16) be able to filter categories on front page
+    * Bugfixes
+        * [#17](https://github.com/dArignac/april/issues/17) fixed styles for tag cloud
 * 1.0.1
     * Enhancements
         * [#12](https://github.com/dArignac/april/issues/12) header image now links to home page 
