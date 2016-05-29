@@ -5,6 +5,30 @@
  */
 function april_theme_customize ( $wp_customize ) {
 
+	/**
+	 * Renders a multiple select control.
+	 */
+	class april_multiple_select_control extends WP_Customize_Control {
+		public $type = 'multi-select';
+		public function render_content() {
+			if ( empty( $this->choices ) ) {
+				return;
+			}
+			?>
+			<label>
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<select id="comment-display-control" <?php $this->link(); ?> multiple="multiple" style="height: 100%;">
+					<?php
+						foreach ( $this->choices as $value => $label ) {
+							$selected = ( in_array( $value, $this->value() ) ) ? selected( 1, 1, false ) : '';
+							echo '<option value="' . esc_attr( $value ) . '"' . $selected . '>' . $label . '</option>';
+						}
+					?>
+				</select>
+			</label>
+		<?php }
+	}
+
 	// START: Logo upload /////////////////////////////////////////////////////////////////////////////////////////////
 	// section
 	$wp_customize->add_section(
@@ -111,6 +135,35 @@ function april_theme_customize ( $wp_customize ) {
 			'priority' => 40
 		)
 	);
+	// CHOOSE FRONT PAGE CATEGORIES
+	// fetch categories, see https://codex.wordpress.org/Plugin_API/Action_Reference/customize_register
+	$cats = array();
+	$cats[0] = __( 'Display all', 'april' );
+	foreach( get_categories() as $category ) {
+		$cats[$category->term_id] = $category->name;
+	}
+	// settings
+	$wp_customize->add_setting(
+		'display_front_page_category',
+		array(
+			'default' => 0
+		)
+	);
+	// control
+	$wp_customize->add_control(
+		new april_multiple_select_control(
+			$wp_customize,
+			'april_display_settings',
+			array(
+				'label'    => __( 'Limit front page posts to specific categories:', 'april' ),
+				'section'  => 'april_display_settings',
+				'settings' => 'display_front_page_category',
+				'type'     => 'multi-select',
+				'choices'  => $cats
+			)
+		)
+	);
+	// DISPLAY AUTHOR ON POSTS?
 	// settings
 	$wp_customize->add_setting(
 		'display_author',
@@ -130,6 +183,7 @@ function april_theme_customize ( $wp_customize ) {
 			'value'    => 1
 		)
 	);
+	// DISPLAY CATEGORIES ON POSTS?
 	// settings
 	$wp_customize->add_setting(
 		'display_post_categories',
@@ -149,6 +203,7 @@ function april_theme_customize ( $wp_customize ) {
 			'value'    => 1
 		)
 	);
+	// DISPLAY TAGS ON POSTS?
 	// settings
 	$wp_customize->add_setting(
 		'display_post_tags',
@@ -168,6 +223,7 @@ function april_theme_customize ( $wp_customize ) {
 			'value'    => 1
 		)
 	);
+	// DISPLAY PAGE TITLES ON PAGES?
 	// settings
 	$wp_customize->add_setting(
 		'display_page_titles',
