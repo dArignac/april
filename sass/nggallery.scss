@@ -2,7 +2,7 @@
 	.carousel-control {
 		border: 0;
 		background: none;
-		color: $brand-primary;
+		color: $brand-accent;
 
 		&:hover, &:focus {
 			border: 0;
@@ -16,5 +16,16 @@
 		.icon-next::before {
 			content: "\25B8";
 		}
+	}
+
+	.carousel-caption {
+		background-color: rgba(255, 255, 255, 0.5);
+		bottom: 0 !important;
+		color: $brand-primary;
+		left: 0 !important;
+		right: 0 !important;
+		padding: 1em 0;
+		text-align: left;
+		text-shadow: none;
 	}
 }

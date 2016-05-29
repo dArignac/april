@@ -4,7 +4,12 @@
         <div class="carousel-inner" role="listbox">
             <?php for( $i = 0; $i < count( $images ); $i++ ): ?>
                 <div class="carousel-item<?php if ( $i == 0 ): ?> active<?php endif; ?>">
-                    <img src="<?php echo $images[$i]->url; ?>" class="center-block" alt="First slide" />
+                    <img src="<?php echo $images[$i]->url; ?>" class="center-block" alt="<?php echo $images[$i]->description; ?>" />
+                    <?php if( $images[$i]->description && strlen( trim( $images[$i]->description ) ) > 0 ): ?>
+                        <div class="carousel-caption">
+                            <p><?php echo $images[$i]->description; ?></p>
+                        </div>
+                    <?php endif; ?>
                 </div>
             <?php endfor; ?>
         </div>
