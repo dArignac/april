@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: April 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/april\n"
-"POT-Creation-Date: 2016-05-23 16:15:30+00:00\n"
-"PO-Revision-Date: 2016-05-23 18:20+0100\n"
+"POT-Creation-Date: 2016-05-29 06:02:43+00:00\n"
+"PO-Revision-Date: 2016-05-29 08:03+0100\n"
 "Last-Translator: Alexander Herrmann <darignac@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -15,152 +15,162 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: comments.php:8
+#: comments.php:8 dist/comments.php:8
 msgid "One response to %s"
 msgstr "Eine Antwort zu %s"
 
-#: comments.php:11
+#: comments.php:11 dist/comments.php:11
 msgid "%1$s response to %2$s"
 msgid_plural "%1$s responses to %2$s"
 msgstr[0] "%1$s Antwort zu %2$s"
 msgstr[1] "%1$s Antworten zu %2$s"
 
-#: comments.php:24
+#: comments.php:24 dist/comments.php:24
 msgid "Older comments"
 msgstr "Ältere Kommentare"
 
-#: comments.php:25
+#: comments.php:25 dist/comments.php:25
 msgid "Newer comments"
 msgstr "Neuere Kommentare"
 
-#: comments.php:37
+#: comments.php:37 dist/comments.php:37
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
-#: comments.php:53
+#: comments.php:53 dist/comments.php:53
 msgid "Name"
 msgstr "Name"
 
-#: comments.php:57
+#: comments.php:57 dist/comments.php:57
 msgid "Email"
 msgstr "E-Mail"
 
-#: comments.php:61
+#: comments.php:61 dist/comments.php:61
 msgid "Website"
 msgstr "Webseite"
 
-#: comments.php:66
+#: comments.php:66 dist/comments.php:66
 msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: content/post-categories.php:3
+#: content/post-categories.php:3 dist/content/post-categories.php:3
 msgid "Published in:"
 msgstr "Veröffentlicht in:"
 
-#: content/post-categories.php:5
+#: content/post-categories.php:5 dist/content/post-categories.php:5
 msgid "View all posts in %s"
 msgstr "Zeige alle Posts in %s"
 
-#: content/post-comments-link.php:4
+#: content/post-comments-link.php:4 dist/content/post-comments-link.php:4
 msgid "Comments closed"
 msgstr "Kommentare sind geschlossen"
 
 #: content/post-comments-link.php:4 content/post-comments-link.php:8
+#: dist/content/post-comments-link.php:4 dist/content/post-comments-link.php:8
 msgid "One Comment"
 msgstr "Ein Kommentar"
 
 #: content/post-comments-link.php:4 content/post-comments-link.php:8
+#: dist/content/post-comments-link.php:4 dist/content/post-comments-link.php:8
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: content/post-comments-link.php:8
+#: content/post-comments-link.php:8 dist/content/post-comments-link.php:8
 msgid "Leave a Comment"
 msgstr "Hinterlasse einen Kommentar"
 
-#: content/post-meta.php:7
+#: content/post-meta.php:7 dist/content/post-meta.php:7
 msgid "%1$s by %2$s"
 msgstr "%1$s von %2$s"
 
-#: content/post-tags.php:18
+#: content/post-tags.php:18 dist/content/post-tags.php:18
 msgid "Tagged in:"
 msgstr "Schlagworte:"
 
-#: content/post-tags.php:20
+#: content/post-tags.php:20 dist/content/post-tags.php:20
 msgid "View all posts with tag \"%s\""
 msgstr "Alle Posts mit Tag \"%s\" anzeigen"
 
-#: content-archive.php:22
+#: content-archive.php:22 dist/content-archive.php:22
 msgid "Continue reading"
 msgstr "Weiterlesen"
 
-#: content.php:32
+#: content.php:32 dist/content.php:32
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: functions.php:19
+#: dist/functions.php:18 functions.php:18
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:20
+#: dist/functions.php:19 functions.php:19
 msgid "Footer"
 msgstr "Fußleiste"
 
-#: functions.php:111
+#: dist/functions.php:105 functions.php:105
 msgid "Primary Sidebar"
 msgstr "Primäre Seitenleiste"
 
-#: functions.php:113
+#: dist/functions.php:107 functions.php:107
 msgid "Widgets in this area will be shown in the header dropdown."
 msgstr "Widgets in dieser Fläche werden im Header-Dropdown angezeigt."
 
-#: include/customizer.php:13
+#: dist/include/customizer.php:13 include/customizer.php:37
 msgid "Logo"
 msgstr "Logo"
 
-#: include/customizer.php:31
+#: dist/include/customizer.php:31 include/customizer.php:55
 msgid "Upload custom logo."
 msgstr "Ein benutzerdefiniertes Logo hoch laden."
 
-#: include/customizer.php:44
+#: dist/include/customizer.php:44 include/customizer.php:68
 msgid "Typekit Settings"
 msgstr "Typekit Einstellungen"
 
-#: include/customizer.php:60
+#: dist/include/customizer.php:60 include/customizer.php:84
 msgid "Kit ID"
 msgstr "Kit ID"
 
-#: include/customizer.php:78
+#: dist/include/customizer.php:78 include/customizer.php:102
 msgid "font-family for <body>"
 msgstr "font-family für <body>"
 
-#: include/customizer.php:96
+#: dist/include/customizer.php:96 include/customizer.php:120
 msgid "font-weight for <body>"
 msgstr "font-weight für <body>"
 
-#: include/customizer.php:110
+#: dist/include/customizer.php:110 include/customizer.php:134
 msgid "Display Settings"
 msgstr "Anzeige-Einstellungen"
 
-#: include/customizer.php:126
+#: dist/include/customizer.php:126 include/customizer.php:179
 msgid "Display author on posts?"
 msgstr "Autor bei Posts anzeigen?"
 
-#: include/customizer.php:145
+#: dist/include/customizer.php:145 include/customizer.php:199
 msgid "Display categories on posts?"
 msgstr "Kategorien an Posts anzeigen?"
 
-#: include/customizer.php:164
+#: dist/include/customizer.php:164 include/customizer.php:219
 msgid "Display tags on posts?"
 msgstr "Tags an Posts anzeigen?"
 
-#: include/customizer.php:183
+#: dist/include/customizer.php:183 include/customizer.php:239
 msgid "Display page titles on pages?"
 msgstr "Seitentitel auf Seiten anzeigen?"
 
-#: sidebar-primary.php:5
+#: dist/sidebar-primary.php:5 sidebar-primary.php:5
 msgid "Open sidebar"
 msgstr "Seitenleiste öffnen"
+
+#: include/customizer.php:141
+msgid "Display all"
+msgstr "Alle anzeigen"
+
+#: include/customizer.php:158
+msgid "Limit front page posts to specific categories:"
+msgstr "Posts der Startseite auf Kategorien einschränken:"
 
 #. Theme Name of the plugin/theme
 msgid "April"
@@ -171,7 +181,7 @@ msgid "https://github.com/dArignac/april"
 msgstr "https://github.com/dArignac/april"
 
 #. Description of the plugin/theme
-msgid "Theme based on Bootstrap 4"
+msgid "Themes based on Bootstrap 4"
 msgstr "Theme basierend auf Bootstrap 4"
 
 #. Author of the plugin/theme
