@@ -25,7 +25,7 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
-* TBA
+* 1.1.0
     * Enhancements
         * [#19](https://github.com/dArignac/april/issues/19) basic template for NextGEN gallery
         * [#16](https://github.com/dArignac/april/issues/16) be able to filter categories on front page
