@@ -24,8 +24,10 @@ grunt
 ## Changelog
 * TBA
     * Enhancements
+        * [#19](https://github.com/dArignac/april/issues/19) basic template for NextGEN gallery
         * [#16](https://github.com/dArignac/april/issues/16) be able to filter categories on front page
     * Bugfixes
+        * [#20](https://github.com/dArignac/april/issues/20) added missing page title
         * [#17](https://github.com/dArignac/april/issues/17) fixed styles for tag cloud
 * 1.0.1
     * Enhancements
