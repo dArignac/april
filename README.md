@@ -21,6 +21,9 @@ grunt
     * as the ``style.css`` is created by sass and then minified, Grunt inserts the required Wordpress header into the minified ``style.css``
 * *the theme does not meet the Wordpress requirements for a theme yet* (haven't checked them)
 
+## NextGEN gallery template
+* To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
+
 ## Changelog
 * TBA
     * Enhancements
