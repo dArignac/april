@@ -1550,7 +1550,7 @@ h2 a, .h2 a, section#comments article .date a { font-weight: 300; }
 
 a { border: 0; border-bottom: 1px solid #999; color: #333; font-style: normal; font-weight: 500; text-decoration: none; }
 
-a:hover, a:focus { border-bottom: 1px solid #099; text-decoration: none; }
+a:hover, a:focus { border-bottom: 1px solid #099; color: #333; text-decoration: none; }
 
 .post-tags a { background: #999; margin: 0 0.5em 0 0; padding: 0.1em 0.2em; }
 

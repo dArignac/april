@@ -63,6 +63,7 @@ a {
 
 	&:hover, &:focus {
 		border-bottom: 1px solid $brand-accent;
+		color: $brand-primary;
 		text-decoration: none;
 	}
 }
