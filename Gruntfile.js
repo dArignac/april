@@ -17,23 +17,24 @@ module.exports = function(grunt) {
             'Text Domain: april\n\n' +
             'Simple responsive theme based on Bootstrap 4.0\n' +
             '*/',
+        dist_target: 'april/',
         clean: ['dist'],
         copy: {
             theme: {
                 files: [
-                    {expand: true, src: 'content/**', dest: 'dist/'},
-                    {expand: true, src: 'include/**', dest: 'dist/'},
-                    {expand: true, src: 'languages/*.mo', dest: 'dist/'},
-                    {expand: true, src: 'menu/*.php', dest: 'dist/'},
-                    {expand: true, src: '*.php', dest: 'dist/'},
-                    {expand: true, src: '*.jpg', dest: 'dist/'},
-                    {expand: true, src: 'LICENSE', dest: 'dist/'}
+                    {expand: true, src: 'content/**', dest: '<%= dist_target %>'},
+                    {expand: true, src: 'include/**', dest: '<%= dist_target %>'},
+                    {expand: true, src: 'languages/*.mo', dest: '<%= dist_target %>'},
+                    {expand: true, src: 'menu/*.php', dest: '<%= dist_target %>'},
+                    {expand: true, src: '*.php', dest: '<%= dist_target %>'},
+                    {expand: true, src: '*.jpg', dest: '<%= dist_target %>'},
+                    {expand: true, src: 'LICENSE', dest: '<%= dist_target %>'}
                 ]
             },
             components: {
                 files: [
-                    {expand: false, src: 'bower_components/font-awesome/css/font-awesome.min.css', dest: 'dist/css/font-awesome.min.css'},
-                    {expand: true, src: '**', 'cwd': 'bower_components/font-awesome/fonts', dest: 'dist/fonts/'},
+                    {expand: false, src: 'bower_components/font-awesome/css/font-awesome.min.css', dest: '<%= dist_target %>css/font-awesome.min.css'},
+                    {expand: true, src: '**', 'cwd': 'bower_components/font-awesome/fonts', dest: '<%= dist_target %>fonts/'},
                 ]
             }
         },
@@ -44,7 +45,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'dist/style.css': 'sass/style.scss'
+                    '<%= dist_target %>style.css': 'sass/style.scss'
                 }
             }
         },
@@ -55,7 +56,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'dist/style.css': ['dist/style.css']
+                    '<%= dist_target %>style.css': ['<%= dist_target %>style.css']
                 }
             }
         },
@@ -67,19 +68,19 @@ module.exports = function(grunt) {
                     banner: '<%= bannerwordpress %>'
                 },
                 files: {
-                    src: ['dist/style.css']
+                    src: ['<%= dist_target %>style.css']
                 }
             }
         },
         concat: {
             bootstrap: {
                 src: [
-                    'bower_components/bootstrap/js/dist/util.js',
-                    'bower_components/bootstrap/js/dist/carousel.js',
-                    'bower_components/bootstrap/js/dist/collapse.js',
+                    'bower_components/bootstrap/js/<%= dist_target %>util.js',
+                    'bower_components/bootstrap/js/<%= dist_target %>carousel.js',
+                    'bower_components/bootstrap/js/<%= dist_target %>collapse.js',
                     'js/<%= pkg.name %>.js'
                 ],
-                dest: 'dist/js/<%= pkg.name %>.js'
+                dest: '<%= dist_target %>js/<%= pkg.name %>.js'
             }
         },
         uglify: {
@@ -87,23 +88,23 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= pkg.version %>, created <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'dist/js/<%= pkg.name %>.js',
-                dest: 'dist/js/<%= pkg.name %>.js'
+                src: '<%= dist_target %>js/<%= pkg.name %>.js',
+                dest: '<%= dist_target %>js/<%= pkg.name %>.js'
             }
         },
         sed: {
             fontawesome: {
-                path: 'dist/functions.php',
+                path: '<%= dist_target %>functions.php',
                 pattern: '/bower_components/font-awesome/css/font-awesome.css',
                 replacement: '/css/font-awesome.min.css'
             },
             tether: {
-                path: 'dist/functions.php',
+                path: '<%= dist_target %>functions.php',
                 pattern: 'wp_enqueue_script\\( \'tether\', get_template_directory_uri\\(\\) . \'/bower_components/tether/dist/js/tether.js\', array\\(\'jquery\'\\), \'1.2.0\', false \\);',
                 replacement: ''
             },
             bootstrap: {
-                path: 'dist/functions.php',
+                path: '<%= dist_target %>functions.php',
                 pattern: 'wp_enqueue_script\\( \'bootstrap\', get_template_directory_uri\\(\\) . \'/bower_components/bootstrap/dist/js/bootstrap.js\', array\\(\'jquery\', \'tether\'\\), \'4.0.0a2\', false \\);',
                 replacement: ''
             }
