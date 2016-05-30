@@ -26,6 +26,7 @@ module.exports = function(grunt) {
                     {expand: true, src: 'include/**', dest: '<%= dist_target %>'},
                     {expand: true, src: 'languages/*.mo', dest: '<%= dist_target %>'},
                     {expand: true, src: 'menu/*.php', dest: '<%= dist_target %>'},
+                    {expand: true, src: 'nggallery/*.php', dest: '<%= dist_target %>'},
                     {expand: true, src: '*.php', dest: '<%= dist_target %>'},
                     {expand: true, src: '*.jpg', dest: '<%= dist_target %>'},
                     {expand: true, src: 'LICENSE', dest: '<%= dist_target %>'}
@@ -75,9 +76,9 @@ module.exports = function(grunt) {
         concat: {
             bootstrap: {
                 src: [
-                    'bower_components/bootstrap/js/<%= dist_target %>util.js',
-                    'bower_components/bootstrap/js/<%= dist_target %>carousel.js',
-                    'bower_components/bootstrap/js/<%= dist_target %>collapse.js',
+                    'bower_components/bootstrap/js/dist/util.js',
+                    'bower_components/bootstrap/js/dist/carousel.js',
+                    'bower_components/bootstrap/js/dist/collapse.js',
                     'js/<%= pkg.name %>.js'
                 ],
                 dest: '<%= dist_target %>js/<%= pkg.name %>.js'
