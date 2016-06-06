@@ -9,3 +9,5 @@ before_script:
 script:
   - bower install
   - grunt
+  - tar zf april-$TRAVIS_TAG.tar.gz april
+  - zip -r april-$TRAVIS_TAG.zip april
