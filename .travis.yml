@@ -8,3 +8,14 @@ before_script:
 - npm install bower
 - bower install
 script: bash release.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: cT/r9AmB+vlMifCidif50ru+s1QNsXOEA63As5ZQSaC/QlNitBiFUUmZNe7AadpDRDKjT3S3waxxU+fF1+KFPfB7qC4+H2zgkiLZw1wMBrCPR0vp0gJKxDVIQCGXTJjxyKt2KeClQ46w2E4L530exHbBAGJMOAVO+0q22h8V6Bt2kvkm+wl3EUr4MhNnILBBusNA4BN54SoALxEP83mBd2FDOz3q4KBjhwg9P07dxQH+m6qukdFcDQaooV7tK3ml5JksFjQZzL+sgCX9PzCEqonv6PJXwHPKJvz9L8cHAKxl+KhhihpGYxUwJPxyn9OZsNX5+NprWkBdshR7I+WR4sx6HoYJfpEUdgDmTWFR1RQC/z/SZ3Bwnak7jWzZqDEQQVDvAIMou8rkYNEen08IFRTuRUFq+e1Igei+fecgnrMzVyHhEzU5+YPlXV+dcsIYu0SvmWPB/5K5pdDqjJgeqcD9f/6bgXod/BGAWBNVHN/Vt+ix4uDVnaobxpqxQRzDnZfjCWuY6QUW/poUV53u7LgscBa4e02i8/KH9sbvaMcQKlKAH9i/OkNWArlVmc/IbDyKQZ3d96x4Ua3UsfIGVbcBiHtkmHHhCr+vr9bdbuOwAJKAcEpJVMWoQ+qTmaBoPj05PBSU6ehbkazWJ8+EeqRZKhp5EkPDje4y6quKB/I=
+  file:
+    - april-$TRAVIS_TAG.tar.gz
+    - april-$TRAVIS_TAG.zip
+  skip_cleanup: true
+  on:
+    repo: dArignac/april
+    tags: true
