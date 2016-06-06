@@ -4,6 +4,7 @@ before_install:
   - rvm install 2.2.2
 install:
   - gem install sass
+before_script:
   - npm install grunt-cli -g
 script:
   - grunt
