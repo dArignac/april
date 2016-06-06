@@ -1482,6 +1482,8 @@ aside #widgets-primary { padding-bottom: 2em; margin-top: 2em; }
 
 aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
+aside button:focus { outline: 0; }
+
 nav.navigation { font-size: 1.2rem; }
 
 nav.navigation .screen-reader-text { display: none; }
