@@ -25,6 +25,12 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Bugfixes
+        * [#22](https://github.com/dArignac/april/issues/22) several gallery fixes
+            * navigation with more than one gallery on a page now works
+            * galleries to not autoplay any more
+            * caption background is less opaque now
 * 1.1.0
     * Enhancements
         * [#19](https://github.com/dArignac/april/issues/19) basic template for NextGEN gallery
