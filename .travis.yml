@@ -7,4 +7,4 @@ before_script:
 - npm install grunt-cli -g
 - npm install bower
 - bower install
-script: release.sh
+script: bash release.sh
