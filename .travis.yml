@@ -1,13 +1,13 @@
 language: node_js
-node_js: "5"
+node_js: '5'
 before_install:
-  - rvm install 2.2.2
+- rvm install 2.2.2
 before_script:
-  - gem install sass
-  - npm install grunt-cli -g
-  - npm install bower
+- gem install sass
+- npm install grunt-cli -g
+- npm install bower
 script:
-  - bower install
-  - grunt
-  - tar zf april-$TRAVIS_TAG.tar.gz april
-  - zip -r april-$TRAVIS_TAG.zip april
+- bower install
+- grunt
+- tar czf april-$TRAVIS_BRANCH.tar.gz april
+- zip -r april-$TRAVIS_BRANCH.zip april
