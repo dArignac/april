@@ -26,6 +26,8 @@ grunt
 
 ## Changelog
 * TBA
+    * Enhancements
+        * [#24](https://github.com/dArignac/april/issues/24) links are no longer bold
     * Bugfixes
         * [#22](https://github.com/dArignac/april/issues/22) several gallery fixes
             * navigation with more than one gallery on a page now works

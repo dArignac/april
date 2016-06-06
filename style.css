@@ -1548,7 +1548,7 @@ h2 a, .h2 a, section#comments article .date a { font-weight: 300; }
 
 .full-line, header > div::after, aside::after, footer::before { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
 
-a { border: 0; border-bottom: 1px solid #999; color: #333; font-style: normal; font-weight: 500; text-decoration: none; }
+a { border: 0; border-bottom: 1px solid #999; color: #333; font-style: normal; font-weight: 300; text-decoration: none; }
 
 a:hover, a:focus { border-bottom: 1px solid #099; color: #333; text-decoration: none; }
 
