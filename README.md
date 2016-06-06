@@ -27,6 +27,7 @@ grunt
 ## Changelog
 * TBA
     * Enhancements
+        * [#27](https://github.com/dArignac/april/issues/27) added border between post content and comment form
         * [#26](https://github.com/dArignac/april/issues/26) removed outline on widget opening button
         * [#25](https://github.com/dArignac/april/issues/25) styled post navigation
         * [#24](https://github.com/dArignac/april/issues/24) links are no longer bold

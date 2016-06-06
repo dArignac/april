@@ -82,6 +82,11 @@ section#comments {
 	.comment-form {
 		margin-top: $section-margin;
 
+		> div {
+			border-top: 1px solid $brand-secondary;
+			padding-top: 3em;
+		}
+
 		.required {
 			color: $brand-accent;
 		}

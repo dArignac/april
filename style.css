@@ -1522,6 +1522,8 @@ section#comments article .date { margin-bottom: 0; }
 
 section#comments .comment-form { margin-top: 2em; }
 
+section#comments .comment-form > div { border-top: 1px solid #999; padding-top: 3em; }
+
 section#comments .comment-form .required { color: #099; }
 
 .carousel-april .carousel-control { border: 0; background: none; color: #099; }
