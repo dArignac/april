@@ -37,6 +37,8 @@ grunt
             * navigation with more than one gallery on a page now works
             * galleries to not autoplay any more
             * caption background is less opaque now
+    * Integration
+        * [#23](https://github.com/dArignac/april/issues/23) releases are now built on travis
 * 1.1.0
     * Enhancements
         * [#19](https://github.com/dArignac/april/issues/19) basic template for NextGEN gallery
