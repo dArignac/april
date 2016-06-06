@@ -6,8 +6,5 @@ before_script:
 - gem install sass
 - npm install grunt-cli -g
 - npm install bower
-script:
 - bower install
-- grunt
-- tar czf april-$TRAVIS_BRANCH.tar.gz april
-- zip -r april-$TRAVIS_BRANCH.zip april
+script: make release
