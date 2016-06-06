@@ -28,10 +28,12 @@
 
 		<div class="col-sm-10 col-sm-offset-1">
 			<?php the_content(); ?>
-			<?php wp_link_pages( array(
-				'before' => '<p class="post-pagination">' . __( 'Pages:', 'april' ),
-				'after'  => '</p>',
-			) ); ?>
+			<?php wp_link_pages(
+				array(
+					'before' => '<nav class="navigation pagination post-navigation" role="navigation"><span class="title">' . __( 'Pages:', 'april' ) . '</span>',
+					'after'  => '</nav>'
+				)
+			); ?>
 		</div>
 
 		<?php do_action( 'post_after' ); ?>

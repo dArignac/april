@@ -18,6 +18,19 @@ nav.navigation {
 			font-weight: 300;
 		}
 	}
+
+	&.post-navigation {
+		color: $brand-accent;
+		margin-top: 3em;
+
+		a {
+			margin: 0 0.5em;
+		}
+
+		span.title {
+			color: $brand-primary;
+		}
+	}
 }
 
 article {

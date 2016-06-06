@@ -1492,6 +1492,12 @@ nav.navigation .nav-links .page-numbers.current { color: #099; }
 
 nav.navigation .nav-links a { font-weight: 300; }
 
+nav.navigation.post-navigation { color: #099; margin-top: 3em; }
+
+nav.navigation.post-navigation a { margin: 0 0.5em; }
+
+nav.navigation.post-navigation span.title { color: #333; }
+
 article { margin-bottom: 3em; }
 
 article h2 { margin: 0.5em 0 1.5em 0; }

@@ -27,6 +27,7 @@ grunt
 ## Changelog
 * TBA
     * Enhancements
+        * [#25](https://github.com/dArignac/april/issues/25) styled post navigation
         * [#24](https://github.com/dArignac/april/issues/24) links are no longer bold
     * Bugfixes
         * [#22](https://github.com/dArignac/april/issues/22) several gallery fixes
