@@ -1,6 +1,6 @@
 <?php if( !defined( 'ABSPATH' ) ) die ( 'No direct access allowed' ); ?>
 <?php if( !empty( $gallery ) ): ?>
-	<div id="carousel-april" class="carousel slide" data-ride="carousel">
+	<div id="carousel-april-<?php echo $gallery->name ?>" class="carousel slide carousel-april" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
 			<?php for( $i = 0; $i < count( $images ); $i++ ): ?>
 				<div class="carousel-item<?php if ( $i == 0 ): ?> active<?php endif; ?>">
@@ -14,12 +14,12 @@
 			<?php endfor; ?>
 		</div>
 
-		<a class="left carousel-control" href="#carousel-april" role="button" data-slide="prev">
+		<a class="left carousel-control" href="#carousel-april-<?php echo $gallery->name ?>" role="button" data-slide="prev">
 			<span class="icon-prev" aria-hidden="true"></span>
 			<span class="sr-only"><?php _e( 'Previous', 'april' ); ?></span>
 		</a>
 
-		<a class="right carousel-control" href="#carousel-april" role="button" data-slide="next">
+		<a class="right carousel-control" href="#carousel-april-<?php echo $gallery->name ?>" role="button" data-slide="next">
 			<span class="icon-next" aria-hidden="true"></span>
 			<span class="sr-only"><?php _e( 'Next', 'april' ); ?></span>
 		</a>
