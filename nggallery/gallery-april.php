@@ -1,6 +1,6 @@
 <?php if( !defined( 'ABSPATH' ) ) die ( 'No direct access allowed' ); ?>
 <?php if( !empty( $gallery ) ): ?>
-	<div id="carousel-april-<?php echo $gallery->name ?>" class="carousel slide carousel-april" data-ride="carousel">
+	<div id="carousel-april-<?php echo $gallery->name ?>" class="carousel slide carousel-april" data-ride="carousel" data-interval="false">
 		<div class="carousel-inner" role="listbox">
 			<?php for( $i = 0; $i < count( $images ); $i++ ): ?>
 				<div class="carousel-item<?php if ( $i == 0 ): ?> active<?php endif; ?>">
