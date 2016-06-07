@@ -12,7 +12,7 @@ bower install
 
 ## Distribution
 * for distribution, Grunt is used (required npm and Grunt globally)
-    * it will copy the theme into a dist folder with all sass and js compiled and minified (see ``Gruntfile.js`` for more info)
+    * it will copy the theme into a dist folder with all sass and js compiled and minimized (see ``Gruntfile.js`` for more info)
 ```
 npm install
 grunt
@@ -20,12 +20,13 @@ grunt
 * the version number is the version in ``package.json``
     * as the ``style.css`` is created by sass and then minified, Grunt inserts the required Wordpress header into the minified ``style.css``
 * *the theme does not meet the Wordpress requirements for a theme yet* (haven't checked them)
+* distribution is automatically done by TravisCI if a tag is created
 
 ## NextGEN gallery template
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
-* TBA
+* 1.2.0
     * Enhancements
         * [#27](https://github.com/dArignac/april/issues/27) added border between post content and comment form
         * [#26](https://github.com/dArignac/april/issues/26) removed outline on widget opening button
