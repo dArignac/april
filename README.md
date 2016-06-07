@@ -22,11 +22,15 @@ grunt
 * *the theme does not meet the Wordpress requirements for a theme yet* (haven't checked them)
 * distribution is automatically done by TravisCI if a tag is created
 
+## Continouos Integration
+* each commit will be dealt at TravisCI, the release script is executed (this is not really CI!)
+* [![Build Status](https://travis-ci.org/dArignac/april.svg?branch=master)](https://travis-ci.org/dArignac/april)
+
 ## NextGEN gallery template
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
-* 1.2.0
+* 1.1.1
     * Enhancements
         * [#27](https://github.com/dArignac/april/issues/27) added border between post content and comment form
         * [#26](https://github.com/dArignac/april/issues/26) removed outline on widget opening button
