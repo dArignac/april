@@ -3,7 +3,7 @@
 <?php
 	// on front page, filter the posts, see https://github.com/dArignac/april/issues/16
 	if ( is_home() ) {
-		$front_page_categories = get_theme_mod('display_front_page_category');
+		$front_page_categories = get_theme_mod('april_display_front_page_category');
 		// "display all" is value 0
 		if ( $front_page_categories && count( $front_page_categories ) > 0 && $front_page_categories[0] != 0 ) {
 			// fetch page query
