@@ -40,7 +40,7 @@ function april_theme_customize ( $wp_customize ) {
 
 		/**
 		 * Adds a section.
-		 * @param $name the name of the section ("april_" will be prepended)
+		 * @param $name string name of the section ("april_" will be prepended)
 		 * @param $title
 		 * @param $priority
 		 */
@@ -57,7 +57,7 @@ function april_theme_customize ( $wp_customize ) {
 		/**
 		 * Adds an image logo control element. Wow.
 		 * @param $label
-		 * @param $section name of the section (without "april_")
+		 * @param $section string name of the section (without "april_")
 		 */
 		public function add_image_logo_control( $label, $section ) {
 			$this->customizer->add_setting(
@@ -80,72 +80,40 @@ function april_theme_customize ( $wp_customize ) {
 				)
 			);
 		}
+
+		public function add_input_control( $name, $label, $section ) {
+			$this->customizer->add_setting(
+				$name,
+				array(
+					'sanitize_callback' => 'april_sanitize_alphanumeric',
+					'transport'         => 'postMessage'
+				)
+			);
+			// control
+			$this->customizer->add_control(
+				$name,
+				array(
+					'label'    => $label,
+					'section'  => 'april_' . $section,
+					'settings' => $name,
+					'type'     => 'input'
+				)
+			);
+		}
 	}
+	// instantiate the customizer class
 	$c = new AprilCustomizer( $wp_customize );
 
-	// START: Logo upload /////////////////////////////////////////////////////////////////////////////////////////////
-	// section
+	// Logo upload ////////////////////////////////////////////////////////////////////////////////////////////////////
 	$c->add_section( 'logo_upload', __( 'Logo', 'april' ), 30 );
 	$c->add_image_logo_control( __( 'Upload custom logo.', 'april' ), 'logo_upload' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	// START: Typekit Settings ////////////////////////////////////////////////////////////////////////////////////////
+	// Typekit Settings ///////////////////////////////////////////////////////////////////////////////////////////////
 	$c->add_section( 'typekit', __( 'Typekit Settings', 'april' ), 35 );
-	// settings
-	$wp_customize->add_setting(
-		'typekit_kit_id',
-		array(
-			'sanitize_callback' => 'april_sanitize_alphanumeric',
-			'transport'         => 'postMessage'
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		'typekit_kit_id',
-		array(
-			'label'    => __( 'Kit ID', 'april' ),
-			'section'  => 'april_typekit',
-			'settings' => 'typekit_kit_id',
-			'type'     => 'input'
-		)
-	);
-	// settings
-	$wp_customize->add_setting(
-		'typekit_font_family',
-		array(
-			'sanitize_callback' => 'esc_attr',
-			'transport'         => 'postMessage'
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		'typekit_font_family',
-		array(
-			'label'    => __( 'font-family for <body>', 'april' ),
-			'section'  => 'april_typekit',
-			'settings' => 'typekit_font_family',
-			'type'     => 'input'
-		)
-	);
-	// settings
-	$wp_customize->add_setting(
-		'typekit_font_weight',
-		array(
-			'sanitize_callback' => 'esc_attr',
-			'transport'         => 'postMessage'
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		'typekit_font_weight',
-		array(
-			'label'    => __( 'font-weight for <body>', 'april' ),
-			'section'  => 'april_typekit',
-			'settings' => 'typekit_font_weight',
-			'type'     => 'input'
-		)
-	);
-	// END: Typekit Settings
+	$c->add_input_control( 'typekit_kit_id',      __( 'Kit ID',                 'april' ), 'typekit' );
+	$c->add_input_control( 'typekit_font_family', __( 'font-family for <body>', 'april' ), 'typekit' );
+	$c->add_input_control( 'typekit_font_weight', __( 'font-weight for <body>', 'april' ), 'typekit' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// START: Display Settings ////////////////////////////////////////////////////////////////////////////////////////
