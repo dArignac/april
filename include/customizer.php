@@ -81,6 +81,12 @@ function april_theme_customize ( $wp_customize ) {
 			);
 		}
 
+		/**
+		 * Adds an input control.
+		 * @param $name string the name of the control
+		 * @param $label
+		 * @param $section string the name of the section (without "april_")
+		 */
 		public function add_input_control( $name, $label, $section ) {
 			$this->customizer->add_setting(
 				$name,
@@ -97,6 +103,37 @@ function april_theme_customize ( $wp_customize ) {
 					'section'  => 'april_' . $section,
 					'settings' => $name,
 					'type'     => 'input'
+				)
+			);
+		}
+
+		/**
+		 * @param $name_setting
+		 * @param $name_control
+		 * @param $label
+		 * @param $section
+		 */
+		public function add_category_control( $name_setting, $name_control, $label, $section ) {
+			// fetch categories, see https://codex.wordpress.org/Plugin_API/Action_Reference/customize_register
+			$cats = array();
+			$cats[0] = __( 'Display all', 'april' );
+			foreach( get_categories() as $category ) {
+				$cats[$category->term_id] = $category->name;
+			}
+			// settings
+			$this->customizer->add_setting('april_' . $name_setting, array( 'default' => 0 ) );
+			// control
+			$this->customizer->add_control(
+				new april_multiple_select_control(
+					$this->customizer,
+					'april_' . $name_control,
+					array(
+						'label'    => $label,
+						'section'  => 'april_' . $section,
+						'settings' => 'april_' . $name_setting,
+						'type'     => 'multi-select',
+						'choices'  => $cats
+					)
 				)
 			);
 		}
@@ -118,34 +155,7 @@ function april_theme_customize ( $wp_customize ) {
 
 	// START: Display Settings ////////////////////////////////////////////////////////////////////////////////////////
 	$c->add_section( 'display_settings', __( 'Display Settings', 'april' ), 40 );
-	// CHOOSE FRONT PAGE CATEGORIES
-	// fetch categories, see https://codex.wordpress.org/Plugin_API/Action_Reference/customize_register
-	$cats = array();
-	$cats[0] = __( 'Display all', 'april' );
-	foreach( get_categories() as $category ) {
-		$cats[$category->term_id] = $category->name;
-	}
-	// settings
-	$wp_customize->add_setting(
-		'display_front_page_category',
-		array(
-			'default' => 0
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		new april_multiple_select_control(
-			$wp_customize,
-			'april_display_settings',
-			array(
-				'label'    => __( 'Limit front page posts to specific categories:', 'april' ),
-				'section'  => 'april_display_settings',
-				'settings' => 'display_front_page_category',
-				'type'     => 'multi-select',
-				'choices'  => $cats
-			)
-		)
-	);
+	$c->add_category_control( 'display_front_page_category', 'display_settings', __( 'Limit front page posts to specific categories:', 'april' ), 'display_settings' );
 	// DISPLAY AUTHOR ON POSTS?
 	// settings
 	$wp_customize->add_setting(
