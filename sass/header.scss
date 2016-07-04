@@ -75,10 +75,19 @@ header {
 	}
 
 	.first-level-addon {
-		margin-top: 1em;
-		padding-bottom: 1em;
+		display: none;
 	}
 
+}
+
+@include media-breakpoint-up(xl) {
+	header {
+		.first-level-addon {
+			display: block;
+			margin-top: 1em;
+			padding-bottom: 1em;
+		}
+	}
 }
 
 @include media-breakpoint-down(xs) {
