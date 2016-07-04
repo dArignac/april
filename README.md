@@ -30,6 +30,9 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Enhancements
+        * [#30](https://github.com/dArignac/april/issues/30) added additional first level navigation on desktop browsers
 * 1.1.1
     * Enhancements
         * [#27](https://github.com/dArignac/april/issues/27) added border between post content and comment form
