@@ -83,9 +83,9 @@ function april_theme_customize ( $wp_customize ) {
 
 		/**
 		 * Adds an input control.
-		 * @param $name string the name of the control
+		 * @param $name		string	the name of the control
 		 * @param $label
-		 * @param $section string the name of the section (without "april_")
+		 * @param $section	string	the name of the section (without "april_")
 		 */
 		public function add_input_control( $name, $label, $section ) {
 			$this->customizer->add_setting(
@@ -108,10 +108,10 @@ function april_theme_customize ( $wp_customize ) {
 		}
 
 		/**
-		 * @param $name_setting
-		 * @param $name_control
+		 * @param $name_setting	string	name of the setting ("april_" will be prepended)
+		 * @param $name_control	string	name of the control ("april_" will be prepended)
 		 * @param $label
-		 * @param $section
+		 * @param $section		string	the name of the section (without "april_")
 		 */
 		public function add_category_control( $name_setting, $name_control, $label, $section ) {
 			// fetch categories, see https://codex.wordpress.org/Plugin_API/Action_Reference/customize_register
@@ -137,6 +137,33 @@ function april_theme_customize ( $wp_customize ) {
 				)
 			);
 		}
+
+		/**
+		 * Adds a checkbox control.
+		 * @param $name		string	name of the section ("april_" will be prepended)
+		 * @param $label
+		 * @param $section	string	the name of the section (without "april_")
+		 */
+		public function add_checkbox_control( $name, $label, $section ) {
+			$this->customizer->add_setting(
+				'april_' . $name,
+				array(
+					'sanitize_callback' => 'esc_attr',
+					'transport'         => 'postMessage',
+				)
+			);
+			// control
+			$this->customizer->add_control(
+				'april_' . $name,
+				array(
+					'label'    => $label,
+					'section'  => 'april_' . $section,
+					'settings' => 'april_' . $name,
+					'type'     => 'checkbox',
+					'value'    => 1
+				)
+			);
+		}
 	}
 	// instantiate the customizer class
 	$c = new AprilCustomizer( $wp_customize );
@@ -153,90 +180,13 @@ function april_theme_customize ( $wp_customize ) {
 	$c->add_input_control( 'typekit_font_weight', __( 'font-weight for <body>', 'april' ), 'typekit' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	// START: Display Settings ////////////////////////////////////////////////////////////////////////////////////////
+	// Display Settings ///////////////////////////////////////////////////////////////////////////////////////////////
 	$c->add_section( 'display_settings', __( 'Display Settings', 'april' ), 40 );
 	$c->add_category_control( 'display_front_page_category', 'display_settings', __( 'Limit front page posts to specific categories:', 'april' ), 'display_settings' );
-	// DISPLAY AUTHOR ON POSTS?
-	// settings
-	$wp_customize->add_setting(
-		'display_author',
-		array(
-			'sanitize_callback' => 'esc_attr',
-			'transport'         => 'postMessage',
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		'display_author',
-		array(
-			'label'    => __( 'Display author on posts?', 'april' ),
-			'section'  => 'april_display_settings',
-			'settings' => 'display_author',
-			'type'     => 'checkbox',
-			'value'    => 1
-		)
-	);
-	// DISPLAY CATEGORIES ON POSTS?
-	// settings
-	$wp_customize->add_setting(
-		'display_post_categories',
-		array(
-			'sanitize_callback' => 'esc_attr',
-			'transport'         => 'postMessage',
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		'display_post_categories',
-		array(
-			'label'    => __( 'Display categories on posts?', 'april' ),
-			'section'  => 'april_display_settings',
-			'settings' => 'display_post_categories',
-			'type'     => 'checkbox',
-			'value'    => 1
-		)
-	);
-	// DISPLAY TAGS ON POSTS?
-	// settings
-	$wp_customize->add_setting(
-		'display_post_tags',
-		array(
-			'sanitize_callback' => 'esc_attr',
-			'transport'         => 'postMessage',
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		'display_post_tags',
-		array(
-			'label'    => __( 'Display tags on posts?', 'april' ),
-			'section'  => 'april_display_settings',
-			'settings' => 'display_post_tags',
-			'type'     => 'checkbox',
-			'value'    => 1
-		)
-	);
-	// DISPLAY PAGE TITLES ON PAGES?
-	// settings
-	$wp_customize->add_setting(
-		'display_page_titles',
-		array(
-			'sanitize_callback' => 'esc_attr',
-			'transport'         => 'postMessage',
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		'display_page_titles',
-		array(
-			'label'    => __( 'Display page titles on pages?', 'april' ),
-			'section'  => 'april_display_settings',
-			'settings' => 'display_page_titles',
-			'type'     => 'checkbox',
-			'value'    => 1
-		)
-	);
-	// END: Display Settings
+	$c->add_checkbox_control( 'display_author',          __( 'Display author on posts?',     'april' ), 'display_settings' );
+	$c->add_checkbox_control( 'display_post_categories', __( 'Display categories on posts?', 'april' ), 'display_settings' );
+	$c->add_checkbox_control( 'display_post_tags',       __( 'Display tags on posts?',       'april' ), 'display_settings' );
+	$c->add_checkbox_control( 'display_page_titles',     __( 'Display page titles on pages?','april' ), 'display_settings' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 

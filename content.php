@@ -2,9 +2,9 @@
 	<?php do_action( 'post_before' ); ?>
 
 	<?php
-		$display_post_categories = get_theme_mod( 'display_post_categories' );
-		$display_post_tags       = get_theme_mod( 'display_post_tags' );
-		$display_page_titles     = get_theme_mod( 'display_page_titles' );
+		$display_post_categories = get_theme_mod( 'april_display_post_categories' );
+		$display_post_tags       = get_theme_mod( 'april_display_post_tags' );
+		$display_page_titles     = get_theme_mod( 'april_display_page_titles' );
 	?>
 
 	<div class="row">
