@@ -11,8 +11,8 @@ header {
 	}
 
 	.topline {
-		margin-bottom: $section-margin;
-		margin-top: $section-margin;
+		margin-bottom: $header-margin;
+		margin-top: $header-margin;
 
 		h2 {
 			margin-bottom: 0;
@@ -23,7 +23,8 @@ header {
 		}
 	}
 
-	ul.nav {
+	// explicit targeting to avoid collision with first level addon
+	ul#menu-primary {
 		font-size: $navigation-font-size;
 
 		& > li {
@@ -73,6 +74,26 @@ header {
 		}
 	}
 
+	.first-level-addon {
+		display: none;
+	}
+
+}
+
+@include media-breakpoint-up(xl) {
+	header {
+		.first-level-addon {
+			display: block;
+			margin-top: $first-level-nav-addon-margin;
+			padding-bottom: $first-level-nav-addon-margin;
+
+			.current-menu-item {
+				a {
+					color: $brand-accent;
+				}
+			}
+		}
+	}
 }
 
 @include media-breakpoint-down(xs) {
@@ -93,8 +114,8 @@ aside {
 	}
 
 	#widgets-primary {
-		padding-bottom: $section-margin;
-		margin-top: $section-margin;
+		padding-bottom: $header-margin;
+		margin-top: $header-margin;
 	}
 
 	#widgets-primary-open {

@@ -31,6 +31,8 @@ grunt
 
 ## Changelog
 * TBA
+    * Enhancements
+        * [#30](https://github.com/dArignac/april/issues/30) added additional first level navigation on desktop browsers
     * Bugfixes
         * fixed theme setting name - **does require configuring ALL THEME SETTINGS again**
 * 1.1.1

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $display_first_level_navigation = get_theme_mod( 'april_display_additional_first_level_navigation_on_desktop' ); ?>
 
 <html <?php language_attributes(); ?>>
 
@@ -44,6 +45,12 @@
 					<?php do_action( 'header_after' ); ?>
 
 				</div>
+
+				<?php if ( $display_first_level_navigation ): ?>
+					<div class="col-sm-12 first-level-addon">
+						<?php get_template_part( 'menu/firstleveladdon' ); ?>
+					</div>
+				<?php endif; ?>
 			</header>
 
 			<?php get_sidebar( 'primary' ); ?>

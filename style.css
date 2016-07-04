@@ -4,7 +4,7 @@ Theme URI: https://github.com/dArignac/april
 Author: Alexander Herrmann
 Author URI: https://github.com/dArignac
 Description: Themes based on Bootstrap 4
-Version: 1.0
+Version: 1.1.1
 License: MIT
 License URI: http://choosealicense.com/licenses/mit/
 Tags: april, bootstrap, responsive
@@ -1448,37 +1448,42 @@ a.text-danger:focus, a.text-danger:hover { color: #c9302c; }
 
 header { border: none; position: relative; }
 
-header .topline { margin-bottom: 2em; margin-top: 2em; }
+header .topline { margin-bottom: 1em; margin-top: 1em; }
 
 header .topline h2 { margin-bottom: 0; }
 
 header .topline h1, header .topline h2 { line-height: 1.1 !important; }
 
-header ul.nav { font-size: 0.85rem; }
+header ul#menu-primary { font-size: 0.85rem; }
 
-header ul.nav > li { border-bottom: 1px solid #ccc; }
+header ul#menu-primary > li { border-bottom: 1px solid #ccc; }
 
-header ul.nav > li:last-child { border-bottom: 0; }
+header ul#menu-primary > li:last-child { border-bottom: 0; }
 
-header ul.nav li { list-style: none; padding: 0.3rem 0 0.25rem 0; }
+header ul#menu-primary li { list-style: none; padding: 0.3rem 0 0.25rem 0; }
 
-header ul.nav li ul { padding-left: 1em; }
+header ul#menu-primary li ul { padding-left: 1em; }
 
-header ul.nav li a { border: 0; color: #333; }
+header ul#menu-primary li a { border: 0; color: #333; }
 
-header ul.nav li a:hover, header ul.nav li a:focus { color: #099; }
+header ul#menu-primary li a:hover, header ul#menu-primary li a:focus { color: #099; }
 
-header ul.nav li span.toggler { cursor: pointer; position: relative; }
+header ul#menu-primary li span.toggler { cursor: pointer; position: relative; }
 
-header ul.nav li span.toggler::before { content: "\f196"; text-decoration: inherit; color: #333; position: absolute; top: 0; left: -1rem; }
+header ul#menu-primary li span.toggler::before { content: "\f196"; text-decoration: inherit; color: #333; position: absolute; top: 0; left: -1rem; }
 
-header ul.nav li span.toggler.open::before { content: "\f147"; }
+header ul#menu-primary li span.toggler.open::before { content: "\f147"; }
+
+header .first-level-addon { display: none; }
+
+@media (min-width: 1200px) { header .first-level-addon { display: block; margin-top: 1em; padding-bottom: 1em; }
+  header .first-level-addon .current-menu-item a { color: #099; } }
 
 @media (max-width: 543px) { header .topline { margin-bottom: 0.5em; margin-top: 0.5em; } }
 
 aside { margin-bottom: 2em; position: relative; }
 
-aside #widgets-primary { padding-bottom: 2em; margin-top: 2em; }
+aside #widgets-primary { padding-bottom: 1em; margin-top: 1em; }
 
 aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
@@ -1554,7 +1559,7 @@ h2, .h2, section#comments article .date { color: #333; font-size: 0.8rem; font-w
 
 h2 a, .h2 a, section#comments article .date a { font-weight: 300; }
 
-.font-awesome, header ul.nav li span.toggler::before, a.post-comment-count::before { font-family: FontAwesome; font-style: normal; font-weight: normal; }
+.font-awesome, header ul#menu-primary li span.toggler::before, a.post-comment-count::before { font-family: FontAwesome; font-style: normal; font-weight: normal; }
 
 .full-line, header > div::after, aside::after, footer::before { box-sizing: border-box; content: ''; position: absolute; bottom: 0; left: -999px; right: -999px; height: 1px; background: #999; }
 
