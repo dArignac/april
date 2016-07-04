@@ -56,12 +56,13 @@ function april_theme_customize ( $wp_customize ) {
 
 		/**
 		 * Adds an image logo control element. Wow.
+		 * @param $name		string	name of the setting ("april_" will be prepended)
 		 * @param $label
-		 * @param $section string name of the section (without "april_")
+		 * @param $section	string	name of the section (without "april_")
 		 */
-		public function add_image_logo_control( $label, $section ) {
+		public function add_image_logo_control( $name, $label, $section ) {
 			$this->customizer->add_setting(
-				'logo_upload',
+				'april_' . $name,
 				array(
 					'sanitize_callback' => 'esc_url_raw',
 					'transport'         => 'postMessage'
@@ -71,11 +72,11 @@ function april_theme_customize ( $wp_customize ) {
 			$this->customizer->add_control(
 				new WP_Customize_Image_Control(
 					$this->customizer,
-					'logo_image',
+					'april_' . $name,
 					array(
 						'label'    => $label,
 						'section'  => 'april_' . $section,
-						'settings' => 'logo_upload'
+						'settings' => 'april_' . $name
 					)
 				)
 			);
@@ -169,8 +170,8 @@ function april_theme_customize ( $wp_customize ) {
 	$c = new AprilCustomizer( $wp_customize );
 
 	// Logo upload ////////////////////////////////////////////////////////////////////////////////////////////////////
-	$c->add_section( 'logo_upload', __( 'Logo', 'april' ), 30 );
-	$c->add_image_logo_control( __( 'Upload custom logo.', 'april' ), 'logo_upload' );
+	$c->add_section( 'logo_upload', __( 'Logo & Icons', 'april' ), 30 );
+	$c->add_image_logo_control( 'logo_image', __( 'Upload custom logo.', 'april' ), 'logo_upload' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Typekit Settings ///////////////////////////////////////////////////////////////////////////////////////////////

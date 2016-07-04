@@ -21,10 +21,10 @@
 
 					<div class="row topline">
 						<div class="col-sm-10 col-xs-10 media">
-							<?php if ( get_theme_mod( 'logo_upload' ) ): ?>
+							<?php if ( get_theme_mod( 'april_logo_image' ) ): ?>
 								<div class="media-left">
 									<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
-										<img class="media-object" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+										<img class="media-object" src="<?php echo esc_url( get_theme_mod( 'april_logo_image' ) ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
 									</a>
 								</div>
 							<?php endif; ?>

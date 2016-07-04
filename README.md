@@ -31,10 +31,10 @@ grunt
 
 ## Changelog
 * TBA
+    * Update-Info
+        * several changes in settings come with this version - unfortunately **you have to configure them all again**
     * Enhancements
         * [#30](https://github.com/dArignac/april/issues/30) added additional first level navigation on desktop browsers
-    * Bugfixes
-        * fixed theme setting name - **does require configuring ALL THEME SETTINGS again**
 * 1.1.1
     * Enhancements
         * [#27](https://github.com/dArignac/april/issues/27) added border between post content and comment form
