@@ -29,46 +29,68 @@ function april_theme_customize ( $wp_customize ) {
 		<?php }
 	}
 
+	/**
+	 * Class for encapsulating the theme section, setting and control generation.
+	 */
+	class AprilCustomizer {
+
+		public function __construct( $wp_customize ) {
+			$this->customizer = $wp_customize;
+		}
+
+		/**
+		 * Adds a section.
+		 * @param $name the name of the section ("april_" will be prepended)
+		 * @param $title
+		 * @param $priority
+		 */
+		public function add_section( $name, $title, $priority ) {
+			$this->customizer->add_section(
+				'april_' . $name,
+				array(
+					'title'    => $title,
+					'priority' => $priority
+				)
+			);
+		}
+
+		/**
+		 * Adds an image logo control element. Wow.
+		 * @param $label
+		 * @param $section name of the section (without "april_")
+		 */
+		public function add_image_logo_control( $label, $section ) {
+			$this->customizer->add_setting(
+				'logo_upload',
+				array(
+					'sanitize_callback' => 'esc_url_raw',
+					'transport'         => 'postMessage'
+				)
+			);
+			// control
+			$this->customizer->add_control(
+				new WP_Customize_Image_Control(
+					$this->customizer,
+					'logo_image',
+					array(
+						'label'    => $label,
+						'section'  => 'april_' . $section,
+						'settings' => 'logo_upload'
+					)
+				)
+			);
+		}
+	}
+	$c = new AprilCustomizer( $wp_customize );
+
 	// START: Logo upload /////////////////////////////////////////////////////////////////////////////////////////////
 	// section
-	$wp_customize->add_section(
-		'april_logo_upload',
-		array(
-			'title'    => __( 'Logo', 'april' ),
-			'priority' => 30
-		)
-	);
-	// setting
-	$wp_customize->add_setting(
-		'logo_upload',
-		array(
-			'sanitize_callback' => 'esc_url_raw',
-			'transport'         => 'postMessage'
-		)
-	);
-	// control
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
-			'logo_image',
-			array(
-				'label'    => __( 'Upload custom logo.', 'april' ),
-				'section'  => 'april_logo_upload',
-				'settings' => 'logo_upload'
-			)
-		)
-	);
+	$c->add_section( 'logo_upload', __( 'Logo', 'april' ), 30 );
+	$c->add_image_logo_control( __( 'Upload custom logo.', 'april' ), 'logo_upload' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// START: Typekit Settings ////////////////////////////////////////////////////////////////////////////////////////
-	// section
-	$wp_customize->add_section(
-		'april_typekit',
-		array(
-			'title'    => __( 'Typekit Settings', 'april' ),
-			'priority' => 35
-		)
-	);
+	$c->add_section( 'typekit', __( 'Typekit Settings', 'april' ), 35 );
 	// settings
 	$wp_customize->add_setting(
 		'typekit_kit_id',
@@ -127,14 +149,7 @@ function april_theme_customize ( $wp_customize ) {
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// START: Display Settings ////////////////////////////////////////////////////////////////////////////////////////
-	// section
-	$wp_customize->add_section(
-		'april_display_settings',
-		array(
-			'title'    => __( 'Display Settings', 'april' ),
-			'priority' => 40
-		)
-	);
+	$c->add_section( 'display_settings', __( 'Display Settings', 'april' ), 40 );
 	// CHOOSE FRONT PAGE CATEGORIES
 	// fetch categories, see https://codex.wordpress.org/Plugin_API/Action_Reference/customize_register
 	$cats = array();
