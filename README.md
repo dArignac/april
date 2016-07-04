@@ -30,6 +30,9 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Bugfixes
+        * fixed theme setting name - **does require configuring ALL THEME SETTINGS again**
 * 1.1.1
     * Enhancements
         * [#27](https://github.com/dArignac/april/issues/27) added border between post content and comment form
