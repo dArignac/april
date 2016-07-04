@@ -183,10 +183,11 @@ function april_theme_customize ( $wp_customize ) {
 	// Display Settings ///////////////////////////////////////////////////////////////////////////////////////////////
 	$c->add_section( 'display_settings', __( 'Display Settings', 'april' ), 40 );
 	$c->add_category_control( 'display_front_page_category', 'display_settings', __( 'Limit front page posts to specific categories:', 'april' ), 'display_settings' );
-	$c->add_checkbox_control( 'display_author',          __( 'Display author on posts?',     'april' ), 'display_settings' );
-	$c->add_checkbox_control( 'display_post_categories', __( 'Display categories on posts?', 'april' ), 'display_settings' );
-	$c->add_checkbox_control( 'display_post_tags',       __( 'Display tags on posts?',       'april' ), 'display_settings' );
-	$c->add_checkbox_control( 'display_page_titles',     __( 'Display page titles on pages?','april' ), 'display_settings' );
+	$c->add_checkbox_control( 'display_author',                                       __( 'Display author on posts?',     'april' ),                                 'display_settings' );
+	$c->add_checkbox_control( 'display_post_categories',                              __( 'Display categories on posts?', 'april' ),                                 'display_settings' );
+	$c->add_checkbox_control( 'display_post_tags',                                    __( 'Display tags on posts?',       'april' ),                                 'display_settings' );
+	$c->add_checkbox_control( 'display_page_titles',                                  __( 'Display page titles on pages?','april' ),                                 'display_settings' );
+	$c->add_checkbox_control( 'display_additional_first_level_navigation_on_desktop', __( 'Display additional first level navigation on desktop browser?','april' ), 'display_settings' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
