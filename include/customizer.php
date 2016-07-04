@@ -171,7 +171,8 @@ function april_theme_customize ( $wp_customize ) {
 
 	// Logo upload ////////////////////////////////////////////////////////////////////////////////////////////////////
 	$c->add_section( 'logo_and_icons', __( 'Logo & Icons', 'april' ), 30 );
-	$c->add_image_logo_control( 'logo_image', __( 'Upload custom logo.', 'april' ), 'logo_and_icons' );
+	$c->add_image_logo_control( 'logo_image', __( 'Custom logo.', 'april' ), 'logo_and_icons' );
+	$c->add_image_logo_control( 'hamburger_image', __( 'Custom Hamburger icon.', 'april' ), 'logo_and_icons' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Typekit Settings ///////////////////////////////////////////////////////////////////////////////////////////////

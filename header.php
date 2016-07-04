@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php $display_first_level_navigation = get_theme_mod( 'april_display_additional_first_level_navigation_on_desktop' ); ?>
+<?php
+	$display_first_level_navigation = get_theme_mod( 'april_display_additional_first_level_navigation_on_desktop' );
+	$logo_image =                     get_theme_mod( 'april_logo_image' );
+	$custom_hamburger_image =         get_theme_mod( 'april_hamburger_image' );
+?>
 
 <html <?php language_attributes(); ?>>
 
@@ -21,10 +25,10 @@
 
 					<div class="row topline">
 						<div class="col-sm-10 col-xs-10 media">
-							<?php if ( get_theme_mod( 'april_logo_image' ) ): ?>
+							<?php if ( $logo_image ): ?>
 								<div class="media-left">
 									<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
-										<img class="media-object" src="<?php echo esc_url( get_theme_mod( 'april_logo_image' ) ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+										<img class="media-object" src="<?php echo esc_url( $logo_image ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
 									</a>
 								</div>
 							<?php endif; ?>
@@ -38,7 +42,13 @@
 							</div>
 						</div>
 						<div class="col-sm-2 col-xs-2">
-							<button class="navbar-toggler pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar"><i class="fa fa-bars"></i></button>
+							<button class="navbar-toggler pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+								<?php if ( $custom_hamburger_image ): ?>
+									<img src="<?php echo esc_url( $custom_hamburger_image ); ?>" />
+								<?php else: ?>
+									<i class="fa fa-bars"></i>
+								<?php endif; ?>
+							</button>
 						</div>
 					</div>
 					<?php get_template_part( 'menu/primary' ); ?>
