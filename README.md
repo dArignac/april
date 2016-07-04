@@ -35,6 +35,7 @@ grunt
         * several changes in settings come with this version - unfortunately **you have to configure them all again**
     * Enhancements
         * [#30](https://github.com/dArignac/april/issues/30) added additional first level navigation on desktop browsers
+        * [#13](https://github.com/dArignac/april/issues/13) hamburger image and widgets open/close image is now customizable
 * 1.1.1
     * Enhancements
         * [#27](https://github.com/dArignac/april/issues/27) added border between post content and comment form

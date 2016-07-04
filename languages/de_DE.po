@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: April 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/april\n"
-"POT-Creation-Date: 2016-07-04 15:24:04+00:00\n"
-"PO-Revision-Date: 2016-07-04 17:26+0100\n"
+"POT-Creation-Date: 2016-07-04 18:15:06+00:00\n"
+"PO-Revision-Date: 2016-07-04 20:16+0100\n"
 "Last-Translator: Alexander Herrmann <darignac@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -114,59 +114,71 @@ msgstr "Primäre Seitenleiste"
 msgid "Widgets in this area will be shown in the header dropdown."
 msgstr "Widgets in dieser Fläche werden im Header-Dropdown angezeigt."
 
-#: include/customizer.php:119
+#: include/customizer.php:120
 msgid "Display all"
 msgstr "Alle anzeigen"
 
-#: include/customizer.php:172
-msgid "Logo"
-msgstr "Logo"
-
 #: include/customizer.php:173
-msgid "Upload custom logo."
-msgstr "Ein benutzerdefiniertes Logo hoch laden."
+msgid "Logo & Icons"
+msgstr "Logo & Icons"
+
+#: include/customizer.php:174
+msgid "Logo image"
+msgstr "Logo-Bild"
+
+#: include/customizer.php:175
+msgid "Hamburger image"
+msgstr "Hamburger-Bild"
+
+#: include/customizer.php:176
+msgid "Widgets open image"
+msgstr "Widgets-Öffnen-Bild"
 
 #: include/customizer.php:177
+msgid "Widgets close image"
+msgstr "Widgets-Schließen-Bild"
+
+#: include/customizer.php:181
 msgid "Typekit Settings"
 msgstr "Typekit Einstellungen"
 
-#: include/customizer.php:178
+#: include/customizer.php:182
 msgid "Kit ID"
 msgstr "Kit ID"
 
-#: include/customizer.php:179
+#: include/customizer.php:183
 msgid "font-family for <body>"
 msgstr "font-family für <body>"
 
-#: include/customizer.php:180
+#: include/customizer.php:184
 msgid "font-weight for <body>"
 msgstr "font-weight für <body>"
 
-#: include/customizer.php:184
+#: include/customizer.php:188
 msgid "Display Settings"
 msgstr "Anzeige-Einstellungen"
 
-#: include/customizer.php:185
+#: include/customizer.php:189
 msgid "Limit front page posts to specific categories:"
 msgstr "Posts der Startseite auf Kategorien einschränken:"
 
-#: include/customizer.php:186
+#: include/customizer.php:190
 msgid "Display author on posts?"
 msgstr "Autor bei Posts anzeigen?"
 
-#: include/customizer.php:187
+#: include/customizer.php:191
 msgid "Display categories on posts?"
 msgstr "Kategorien an Posts anzeigen?"
 
-#: include/customizer.php:188
+#: include/customizer.php:192
 msgid "Display tags on posts?"
 msgstr "Tags an Posts anzeigen?"
 
-#: include/customizer.php:189
+#: include/customizer.php:193
 msgid "Display page titles on pages?"
 msgstr "Seitentitel auf Seiten anzeigen?"
 
-#: include/customizer.php:190
+#: include/customizer.php:194
 msgid "Display additional first level navigation on desktop browser?"
 msgstr "Zusätzliche First-Level-Navigation bei Desktop-Browsern zeigen?"
 
@@ -178,9 +190,17 @@ msgstr "Vorheriges"
 msgid "Next"
 msgstr "Nächstes"
 
-#: sidebar-primary.php:5
+#: sidebar-primary.php:9
 msgid "Open sidebar"
 msgstr "Seitenleiste öffnen"
+
+#: sidebar-primary.php:11
+msgid "Open widgets"
+msgstr "Widgets öffnen"
+
+#: sidebar-primary.php:12
+msgid "Close widgets"
+msgstr "Widgets schließen"
 
 #. Theme Name of the plugin/theme
 msgid "April"
@@ -201,3 +221,9 @@ msgstr "Alexander Herrmann"
 #. Author URI of the plugin/theme
 msgid "https://github.com/dArignac"
 msgstr "https://github.com/dArignac"
+
+#~ msgid "Logo"
+#~ msgstr "Logo"
+
+#~ msgid "Upload custom logo."
+#~ msgstr "Ein benutzerdefiniertes Logo hoch laden."

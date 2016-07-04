@@ -2,9 +2,9 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: April 1.0\n"
+"Project-Id-Version: April 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/april\n"
-"POT-Creation-Date: 2016-07-04 15:24:04+00:00\n"
+"POT-Creation-Date: 2016-07-04 18:15:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -111,59 +111,71 @@ msgstr ""
 msgid "Widgets in this area will be shown in the header dropdown."
 msgstr ""
 
-#: include/customizer.php:119
+#: include/customizer.php:120
 msgid "Display all"
 msgstr ""
 
-#: include/customizer.php:172
-msgid "Logo"
+#: include/customizer.php:173
+msgid "Logo & Icons"
 msgstr ""
 
-#: include/customizer.php:173
-msgid "Upload custom logo."
+#: include/customizer.php:174
+msgid "Logo image"
+msgstr ""
+
+#: include/customizer.php:175
+msgid "Hamburger image"
+msgstr ""
+
+#: include/customizer.php:176
+msgid "Widgets open image"
 msgstr ""
 
 #: include/customizer.php:177
+msgid "Widgets close image"
+msgstr ""
+
+#: include/customizer.php:181
 msgid "Typekit Settings"
 msgstr ""
 
-#: include/customizer.php:178
+#: include/customizer.php:182
 msgid "Kit ID"
 msgstr ""
 
-#: include/customizer.php:179
+#: include/customizer.php:183
 msgid "font-family for <body>"
 msgstr ""
 
-#: include/customizer.php:180
+#: include/customizer.php:184
 msgid "font-weight for <body>"
 msgstr ""
 
-#: include/customizer.php:184
+#: include/customizer.php:188
 msgid "Display Settings"
 msgstr ""
 
-#: include/customizer.php:185
+#: include/customizer.php:189
 msgid "Limit front page posts to specific categories:"
 msgstr ""
 
-#: include/customizer.php:186
+#: include/customizer.php:190
 msgid "Display author on posts?"
 msgstr ""
 
-#: include/customizer.php:187
+#: include/customizer.php:191
 msgid "Display categories on posts?"
 msgstr ""
 
-#: include/customizer.php:188
+#: include/customizer.php:192
 msgid "Display tags on posts?"
 msgstr ""
 
-#: include/customizer.php:189
+#: include/customizer.php:193
 msgid "Display page titles on pages?"
 msgstr ""
 
-#: include/customizer.php:190
+#: include/customizer.php:194
 msgid "Display additional first level navigation on desktop browser?"
 msgstr ""
 
@@ -175,8 +187,16 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: sidebar-primary.php:5
+#: sidebar-primary.php:9
 msgid "Open sidebar"
+msgstr ""
+
+#: sidebar-primary.php:11
+msgid "Open widgets"
+msgstr ""
+
+#: sidebar-primary.php:12
+msgid "Close widgets"
 msgstr ""
 
 #. Theme Name of the plugin/theme
