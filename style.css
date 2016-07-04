@@ -1487,6 +1487,8 @@ aside #widgets-primary { padding-bottom: 1em; margin-top: 1em; }
 
 aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
+aside #widgets-primary-open img.hidden { display: none; }
+
 aside button:focus { outline: 0; }
 
 nav.navigation { font-size: 1.2rem; }

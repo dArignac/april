@@ -13,6 +13,7 @@
         var toggleWidgets = function() {
             $('#widgets-primary-open').find('i').toggleClass('fa-plus');
             $('#widgets-primary-open').find('i').toggleClass('fa-minus');
+            $('#widgets-primary-open').find('img').toggleClass('hidden');
             $(this).parent().toggleClass('open');
         };
 

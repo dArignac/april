@@ -125,6 +125,10 @@ aside {
 		padding: 0.25em 0.75em;
 		position: absolute;
 		top: 100%;
+
+		img.hidden {
+			display: none;
+		}
 	}
 
 	button:focus {
