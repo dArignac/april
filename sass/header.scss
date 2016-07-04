@@ -23,7 +23,8 @@ header {
 		}
 	}
 
-	ul.nav {
+	// explicit targeting to avoid collision with first level addon
+	ul#menu-primary {
 		font-size: $navigation-font-size;
 
 		& > li {
@@ -71,6 +72,11 @@ header {
 				}
 			}
 		}
+	}
+
+	.first-level-addon {
+		margin-top: 1em;
+		padding-bottom: 1em;
 	}
 
 }
