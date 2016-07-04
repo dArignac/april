@@ -83,13 +83,13 @@ function april_theme_customize ( $wp_customize ) {
 
 		/**
 		 * Adds an input control.
-		 * @param $name		string	the name of the control
+		 * @param $name		string	the name of the control ("april_" will be prepended)
 		 * @param $label
 		 * @param $section	string	the name of the section (without "april_")
 		 */
 		public function add_input_control( $name, $label, $section ) {
 			$this->customizer->add_setting(
-				$name,
+				'april_' . $name,
 				array(
 					'sanitize_callback' => 'april_sanitize_alphanumeric',
 					'transport'         => 'postMessage'
@@ -97,11 +97,11 @@ function april_theme_customize ( $wp_customize ) {
 			);
 			// control
 			$this->customizer->add_control(
-				$name,
+				'april_' . $name,
 				array(
 					'label'    => $label,
 					'section'  => 'april_' . $section,
-					'settings' => $name,
+					'settings' => 'april_' . $name,
 					'type'     => 'input'
 				)
 			);
@@ -198,5 +198,5 @@ add_action( 'customize_register', 'april_theme_customize' );
  * @return string
  */
 function april_sanitize_alphanumeric ( $s ) {
-	return preg_replace("/[^a-zA-Z0-9]+/", "", $s);
+	return preg_replace("/[^a-zA-Z0-9\\-]+/", "", $s);
 }

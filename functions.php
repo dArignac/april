@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', 'april_theme_setup', 10 );
 function april_load_scripts_and_styles() {
 
 	// Typekit Javascript if configured
-	$typekitKidId = get_theme_mod( 'typekit_kit_id' );
+	$typekitKidId = get_theme_mod( 'april_typekit_kit_id' );
 	if ( $typekitKidId ) {
 		// insert once
 		if ( !wp_script_is( 'april-theme-typekit-js', 'done' ) ) {
@@ -49,8 +49,8 @@ function april_load_scripts_and_styles() {
 	// typekit css depending on settings
 	if ( $typekitKidId ) {
 		$typekitCSS = '';
-		$typekitFontFamily = get_theme_mod( 'typekit_font_family' );
-		$typekitFontWeight = get_theme_mod( 'typekit_font_weight' );
+		$typekitFontFamily = get_theme_mod( 'april_typekit_font_family' );
+		$typekitFontWeight = get_theme_mod( 'april_typekit_font_weight' );
 		if ( $typekitFontFamily ) {
 			$typekitCSS = 'body, h1 { font-family: "' . $typekitFontFamily . '";';
 
