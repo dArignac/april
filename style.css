@@ -1476,7 +1476,8 @@ header ul#menu-primary li span.toggler.open::before { content: "\f147"; }
 
 header .first-level-addon { display: none; }
 
-@media (min-width: 1200px) { header .first-level-addon { display: block; margin-top: 1em; padding-bottom: 1em; } }
+@media (min-width: 1200px) { header .first-level-addon { display: block; margin-top: 1em; padding-bottom: 1em; }
+  header .first-level-addon .current-menu-item a { color: #099; } }
 
 @media (max-width: 543px) { header .topline { margin-bottom: 0.5em; margin-top: 0.5em; } }
 

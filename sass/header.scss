@@ -86,6 +86,12 @@ header {
 			display: block;
 			margin-top: $first-level-nav-addon-margin;
 			padding-bottom: $first-level-nav-addon-margin;
+
+			.current-menu-item {
+				a {
+					color: $brand-accent;
+				}
+			}
 		}
 	}
 }
