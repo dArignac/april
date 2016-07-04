@@ -11,8 +11,8 @@ header {
 	}
 
 	.topline {
-		margin-bottom: $section-margin;
-		margin-top: $section-margin;
+		margin-bottom: $header-margin;
+		margin-top: $header-margin;
 
 		h2 {
 			margin-bottom: 0;
@@ -108,8 +108,8 @@ aside {
 	}
 
 	#widgets-primary {
-		padding-bottom: $section-margin;
-		margin-top: $section-margin;
+		padding-bottom: $header-margin;
+		margin-top: $header-margin;
 	}
 
 	#widgets-primary-open {

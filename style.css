@@ -1448,7 +1448,7 @@ a.text-danger:focus, a.text-danger:hover { color: #c9302c; }
 
 header { border: none; position: relative; }
 
-header .topline { margin-bottom: 2em; margin-top: 2em; }
+header .topline { margin-bottom: 1em; margin-top: 1em; }
 
 header .topline h2 { margin-bottom: 0; }
 
@@ -1482,7 +1482,7 @@ header .first-level-addon { display: none; }
 
 aside { margin-bottom: 2em; position: relative; }
 
-aside #widgets-primary { padding-bottom: 2em; margin-top: 2em; }
+aside #widgets-primary { padding-bottom: 1em; margin-top: 1em; }
 
 aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
