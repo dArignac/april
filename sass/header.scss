@@ -84,8 +84,8 @@ header {
 	header {
 		.first-level-addon {
 			display: block;
-			margin-top: 1em;
-			padding-bottom: 1em;
+			margin-top: $first-level-nav-addon-margin;
+			padding-bottom: $first-level-nav-addon-margin;
 		}
 	}
 }
