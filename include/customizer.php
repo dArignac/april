@@ -170,8 +170,8 @@ function april_theme_customize ( $wp_customize ) {
 	$c = new AprilCustomizer( $wp_customize );
 
 	// Logo upload ////////////////////////////////////////////////////////////////////////////////////////////////////
-	$c->add_section( 'logo_upload', __( 'Logo & Icons', 'april' ), 30 );
-	$c->add_image_logo_control( 'logo_image', __( 'Upload custom logo.', 'april' ), 'logo_upload' );
+	$c->add_section( 'logo_and_icons', __( 'Logo & Icons', 'april' ), 30 );
+	$c->add_image_logo_control( 'logo_image', __( 'Upload custom logo.', 'april' ), 'logo_and_icons' );
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Typekit Settings ///////////////////////////////////////////////////////////////////////////////////////////////
