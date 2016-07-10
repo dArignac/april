@@ -1547,7 +1547,13 @@ footer { margin-bottom: 2em; margin-top: 2em; padding-top: 2em; position: relati
 
 footer::before { top: 0; }
 
+body { padding-top: 10em; }
+
 body > .overflower { overflow: hidden; }
+
+@media (max-width: 1199px) { body { padding-top: 6em; } }
+
+@media (max-width: 767px) { body { padding-top: 5em; } }
 
 h1, h2, .h2, section#comments article .date, h3, h4, h5, h6 { line-height: 1.5 !important; }
 
