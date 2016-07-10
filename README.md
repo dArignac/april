@@ -30,6 +30,9 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Enhancements
+        * [#15](https://github.com/dArignac/april/issues/15) header is now fixed
 * 1.2.0
     * Update-Info
         * several changes in settings come with this version - unfortunately **you have to configure them all again**

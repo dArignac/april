@@ -1,7 +1,7 @@
 // <header></header> styles
 header {
+	background: $body-bg;
 	border: none;
-	position: relative;
 
 	& > div {
 
@@ -106,6 +106,7 @@ header {
 }
 
 aside {
+	background: $body-bg;
 	margin-bottom: $section-margin;
 	position: relative;
 
@@ -115,11 +116,11 @@ aside {
 
 	#widgets-primary {
 		padding-bottom: $header-margin;
-		margin-top: $header-margin;
+		padding-top: $header-margin;
 	}
 
 	#widgets-primary-open {
-		background: none;
+		background: $body-bg;
 		border: 1px solid $brand-secondary;
 		border-top: 0;
 		padding: 0.25em 0.75em;

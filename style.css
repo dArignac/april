@@ -1446,7 +1446,7 @@ a.text-danger:focus, a.text-danger:hover { color: #c9302c; }
 
 .tagcloud a { font-weight: 300 !important; }
 
-header { border: none; position: relative; }
+header { background: #fff; border: none; }
 
 header .topline { margin-bottom: 1em; margin-top: 1em; }
 
@@ -1481,11 +1481,11 @@ header .first-level-addon { display: none; }
 
 @media (max-width: 543px) { header .topline { margin-bottom: 0.5em; margin-top: 0.5em; } }
 
-aside { margin-bottom: 2em; position: relative; }
+aside { background: #fff; margin-bottom: 2em; position: relative; }
 
-aside #widgets-primary { padding-bottom: 1em; margin-top: 1em; }
+aside #widgets-primary { padding-bottom: 1em; padding-top: 1em; }
 
-aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
+aside #widgets-primary-open { background: #fff; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
 aside #widgets-primary-open img.hidden { display: none; }
 
