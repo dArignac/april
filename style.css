@@ -1448,7 +1448,7 @@ a.text-danger:focus, a.text-danger:hover { color: #c9302c; }
 
 header { background: #fff; border: none; }
 
-header .topline { margin-bottom: 1em; margin-top: 1em; }
+header .topline { padding-bottom: 1em; padding-top: 1em; }
 
 header .topline h2 { margin-bottom: 0; }
 
@@ -1479,7 +1479,7 @@ header .first-level-addon { display: none; }
 @media (min-width: 1200px) { header .first-level-addon { display: block; margin-top: 1em; padding-bottom: 1em; }
   header .first-level-addon .current-menu-item a { color: #099; } }
 
-@media (max-width: 543px) { header .topline { margin-bottom: 0.5em; margin-top: 0.5em; } }
+@media (max-width: 543px) { header .topline { padding-bottom: 0.5em; padding-top: 0.5em; } }
 
 aside { background: #fff; margin-bottom: 2em; position: relative; }
 
