@@ -18,6 +18,16 @@
 	endif;
 ?>
 
+<div class="row">
+	<div class="col-sm-10 col-sm-offset-1 text-xs-center">
+		<?php the_posts_pagination(
+			array(
+				'prev_text' => '&ltrif;',
+				'next_text' => '&rtrif;'
+			)
+		); ?>
+	</div>
+</div>
+
 <?php
-	the_posts_pagination();
 	get_footer();
