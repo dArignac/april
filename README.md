@@ -22,7 +22,7 @@ grunt
 * *the theme does not meet the Wordpress requirements for a theme yet* (haven't checked them)
 * distribution is automatically done by TravisCI if a tag is created
 
-## Continouos Integration
+## Continuous Integration
 * each commit will be dealt at TravisCI, the release script is executed (this is not really CI!)
 * [![Build Status](https://travis-ci.org/dArignac/april.svg?branch=master)](https://travis-ci.org/dArignac/april)
 
