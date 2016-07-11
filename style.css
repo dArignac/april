@@ -1446,9 +1446,9 @@ a.text-danger:focus, a.text-danger:hover { color: #c9302c; }
 
 .tagcloud a { font-weight: 300 !important; }
 
-header { border: none; position: relative; }
+header { background: #fff; border: none; }
 
-header .topline { margin-bottom: 1em; margin-top: 1em; }
+header .topline { padding-bottom: 1em; padding-top: 1em; }
 
 header .topline h2 { margin-bottom: 0; }
 
@@ -1479,13 +1479,13 @@ header .first-level-addon { display: none; }
 @media (min-width: 1200px) { header .first-level-addon { display: block; margin-top: 1em; padding-bottom: 1em; }
   header .first-level-addon .current-menu-item a { color: #099; } }
 
-@media (max-width: 543px) { header .topline { margin-bottom: 0.5em; margin-top: 0.5em; } }
+@media (max-width: 543px) { header .topline { padding-bottom: 0.5em; padding-top: 0.5em; } }
 
-aside { margin-bottom: 2em; position: relative; }
+aside { background: #fff; margin-bottom: 2em; position: relative; }
 
-aside #widgets-primary { padding-bottom: 1em; margin-top: 1em; }
+aside #widgets-primary { padding-bottom: 1em; padding-top: 1em; }
 
-aside #widgets-primary-open { background: none; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
+aside #widgets-primary-open { background: #fff; border: 1px solid #999; border-top: 0; padding: 0.25em 0.75em; position: absolute; top: 100%; }
 
 aside #widgets-primary-open img.hidden { display: none; }
 
@@ -1547,7 +1547,13 @@ footer { margin-bottom: 2em; margin-top: 2em; padding-top: 2em; position: relati
 
 footer::before { top: 0; }
 
+body { padding-top: 10em; }
+
 body > .overflower { overflow: hidden; }
+
+@media (max-width: 1199px) { body { padding-top: 6em; } }
+
+@media (max-width: 767px) { body { padding-top: 5em; } }
 
 h1, h2, .h2, section#comments article .date, h3, h4, h5, h6 { line-height: 1.5 !important; }
 

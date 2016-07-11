@@ -1,7 +1,7 @@
 // <header></header> styles
 header {
+	background: $body-bg;
 	border: none;
-	position: relative;
 
 	& > div {
 
@@ -11,8 +11,8 @@ header {
 	}
 
 	.topline {
-		margin-bottom: $header-margin;
-		margin-top: $header-margin;
+		padding-bottom: $header-margin;
+		padding-top: $header-margin;
 
 		h2 {
 			margin-bottom: 0;
@@ -99,13 +99,14 @@ header {
 @include media-breakpoint-down(xs) {
 	header {
 		.topline {
-			margin-bottom: 0.5em;
-			margin-top: 0.5em;
+			padding-bottom: 0.5em;
+			padding-top: 0.5em;
 		}
 	}
 }
 
 aside {
+	background: $body-bg;
 	margin-bottom: $section-margin;
 	position: relative;
 
@@ -115,11 +116,11 @@ aside {
 
 	#widgets-primary {
 		padding-bottom: $header-margin;
-		margin-top: $header-margin;
+		padding-top: $header-margin;
 	}
 
 	#widgets-primary-open {
-		background: none;
+		background: $body-bg;
 		border: 1px solid $brand-secondary;
 		border-top: 0;
 		padding: 0.25em 0.75em;

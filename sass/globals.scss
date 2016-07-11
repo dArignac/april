@@ -1,6 +1,22 @@
 // some structure
-body > .overflower {
-	overflow: hidden;
+body {
+	padding-top: 10em;
+
+	& > .overflower {
+		overflow: hidden;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	body {
+		padding-top: 6em;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	body {
+		padding-top: 5em;
+	}
 }
 
 // basic styles
