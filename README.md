@@ -33,6 +33,8 @@ grunt
 * TBA
     * Enhancements
         * [#15](https://github.com/dArignac/april/issues/15) header is now fixed
+    * Bugfixes
+        * [#32](https://github.com/dArignac/april/issues/32) styled search page
 * 1.2.0
     * Update-Info
         * several changes in settings come with this version - unfortunately **you have to configure them all again**
