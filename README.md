@@ -30,6 +30,9 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Enhancements
+        * [#16](https://github.com/dArignac/april/issues/16) better way to filter front page categories
 * 1.3.0
     * Enhancements
         * [#15](https://github.com/dArignac/april/issues/15) header is now fixed
