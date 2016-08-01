@@ -222,6 +222,9 @@ if ( ! function_exists( 'april_alter_query' ) ) {
 			$paged = 1;
 		}
 
+		// get all sticky posts - whatever category they belong to
+		$sticky_posts = get_option( 'sticky_posts' );
+
 		// on front page, filter the posts, see https://github.com/dArignac/april/issues/16
 		if ( is_home() ) {
 
@@ -229,7 +232,23 @@ if ( ! function_exists( 'april_alter_query' ) ) {
 
 			// "display all" is value 0
 			if ( $front_page_categories && count( $front_page_categories ) > 0 && $front_page_categories[0] != 0 ) {
+				// only display the categories that were configured
 				$query->set( 'cat', implode( ',', array_values( $front_page_categories ) ) );
+
+				// remove sticky posts of the categories to be displayed from the sticky array
+				// this results in displaying only sticky posts for the selected categories and hiding all other
+				$sticky_posts_other_cats = array();
+				foreach ( $sticky_posts as $post ) {
+					foreach ( get_the_category( $post ) as $category ) {
+						if ( ! in_array( $category->term_id, $front_page_categories ) ) {
+							array_push( $sticky_posts_other_cats, $post );
+							continue 2;
+						}
+					}
+				}
+
+				// do not show sticky posts of other categories
+				$query->set( 'post__not_in', $sticky_posts_other_cats );
 			}
 		}
 
