@@ -30,7 +30,7 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
-* TBA
+* 1.3.1
     * Enhancements
         * [#35](https://github.com/dArignac/april/issues/35) show only sticky posts of configured categories on landing page
         * [#16](https://github.com/dArignac/april/issues/16) better way to filter front page categories
