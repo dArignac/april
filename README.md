@@ -32,6 +32,7 @@ grunt
 ## Changelog
 * TBA
     * Enhancements
+        * [#35](https://github.com/dArignac/april/issues/35) show only sticky posts of configured categories on landing page
         * [#16](https://github.com/dArignac/april/issues/16) better way to filter front page categories
 * 1.3.0
     * Enhancements
