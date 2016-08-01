@@ -205,3 +205,34 @@ if ( ! function_exists( ( 'april_comments_callback' ) ) ) {
 		<?php
 	}
 }
+
+if ( ! function_exists( 'april_alter_query' ) ) {
+	function april_alter_query( $query ) {
+
+		if ( !$query->is_main_query() ) {
+			return;
+		}
+
+		// on front page, filter the posts, see https://github.com/dArignac/april/issues/16
+		if ( is_home() ) {
+
+			$front_page_categories = get_theme_mod('april_display_front_page_category');
+
+			// "display all" is value 0
+			if ( $front_page_categories && count( $front_page_categories ) > 0 && $front_page_categories[0] != 0 ) {
+				// fetch page query
+				if ( get_query_var('paged') ) {
+					$paged = get_query_var('paged');
+				} elseif ( get_query_var('page') ) {
+					$paged = get_query_var('page');
+				} else {
+					$paged = 1;
+				}
+			}
+			$query->set( 'paged', $paged );
+			$query->set( 'cat', implode( ',', array_values( $front_page_categories ) ) );
+		}
+	}
+}
+
+add_action( 'pre_get_posts' , 'april_alter_query' );
