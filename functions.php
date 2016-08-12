@@ -206,8 +206,8 @@ if ( ! function_exists( ( 'april_comments_callback' ) ) ) {
 	}
 }
 
-if ( ! function_exists( 'april_alter_query' ) ) {
-	function april_alter_query( $query ) {
+if ( ! function_exists( 'april_pre_get_posts' ) ) {
+	function april_pre_get_posts( $query ) {
 
 		if ( !$query->is_main_query() ) {
 			return;
@@ -257,4 +257,4 @@ if ( ! function_exists( 'april_alter_query' ) ) {
 	}
 }
 
-add_action( 'pre_get_posts' , 'april_alter_query' );
+add_action( 'pre_get_posts' , 'april_pre_get_posts' );
