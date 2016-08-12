@@ -36,6 +36,24 @@ nav.navigation {
 article {
 	margin-bottom: 3em;
 
+	&.tag-sticky {
+		background: $brand-accent;
+		color: #fff;
+		padding-top: 0.75em;
+
+		h1 {
+			margin-bottom: 0.5em;
+
+			a {
+				color: #fff;
+			}
+		}
+
+		.the-date {
+			display: none;
+		}
+	}
+
 	h2 {
 		margin: 0.5em 0 1.5em 0;
 	}

@@ -9,8 +9,8 @@ if ( ! function_exists( ( 'april_theme_setup' ) ) ) {
 
 		add_theme_support( 'post-thumbnails' ); // featured images
 
-		include 'include/customizer.php';
-		include 'menu/walker.php';
+		include_once 'include/customizer.php';
+		include_once 'menu/walker.php';
 
 		load_theme_textdomain( 'april', get_template_directory() . '/languages' );
 
@@ -206,8 +206,8 @@ if ( ! function_exists( ( 'april_comments_callback' ) ) ) {
 	}
 }
 
-if ( ! function_exists( 'april_alter_query' ) ) {
-	function april_alter_query( $query ) {
+if ( ! function_exists( 'april_pre_get_posts' ) ) {
+	function april_pre_get_posts( $query ) {
 
 		if ( !$query->is_main_query() ) {
 			return;
@@ -252,9 +252,90 @@ if ( ! function_exists( 'april_alter_query' ) ) {
 			}
 		}
 
+		// if we're on a category page, the sticky posts of the category are included via april_the_posts thus they
+		// have to be removed from the query here
+		if ( $query->is_category() ) {
+			// get all sticky posts - whatever category they belong to
+			$sticky_post_ids = get_option('sticky_posts');
+
+			// get the current category
+			$query_object = get_queried_object();
+			$current_category_id = $query_object->term_id;
+
+			// will store the sticky posts of the current category
+			$exclude_post_ids = array();
+
+			// iterate the stickies...
+			foreach ( $sticky_post_ids as $post_id ) {
+				// and iterate their categories...
+				foreach ( get_the_category( $post_id ) as $category ) {
+					// current category and one of the posts's categories match, save the id in the exclude array
+					if ( $current_category_id == $category->term_id && !in_array( $category->term_id, $exclude_post_ids ) ) {
+						array_push( $exclude_post_ids, $post_id );
+					}
+				}
+			}
+
+			// exclude posts
+			$query->set( 'post__not_in', $exclude_post_ids );
+		}
+
 		// set pagination
 		$query->set( 'paged', $paged );
 	}
 }
 
-add_action( 'pre_get_posts' , 'april_alter_query' );
+add_action( 'pre_get_posts' , 'april_pre_get_posts' );
+
+
+if ( ! function_exists( 'april_the_posts' ) ) {
+	function april_the_posts( $posts, $query ) {
+
+		// if on a category page...
+		if ( $query->is_category() ) {
+			// get all sticky posts - whatever category they belong to
+			$sticky_post_ids = get_option('sticky_posts');
+
+			// get the currently displayed category
+			$current_category = get_category( get_query_var( 'cat' ) );
+
+			// will store the sticky posts of the current category
+			$append_posts = array();
+
+			// iterate the stickies...
+			foreach ( $sticky_post_ids as $post_id ) {
+				// and iterate their categories...
+				foreach ( get_the_category( $post_id ) as $category ) {
+					// current category and one of the posts's categories match, save the id in the append array
+					if ( $current_category->term_id == $category->term_id && !in_array( $category->term_id, $append_posts ) ) {
+						array_push( $append_posts, $post_id );
+					}
+				}
+			}
+
+			// fetch the posts, sort them, and prepend to the current posts
+			// fetch 'em:
+			$append_posts = array_map(
+				function( $post_id ) {
+					return get_post( $post_id );
+				},
+				$append_posts
+			);
+			// sort them by post date
+			uasort(
+				$append_posts,
+				function( $a, $b ) {
+					if ( $a->post_date_gmt == $b->post_date_gmt ) {
+						return 0;
+					}
+					return ($a->post_date_gmt < $b->post_date_gmt) ? -1 : 1;
+				}
+			);
+			// prepend
+			$posts = array_merge( $append_posts, $posts);
+		}
+
+		return $posts;
+	}
+}
+add_filter( 'the_posts', 'april_the_posts', 10, 2 );

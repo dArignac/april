@@ -1,6 +1,14 @@
 # april
 Wordpress theme based on Bootstrap 4
 
+## Features
+* Responsive design
+* Sticky posts in categories
+    * if there are posts marked as sticky, they are displayed as first posts on all pages of a **category** listing (e.g. if you have 5 posts per page and 2 sticky posts the page will show 7 posts)
+    * the default post listing (main query/landing page) is not altered (sticky posts will be displayed only on the **first** page)
+    * if a post has the tag **sticky** it will have an alternative color and no date displayed
+* Custom NextGEN gallery template
+
 ## Used libraries
 * [Bootstrap 4 alpha 2](https://github.com/twbs/bootstrap "Bootstrap 4.0 alpha 2")
 
@@ -30,6 +38,9 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Enhancements
+        * [#36](https://github.com/dArignac/april/issues/36) show sticky posts on category listings on all pages
 * 1.3.1
     * Enhancements
         * [#35](https://github.com/dArignac/april/issues/35) show only sticky posts of configured categories on landing page
