@@ -255,7 +255,6 @@ if ( ! function_exists( 'april_pre_get_posts' ) ) {
 		// if we're on a category page, the sticky posts of the category are included via april_the_posts thus they
 		// have to be removed from the query here
 		if ( $query->is_category() ) {
-			// FIXME this is nearly the same code as for april_the_posts
 			// get all sticky posts - whatever category they belong to
 			$sticky_post_ids = get_option('sticky_posts');
 
@@ -264,21 +263,21 @@ if ( ! function_exists( 'april_pre_get_posts' ) ) {
 			$current_category_id = $query_object->term_id;
 
 			// will store the sticky posts of the current category
-			$append_posts = array();
+			$exclude_post_ids = array();
 
 			// iterate the stickies...
 			foreach ( $sticky_post_ids as $post_id ) {
 				// and iterate their categories...
 				foreach ( get_the_category( $post_id ) as $category ) {
-					// current category and one of the posts's categories match, save the id in the append array
-					if ( $current_category_id == $category->term_id && !in_array($category->term_id, $append_posts)) {
-						array_push($append_posts, $post_id);
+					// current category and one of the posts's categories match, save the id in the exclude array
+					if ( $current_category_id == $category->term_id && !in_array( $category->term_id, $exclude_post_ids ) ) {
+						array_push( $exclude_post_ids, $post_id );
 					}
 				}
 			}
 
 			// exclude posts
-			$query->set( 'post__not_in', $append_posts );
+			$query->set( 'post__not_in', $exclude_post_ids );
 		}
 
 		// set pagination
@@ -308,8 +307,8 @@ if ( ! function_exists( 'april_the_posts' ) ) {
 				// and iterate their categories...
 				foreach ( get_the_category( $post_id ) as $category ) {
 					// current category and one of the posts's categories match, save the id in the append array
-					if ( $current_category->term_id == $category->term_id && !in_array($category->term_id, $append_posts)) {
-						array_push($append_posts, $post_id);
+					if ( $current_category->term_id == $category->term_id && !in_array( $category->term_id, $append_posts ) ) {
+						array_push( $append_posts, $post_id );
 					}
 				}
 			}
