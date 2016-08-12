@@ -16,7 +16,7 @@
 				</h1>
 			<?php endif; ?>
 			<?php if ( ! is_page() ) : ?>
-				<h2 class="text-xs-center">
+				<h2 class="text-xs-center the-date">
 					<?php get_template_part( 'content/post-meta' ); ?>
 				</h2>
 			<?php endif; ?>

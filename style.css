@@ -1509,6 +1509,12 @@ nav.navigation.post-navigation span.title { color: #333; }
 
 article { margin-bottom: 3em; }
 
+article.tag-sticky { background: #099; color: #fff; }
+
+article.tag-sticky h1 a { color: #fff; }
+
+article.tag-sticky .the-date { display: none; }
+
 article h2 { margin: 0.5em 0 1.5em 0; }
 
 article figure { margin: 0 0 1em; }

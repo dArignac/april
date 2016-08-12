@@ -7,7 +7,7 @@
 			<h1 class="text-xs-center">
 				<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
 			</h1>
-			<h2 class="text-xs-center">
+			<h2 class="text-xs-center the-date">
 				<?php get_template_part( 'content/post-meta' ); ?>
 			</h2>
 		</div>

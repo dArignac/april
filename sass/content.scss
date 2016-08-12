@@ -36,6 +36,19 @@ nav.navigation {
 article {
 	margin-bottom: 3em;
 
+	&.tag-sticky {
+		background: $brand-accent;
+		color: #fff;
+
+		h1 a {
+			color: #fff;
+		}
+
+		.the-date {
+			display: none;
+		}
+	}
+
 	h2 {
 		margin: 0.5em 0 1.5em 0;
 	}
