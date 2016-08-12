@@ -9,8 +9,8 @@ if ( ! function_exists( ( 'april_theme_setup' ) ) ) {
 
 		add_theme_support( 'post-thumbnails' ); // featured images
 
-		include 'include/customizer.php';
-		include 'menu/walker.php';
+		include_once 'include/customizer.php';
+		include_once 'menu/walker.php';
 
 		load_theme_textdomain( 'april', get_template_directory() . '/languages' );
 
