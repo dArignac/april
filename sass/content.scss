@@ -39,9 +39,14 @@ article {
 	&.tag-sticky {
 		background: $brand-accent;
 		color: #fff;
+		padding-top: 0.75em;
 
-		h1 a {
-			color: #fff;
+		h1 {
+			margin-bottom: 0.5em;
+
+			a {
+				color: #fff;
+			}
 		}
 
 		.the-date {
