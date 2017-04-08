@@ -10,7 +10,7 @@ Wordpress theme based on Bootstrap 4
 * Custom NextGEN gallery template
 
 ## Used libraries
-* [Bootstrap 4 alpha 2](https://github.com/twbs/bootstrap "Bootstrap 4.0 alpha 2")
+* [Bootstrap 4 alpha 6](https://v4-alpha.getbootstrap.com/ "Bootstrap 4.0 alpha 6")
 
 ## Development
 * setup required libs with bower for development
