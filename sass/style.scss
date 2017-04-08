@@ -38,7 +38,7 @@ Simple responsive theme based on Bootstrap 4.0
 @import "../bower_components/bootstrap/scss/buttons";
 
 // Components
-@import "../bower_components/bootstrap/scss/animation"; // for collapse
+@import "../bower_components/bootstrap/scss/transitions";
 //@import "../bower_components/bootstrap/scss/dropdown";
 //@import "../bower_components/bootstrap/scss/button-group";
 //@import "../bower_components/bootstrap/scss/input-group";
@@ -48,12 +48,11 @@ Simple responsive theme based on Bootstrap 4.0
 //@import "../bower_components/bootstrap/scss/card";
 //@import "../bower_components/bootstrap/scss/breadcrumb";
 //@import "../bower_components/bootstrap/scss/pagination";
-//@import "../bower_components/bootstrap/scss/pager";
-//@import "../bower_components/bootstrap/scss/labels";
+//@import "../bower_components/bootstrap/scss/badge";
 //@import "../bower_components/bootstrap/scss/jumbotron";
 //@import "../bower_components/bootstrap/scss/alert";
 //@import "../bower_components/bootstrap/scss/progress";
-@import "../bower_components/bootstrap/scss/media"; // in header
+@import "../bower_components/bootstrap/scss/media";
 //@import "../bower_components/bootstrap/scss/list-group";
 //@import "../bower_components/bootstrap/scss/responsive-embed";
 //@import "../bower_components/bootstrap/scss/close";
@@ -66,9 +65,6 @@ Simple responsive theme based on Bootstrap 4.0
 
 // Utility classes
 @import "../bower_components/bootstrap/scss/utilities";
-//@import "../bower_components/bootstrap/scss/utilities-background";
-@import "../bower_components/bootstrap/scss/utilities-spacing";
-@import "../bower_components/bootstrap/scss/utilities-responsive";
 
 // theme styles
 @import "widgets";
