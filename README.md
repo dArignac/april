@@ -10,7 +10,7 @@ Wordpress theme based on Bootstrap 4
 * Custom NextGEN gallery template
 
 ## Used libraries
-* [Bootstrap 4 alpha 6](https://v4-alpha.getbootstrap.com/ "Bootstrap 4.0 alpha 6")
+* [Bootstrap 4](https://getbootstrap.com/ "Bootstrap 4")
 
 ## Development
 You need to have Ruby installed. Install [RVM](https://rvm.io/) and enable it: `source ~/.rvm/scripts/rvm`.
