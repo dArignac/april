@@ -41,7 +41,7 @@ function april_load_scripts_and_styles() {
 
 	// Font Awesome
 	// will be replaced with grunt script
-	wp_enqueue_style( 'april-font-awesome', get_template_directory_uri() . '/bower_components/font-awesome/css/font-awesome.css' );
+	wp_enqueue_style( 'april-font-awesome', get_template_directory_uri() . '/node_modules/font-awesome/css/font-awesome.css' );
 
 	// default stylesheet
 	wp_enqueue_style( 'april-style', get_stylesheet_uri() );
@@ -70,8 +70,8 @@ function april_load_scripts_and_styles() {
 
 	// Bootstrap required scripts
 	// will be replaced by grunt script - it packages all into april.js
-	wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.js', array('jquery', 'tether'), '4.0.0a2', false );
+	wp_enqueue_script( 'tether', get_template_directory_uri() . '/node_modules/tether/dist/js/tether.js', array('jquery'), '1.2.0', false );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.js', array('jquery', 'tether'), '4.0.0a2', false );
 }
 add_action( 'wp_enqueue_scripts', 'april_load_scripts_and_styles' );
 

@@ -34,8 +34,8 @@ module.exports = function(grunt) {
             },
             components: {
                 files: [
-                    {expand: false, src: 'bower_components/font-awesome/css/font-awesome.min.css', dest: '<%= dist_target %>css/font-awesome.min.css'},
-                    {expand: true, src: '**', 'cwd': 'bower_components/font-awesome/fonts', dest: '<%= dist_target %>fonts/'},
+                    {expand: false, src: 'node_modules/font-awesome/css/font-awesome.min.css', dest: '<%= dist_target %>css/font-awesome.min.css'},
+                    {expand: true, src: '**', 'cwd': 'node_modules/font-awesome/fonts', dest: '<%= dist_target %>fonts/'},
                 ]
             }
         },
@@ -76,9 +76,9 @@ module.exports = function(grunt) {
         concat: {
             bootstrap: {
                 src: [
-                    'bower_components/bootstrap/js/dist/util.js',
-                    'bower_components/bootstrap/js/dist/carousel.js',
-                    'bower_components/bootstrap/js/dist/collapse.js',
+                    'node_modules/bootstrap/js/dist/util.js',
+                    'node_modules/bootstrap/js/dist/carousel.js',
+                    'node_modules/bootstrap/js/dist/collapse.js',
                     'js/<%= pkg.name %>.js'
                 ],
                 dest: '<%= dist_target %>js/<%= pkg.name %>.js'
@@ -96,17 +96,17 @@ module.exports = function(grunt) {
         sed: {
             fontawesome: {
                 path: '<%= dist_target %>functions.php',
-                pattern: '/bower_components/font-awesome/css/font-awesome.css',
+                pattern: '/node_modules/font-awesome/css/font-awesome.css',
                 replacement: '/css/font-awesome.min.css'
             },
             tether: {
                 path: '<%= dist_target %>functions.php',
-                pattern: 'wp_enqueue_script\\( \'tether\', get_template_directory_uri\\(\\) . \'/bower_components/tether/dist/js/tether.js\', array\\(\'jquery\'\\), \'1.2.0\', false \\);',
+                pattern: 'wp_enqueue_script\\( \'tether\', get_template_directory_uri\\(\\) . \'/node_modules/tether/dist/js/tether.js\', array\\(\'jquery\'\\), \'1.2.0\', false \\);',
                 replacement: ''
             },
             bootstrap: {
                 path: '<%= dist_target %>functions.php',
-                pattern: 'wp_enqueue_script\\( \'bootstrap\', get_template_directory_uri\\(\\) . \'/bower_components/bootstrap/dist/js/bootstrap.js\', array\\(\'jquery\', \'tether\'\\), \'4.0.0a2\', false \\);',
+                pattern: 'wp_enqueue_script\\( \'bootstrap\', get_template_directory_uri\\(\\) . \'/node_modules/bootstrap/dist/js/bootstrap.js\', array\\(\'jquery\', \'tether\'\\), \'4.0.0a2\', false \\);',
                 replacement: ''
             }
         }
