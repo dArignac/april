@@ -13,15 +13,14 @@ Wordpress theme based on Bootstrap 4
 * [Bootstrap 4 alpha 6](https://v4-alpha.getbootstrap.com/ "Bootstrap 4.0 alpha 6")
 
 ## Development
-* setup required libs with bower for development
-```
-bower install
-```
+You need to have Ruby installed. Install [RVM](https://rvm.io/) and enable it: `source ~/.rvm/scripts/rvm`.
+If not yet available, you need to install Sass into it: `gem install sass`.
 
 ## Distribution
 * for distribution, Grunt is used (required npm and Grunt globally)
     * it will copy the theme into a dist folder with all sass and js compiled and minimized (see ``Gruntfile.js`` for more info)
 ```
+npm install -g grunt-cli
 npm install
 grunt
 ```
