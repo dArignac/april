@@ -18,7 +18,7 @@
 
 		<?php do_action( 'body_top' ); ?>
 
-		<div class="pos-f-t">
+		<div class="fixed-top">
 			<div class="container">
 				<header class="row">
 					<div class="col-sm-12">
@@ -28,14 +28,12 @@
 						<div class="row topline">
 							<div class="col-sm-10 col-xs-10 media">
 								<?php if ( $logo_image ): ?>
-									<div class="media-left">
-										<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
-											<img class="media-object" src="<?php echo esc_url( $logo_image ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
-										</a>
-									</div>
+									<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
+										<img class="align-self-start mr-3" src="<?php echo esc_url( $logo_image ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+									</a>
 								<?php endif; ?>
 								<div class="media-body hidden-xs-down">
-									<h1 class="media-heading">
+									<h1 class="mt-0">
 										<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
 											<?php echo get_bloginfo( 'name' ); ?>
 										</a>

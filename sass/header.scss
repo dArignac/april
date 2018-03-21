@@ -54,6 +54,7 @@ header {
 
 			span.toggler {
 				cursor: pointer;
+				float: right !important;
 				position: relative;
 
 				&::before {
