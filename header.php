@@ -28,12 +28,12 @@
 						<div class="row topline">
 							<div class="col-sm-10 col-xs-10 media">
 								<?php if ( $logo_image ): ?>
-									<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
+									<a href="<?php echo esc_url( home_url() ); ?>" class="logo-image" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
 										<img class="align-self-start mr-3" src="<?php echo esc_url( $logo_image ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
 									</a>
 								<?php endif; ?>
 								<div class="media-body hidden-xs-down">
-									<h1 class="mt-0">
+									<h1 class="mt-0 mb-1">
 										<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
 											<?php echo get_bloginfo( 'name' ); ?>
 										</a>
@@ -42,7 +42,7 @@
 								</div>
 							</div>
 							<div class="col-sm-2 col-xs-2">
-								<button class="navbar-toggler pull-sm-right pull-xs-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+								<button class="navbar-toggler pull-sm-right float-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
 									<?php if ( $custom_hamburger_image ): ?>
 										<img src="<?php echo esc_url( $custom_hamburger_image ); ?>" />
 									<?php else: ?>
