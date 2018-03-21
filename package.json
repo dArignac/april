@@ -7,7 +7,7 @@
         "url": "https://github.com/dArignac/april"
     },
     "scripts": {
-        "sass": "sass -t compact --watch sass/style.scss:style.css sass/style.scss style.css"
+        "sass": "sass -t compact --scss --watch sass/style.scss:style.css"
     },
     "devDependencies": {
         "grunt": "~0.4.5",
