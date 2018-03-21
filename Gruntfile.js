@@ -101,12 +101,12 @@ module.exports = function(grunt) {
             },
             tether: {
                 path: '<%= dist_target %>functions.php',
-                pattern: 'wp_enqueue_script\\( \'tether\', get_template_directory_uri\\(\\) . \'/node_modules/tether/dist/js/tether.js\', array\\(\'jquery\'\\), \'1.2.0\', false \\);',
+                pattern: 'wp_enqueue_script\\( \'tether\', get_template_directory_uri\\(\\) . \'/node_modules/tether/dist/js/tether.js\', array\\(\'jquery\'\\), null, false \\);',
                 replacement: ''
             },
             bootstrap: {
                 path: '<%= dist_target %>functions.php',
-                pattern: 'wp_enqueue_script\\( \'bootstrap\', get_template_directory_uri\\(\\) . \'/node_modules/bootstrap/dist/js/bootstrap.js\', array\\(\'jquery\', \'tether\'\\), \'4.0.0a2\', false \\);',
+                pattern: 'wp_enqueue_script\\( \'bootstrap\', get_template_directory_uri\\(\\) . \'/node_modules/bootstrap/dist/js/bootstrap.js\', array\\(\'jquery\', \'tether\'\\), null, false \\);',
                 replacement: ''
             }
         }
