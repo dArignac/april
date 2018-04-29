@@ -1,3 +1,10 @@
+// first level navigation and footer navigation
+ul.nav-inline {
+    .nav-item + .nav-item {
+        margin-left: 1rem;
+    }
+}
+
 // navigation on the bottom of the page
 nav.navigation {
 	.screen-reader-text {
