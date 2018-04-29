@@ -16,6 +16,11 @@ Wordpress theme based on Bootstrap 4
 You need to have Ruby installed. Install [RVM](https://rvm.io/) and enable it: `source ~/.rvm/scripts/rvm`.
 If not yet available, you need to install Sass into it: `gem install sass`.
 
+To auto compile the SCSS to CSS, run the following in a terminal from the theme root:
+```
+sass -t compact --scss --watch sass/style.scss:style.css
+```
+
 ## Distribution
 * for distribution, Grunt is used (required npm and Grunt globally)
     * it will copy the theme into a dist folder with all sass and js compiled and minimized (see ``Gruntfile.js`` for more info)
