@@ -21,8 +21,8 @@
 		<?php wp_list_comments( array( 'callback' => 'april_comments_callback' ) ); ?>
 
 		<div class="row">
-			<div class="col-sm-5 col-sm-offset-1 text-xs-left"><?php previous_comments_link( '&ltrif; ' . __( 'Older comments', 'april' ) ) ?></div>
-			<div class="col-sm-5 text-xs-right"><?php next_comments_link( __( 'Newer comments', 'april' ) . ' &rtrif;' ) ?></div>
+			<div class="col-sm-5 col-sm-offset-1 text-left"><?php previous_comments_link( '&ltrif; ' . __( 'Older comments', 'april' ) ) ?></div>
+			<div class="col-sm-5 text-right"><?php next_comments_link( __( 'Newer comments', 'april' ) . ' &rtrif;' ) ?></div>
 		</div>
 
 	<?php else : // this is displayed if there are no comments so far ?>

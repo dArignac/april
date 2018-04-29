@@ -17,7 +17,7 @@
 			<?php if ( ! is_singular() ): ?><a href="<?php echo esc_url( get_permalink() ); ?>"><?php endif; ?>
 			<img src="<?php echo $post_thumbnail_url; ?>" class="figure-img img-fluid" alt="<?php echo $post_alt; ?>">
 			<?php if ( ! is_singular() ): ?></a><?php endif; ?>
-			<?php if ( $post_caption && is_singular() ): ?><figcaption class="figure-caption text-xs-right"><?php echo $post_caption; ?></figcaption><?php endif; ?>
+			<?php if ( $post_caption && is_singular() ): ?><figcaption class="figure-caption text-right"><?php echo $post_caption; ?></figcaption><?php endif; ?>
 		</figure>
 	</div>
 <?php endif; ?>
