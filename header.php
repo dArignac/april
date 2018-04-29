@@ -26,13 +26,13 @@
 						<?php do_action( 'header_before' ); ?>
 
 						<div class="row topline">
-							<div class="col-sm-10 col-xs-10 media">
+							<div class="col-10 col-sm-10 media">
 								<?php if ( $logo_image ): ?>
 									<a href="<?php echo esc_url( home_url() ); ?>" class="logo-image" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
 										<img class="align-self-start mr-3" src="<?php echo esc_url( $logo_image ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" />
 									</a>
 								<?php endif; ?>
-								<div class="media-body hidden-xs-down">
+								<div class="media-body">
 									<h1 class="mt-0 mb-1">
 										<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ) ;?>">
 											<?php echo get_bloginfo( 'name' ); ?>
@@ -41,7 +41,7 @@
 									<?php if ( get_bloginfo( 'description' ) ): ?><h2><?php echo get_bloginfo( 'description' ); ?></h2><?php endif; ?>
 								</div>
 							</div>
-							<div class="col-sm-2 col-xs-2">
+							<div class="col-2 col-sm-2">
 								<button class="navbar-toggler pull-sm-right float-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
 									<?php if ( $custom_hamburger_image ): ?>
 										<img src="<?php echo esc_url( $custom_hamburger_image ); ?>" />
