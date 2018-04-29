@@ -10,7 +10,7 @@
 function april_nav_menu_item_args( $args, $item, $depth ) {
 	if ( $item->hasChildren ) {
 		$toggler = esc_attr( $item->ID );
-		$args->after = ' <span data-toggle="collapse" data-target="#tgglr-' . $toggler . ' + ul.sub-menu" id="tgglr-' . $toggler . '" class="toggler"><span class="sr-only">toggle menu</span></span>';
+		$args->after = ' <span class="toggler"><span class="sr-only">toggle menu</span></span>';
 	} else {
 		$args->after = '';
 	}

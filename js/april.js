@@ -1,5 +1,15 @@
 +function ($) {
     $(function () {
+        /**
+         * As activation via data-target="#tgglr-XXX + ul.sub-menu" does not work any more (2018-04),
+         * now toggle via JS.
+         */
+        $('.toggler').each(function(idx) {
+            $(this).click(function() {
+                $(this).next('ul.sub-menu').collapse('toggle');
+            });
+        });
+
         var toggleNavigation =  function() {
             $(this).prev('span.toggler').toggleClass('open');
         };
