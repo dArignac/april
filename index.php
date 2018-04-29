@@ -10,7 +10,7 @@
 ?>
 
 <div class="row">
-	<div class="col-sm-10 col-sm-offset-1 text-center">
+	<div class="col-sm-10 offset-sm-1 text-center">
 		<?php the_posts_pagination(
 			array(
 				'prev_text' => '&ltrif;',

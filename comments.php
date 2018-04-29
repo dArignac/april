@@ -1,7 +1,7 @@
 <section id="comments">
 	<?php if ( have_comments() ) : ?>
 		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1">
+			<div class="col-sm-10 offset-sm-1">
 				<h6>
 					<?php
 					if ( 1 == get_comments_number() ) {
@@ -21,7 +21,7 @@
 		<?php wp_list_comments( array( 'callback' => 'april_comments_callback' ) ); ?>
 
 		<div class="row">
-			<div class="col-sm-5 col-sm-offset-1 text-left"><?php previous_comments_link( '&ltrif; ' . __( 'Older comments', 'april' ) ) ?></div>
+			<div class="col-sm-5 offset-sm-1 text-left"><?php previous_comments_link( '&ltrif; ' . __( 'Older comments', 'april' ) ) ?></div>
 			<div class="col-sm-5 text-right"><?php next_comments_link( __( 'Newer comments', 'april' ) . ' &rtrif;' ) ?></div>
 		</div>
 
@@ -33,7 +33,7 @@
 		<?php else : // comments are closed ?>
 			<!-- If comments are closed. -->
 			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-sm-10 offset-sm-1">
 					<p class="nocomments"><?php _e( 'Comments are closed.', 'april' ); ?></p>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 	<?php endif; ?>
 
 	<div class="row comment-form">
-		<div class="col-sm-10 col-sm-offset-1">
+		<div class="col-sm-10 offset-sm-1">
 			<?php
 			$req       = get_option( 'require_name_email' );
 			$aria_req  = ( $req ? " aria-required='true'" : '' );

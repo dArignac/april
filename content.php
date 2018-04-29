@@ -9,7 +9,7 @@
 
 	<div class="row">
 
-		<div class="col-sm-10 col-sm-offset-1">
+		<div class="col-sm-10 offset-sm-1">
 			<?php if ( is_singular( 'post' ) || ( is_page() && $display_page_titles ) ) : ?>
 				<h1 class="text-center">
 					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
@@ -26,7 +26,7 @@
 			<?php get_template_part( 'content/post-featured-image' ); ?>
 		</div>
 
-		<div class="col-sm-10 col-sm-offset-1">
+		<div class="col-sm-10 offset-sm-1">
 			<?php the_content(); ?>
 			<?php wp_link_pages(
 				array(
