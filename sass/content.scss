@@ -1,38 +1,3 @@
-nav.navigation {
-	.screen-reader-text {
-		display: none;
-	}
-
-	font-size: 1.2rem;
-
-	.nav-links {
-		.page-numbers {
-			margin: 0 0.5em;
-
-			&.current {
-				color: $brand-accent;
-			}
-		}
-
-		a {
-			font-weight: 300;
-		}
-	}
-
-	&.post-navigation {
-		color: $brand-accent;
-		margin-top: 3em;
-
-		a {
-			margin: 0 0.5em;
-		}
-
-		span.title {
-			color: $brand-primary;
-		}
-	}
-}
-
 article {
 	margin-bottom: 3em;
 
