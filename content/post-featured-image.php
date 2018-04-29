@@ -12,7 +12,7 @@
 	$post_caption = $post_thumbnail_values[0]->post_excerpt;
 	$post_alt = $post_thumbnail_values[0]->post_name;
 	?>
-	<div class="text-xs-center">
+	<div class="text-center">
 		<figure class="figure">
 			<?php if ( ! is_singular() ): ?><a href="<?php echo esc_url( get_permalink() ); ?>"><?php endif; ?>
 			<img src="<?php echo $post_thumbnail_url; ?>" class="figure-img img-fluid" alt="<?php echo $post_alt; ?>">
