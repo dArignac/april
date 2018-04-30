@@ -85,15 +85,7 @@ a {
 	}
 }
 
-.post-tags a {
-	@extend a.post-continue-reading;
-
-	background: $brand-secondary;
-	margin: 0 0.5em 0 0;
-	padding: 0.1em 0.2em;
-}
-
-a.post-continue-reading {
+%post-continue-reading {
 	background: $brand-primary;
 	border: none;
 	color: white;
@@ -113,8 +105,20 @@ a.post-continue-reading {
 	}
 }
 
+.post-tags a {
+	@extend %post-continue-reading;
+
+	background: $brand-secondary;
+	margin: 0 0.5em 0 0;
+	padding: 0.1em 0.2em;
+}
+
+a.post-continue-reading {
+	@extend %post-continue-reading;
+}
+
 a.post-comment-count {
-	@extend a.post-continue-reading;
+	@extend %post-continue-reading;
 
 	background: white;
 
