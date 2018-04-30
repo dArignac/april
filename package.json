@@ -6,6 +6,9 @@
         "type": "git",
         "url": "https://github.com/dArignac/april"
     },
+    "scripts": {
+        "sass": "sass -t compact --scss --watch sass/style.scss:style.css"
+    },
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-clean": "~1.0.0",
@@ -16,5 +19,10 @@
         "grunt-contrib-concat": "~0.5.1",
         "grunt-sed": "~0.1.1",
         "grunt-banner": "~0.6.0"
+    },
+    "dependencies": {
+        "bootstrap": "^4.0.0",
+        "font-awesome": "^4.7.0",
+        "tether": "^1.4.3"
     }
 }

@@ -9,5 +9,10 @@
 		a {
 			border-bottom: 1px solid $brand-accent;
 		}
+
+		// hide header website title and text
+		header .topline .media .media-body {
+			display: none;
+		}
 	}
 }

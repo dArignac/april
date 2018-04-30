@@ -1,7 +1,5 @@
-.idea
 .sass-cache
 april
-bower_components
 dist
 node_modules
-style.css
+style.css*

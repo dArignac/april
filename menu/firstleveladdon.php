@@ -1,4 +1,7 @@
 <?php
+	/**
+	 * Menu wrapping for the first level navigation. That is the always visible one and NOT the collapsible nav.
+	 */
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'primary',

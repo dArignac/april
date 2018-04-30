@@ -10,11 +10,16 @@ Wordpress theme based on Bootstrap 4
 * Custom NextGEN gallery template
 
 ## Used libraries
-* [Bootstrap 4 alpha 6](https://v4-alpha.getbootstrap.com/ "Bootstrap 4.0 alpha 6")
+* [Bootstrap 4](https://getbootstrap.com/ "Bootstrap 4")
 
 ## Development
 You need to have Ruby installed. Install [RVM](https://rvm.io/) and enable it: `source ~/.rvm/scripts/rvm`.
 If not yet available, you need to install Sass into it: `gem install sass`.
+
+To auto compile the SCSS to CSS, run the following in a terminal from the theme root:
+```
+sass -t compact --scss --watch sass/style.scss:style.css
+```
 
 ## Distribution
 * for distribution, Grunt is used (required npm and Grunt globally)

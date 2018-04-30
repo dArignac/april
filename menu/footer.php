@@ -6,7 +6,7 @@
 			'container_class' => false,
 			'menu_class'      => 'nav',
 			'menu_id'         => 'menu-footer',
-			'items_wrap'      => '<ul id="%1$s" class="%2$s nav-inline text-xs-center" role="navigation">%3$s</ul>'
+			'items_wrap'      => '<ul id="%1$s" class="%2$s nav-inline d-flex justify-content-center" role="navigation">%3$s</ul>'
 		)
 	);
 ?>
