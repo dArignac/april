@@ -42,6 +42,11 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* 1.5.0
+    * Enhancements
+        * [#38](https://github.com/dArignac/april/pull/38) adjusted to Bootstrap 4.1 release version
+    * Bugfixes
+        * [#39](https://github.com/dArignac/april/issues/39) fixed Sass deprecation warnings
 * 1.4.0
     * Enhancements
         * [#36](https://github.com/dArignac/april/issues/36) show sticky posts on category listings on all pages
