@@ -45,6 +45,8 @@ grunt
 * TBA
     * Enhancements
         * [#40](https://github.com/dArignac/april/pull/40) adjusted tag styling on article page
+    * Bugfixes
+        * [#34](https://github.com/dArignac/april/issues/34) fixed scrolling to anchors
 * 1.5.0
     * Enhancements
         * [#38](https://github.com/dArignac/april/pull/38) adjusted to Bootstrap 4.1 release version
