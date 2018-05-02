@@ -15,7 +15,6 @@
 
 <?php if ( $tags   = get_the_tags( $post->ID ) ): ?>
 	<div class="col-sm-10 offset-sm-1 post-tags">
-		<?php echo __( 'Tagged in:', 'april' ); ?>
 		<?php foreach ( $tags as $tag ): ?>
 			<a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'View all posts with tag "%s"', 'april' ), $tag->name ) ) ?>"><?php echo $tag->name; ?></a>
 		<?php endforeach; ?>

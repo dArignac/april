@@ -50,6 +50,22 @@ article {
 	.post-tags {
 		margin-top: 1em;
 	}
+
+	.post-tags {
+		a {
+			@extend h2;
+
+			display: inline;
+			border-bottom: none;
+			border-left: 1px solid $brand-primary;
+			padding: 0 10px;
+		}
+
+		a:first-child {
+			border-left: none;
+			padding-left: 0;
+		}
+	}
 }
 
 section#comments {

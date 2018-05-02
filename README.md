@@ -42,6 +42,9 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Enhancements
+        * [#40](https://github.com/dArignac/april/pull/40) adjusted tag styling on article page
 * 1.5.0
     * Enhancements
         * [#38](https://github.com/dArignac/april/pull/38) adjusted to Bootstrap 4.1 release version

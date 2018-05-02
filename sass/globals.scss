@@ -105,14 +105,6 @@ a {
 	}
 }
 
-.post-tags a {
-	@extend %post-continue-reading;
-
-	background: $brand-secondary;
-	margin: 0 0.5em 0 0;
-	padding: 0.1em 0.2em;
-}
-
 a.post-continue-reading {
 	@extend %post-continue-reading;
 }
