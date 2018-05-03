@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             'Simple responsive theme based on Bootstrap 4.0\n' +
             '*/',
         dist_target: 'april/',
-        clean: ['dist'],
+        clean: ['april'],
         copy: {
             theme: {
                 files: [
@@ -76,9 +76,7 @@ module.exports = function(grunt) {
         concat: {
             bootstrap: {
                 src: [
-                    'node_modules/bootstrap/js/dist/util.js',
-                    'node_modules/bootstrap/js/dist/carousel.js',
-                    'node_modules/bootstrap/js/dist/collapse.js',
+                    'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
                     'js/<%= pkg.name %>.js'
                 ],
                 dest: '<%= dist_target %>js/<%= pkg.name %>.js'

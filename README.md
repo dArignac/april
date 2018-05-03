@@ -48,6 +48,7 @@ grunt
         * [#42](https://github.com/dArignac/april/pull/42) added previous and next post links to posts page
     * Bugfixes
         * [#34](https://github.com/dArignac/april/issues/34) fixed scrolling to anchors
+        * [#43](https://github.com/dArignac/april/issues/43) fixed invalid bundled javascript file
 * 1.5.0
     * Enhancements
         * [#38](https://github.com/dArignac/april/pull/38) adjusted to Bootstrap 4.1 release version
