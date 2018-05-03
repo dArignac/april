@@ -45,6 +45,7 @@ grunt
 * TBA
     * Enhancements
         * [#40](https://github.com/dArignac/april/pull/40) adjusted tag styling on article page
+        * [#42](https://github.com/dArignac/april/pull/42) added previous and next post links to posts page
     * Bugfixes
         * [#34](https://github.com/dArignac/april/issues/34) fixed scrolling to anchors
 * 1.5.0

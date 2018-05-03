@@ -45,6 +45,9 @@
 			<?php get_template_part( 'content/post-tags' ); ?>
 		<?php endif; ?>
 
+		<div class="col-sm-5 mt-5 offset-sm-1"><?php previous_post_link( '&ltrif;&nbsp;%link', __( 'Previous post', 'april' ), true ); ?></div>
+		<div class="col-sm-5 mt-5 text-right"><?php next_post_link( '%link&nbsp;&rtrif;', __( 'Next post', 'april' ), true ); ?></div>
+
 	</div>
 </article>
 

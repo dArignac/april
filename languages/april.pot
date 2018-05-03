@@ -1,205 +1,213 @@
-# Copyright (C) 2016 Alexander Herrmann
+# Copyright (C) 2018 Alexander Herrmann
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: April 1.2.0\n"
+"Project-Id-Version: April 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/april\n"
-"POT-Creation-Date: 2016-07-11 18:28:21+00:00\n"
+"POT-Creation-Date: 2018-05-03 19:48:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: comments.php:8
+#: april/comments.php:8 comments.php:8
 msgid "One response to %s"
 msgstr ""
 
-#: comments.php:11
+#: april/comments.php:11 comments.php:11
 msgid "%1$s response to %2$s"
 msgid_plural "%1$s responses to %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:24
+#: april/comments.php:24 comments.php:24
 msgid "Older comments"
 msgstr ""
 
-#: comments.php:25
+#: april/comments.php:25 comments.php:25
 msgid "Newer comments"
 msgstr ""
 
-#: comments.php:37
+#: april/comments.php:37 comments.php:37
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:53
+#: april/comments.php:53 comments.php:53
 msgid "Name"
 msgstr ""
 
-#: comments.php:57
+#: april/comments.php:57 comments.php:57
 msgid "Email"
 msgstr ""
 
-#: comments.php:61
+#: april/comments.php:61 comments.php:61
 msgid "Website"
 msgstr ""
 
-#: comments.php:66
+#: april/comments.php:66 comments.php:66
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: content/post-categories.php:3
+#: april/content/post-categories.php:3 content/post-categories.php:3
 msgid "Published in:"
 msgstr ""
 
-#: content/post-categories.php:5
+#: april/content/post-categories.php:5 content/post-categories.php:5
 msgid "View all posts in %s"
 msgstr ""
 
-#: content/post-comments-link.php:4
+#: april/content/post-comments-link.php:4 content/post-comments-link.php:4
 msgid "Comments closed"
 msgstr ""
 
-#: content/post-comments-link.php:4 content/post-comments-link.php:8
+#: april/content/post-comments-link.php:4
+#: april/content/post-comments-link.php:8 content/post-comments-link.php:4
+#: content/post-comments-link.php:8
 msgid "One Comment"
 msgstr ""
 
-#: content/post-comments-link.php:4 content/post-comments-link.php:8
+#: april/content/post-comments-link.php:4
+#: april/content/post-comments-link.php:8 content/post-comments-link.php:4
+#: content/post-comments-link.php:8
 msgid "% Comments"
 msgstr ""
 
-#: content/post-comments-link.php:8
+#: april/content/post-comments-link.php:8 content/post-comments-link.php:8
 msgid "Leave a Comment"
 msgstr ""
 
-#: content/post-meta.php:7
+#: april/content/post-meta.php:7 content/post-meta.php:7
 msgid "%1$s by %2$s"
 msgstr ""
 
-#: content/post-tags.php:18
-msgid "Tagged in:"
-msgstr ""
-
-#: content/post-tags.php:20
+#: april/content/post-tags.php:19 content/post-tags.php:19
 msgid "View all posts with tag \"%s\""
 msgstr ""
 
-#: content-archive.php:22
+#: april/content-archive.php:22 content-archive.php:22
 msgid "Continue reading"
 msgstr ""
 
-#: content.php:33
+#: april/content.php:33 content.php:33
 msgid "Pages:"
 msgstr ""
 
-#: functions.php:18
+#: april/content.php:48 content.php:48
+msgid "Previous post"
+msgstr ""
+
+#: april/content.php:49 content.php:49
+msgid "Next post"
+msgstr ""
+
+#: april/functions.php:18 functions.php:18
 msgid "Primary"
 msgstr ""
 
-#: functions.php:19
+#: april/functions.php:19 functions.php:19
 msgid "Footer"
 msgstr ""
 
-#: functions.php:105
+#: april/functions.php:105 functions.php:105
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:107
+#: april/functions.php:107 functions.php:107
 msgid "Widgets in this area will be shown in the header dropdown."
 msgstr ""
 
-#: include/customizer.php:120
+#: april/include/customizer.php:120 include/customizer.php:120
 msgid "Display all"
 msgstr ""
 
-#: include/customizer.php:173
+#: april/include/customizer.php:173 include/customizer.php:173
 msgid "Logo & Icons"
 msgstr ""
 
-#: include/customizer.php:174
+#: april/include/customizer.php:174 include/customizer.php:174
 msgid "Logo image"
 msgstr ""
 
-#: include/customizer.php:175
+#: april/include/customizer.php:175 include/customizer.php:175
 msgid "Hamburger image"
 msgstr ""
 
-#: include/customizer.php:176
+#: april/include/customizer.php:176 include/customizer.php:176
 msgid "Widgets open image"
 msgstr ""
 
-#: include/customizer.php:177
+#: april/include/customizer.php:177 include/customizer.php:177
 msgid "Widgets close image"
 msgstr ""
 
-#: include/customizer.php:181
+#: april/include/customizer.php:181 include/customizer.php:181
 msgid "Typekit Settings"
 msgstr ""
 
-#: include/customizer.php:182
+#: april/include/customizer.php:182 include/customizer.php:182
 msgid "Kit ID"
 msgstr ""
 
-#: include/customizer.php:183
+#: april/include/customizer.php:183 include/customizer.php:183
 msgid "font-family for <body>"
 msgstr ""
 
-#: include/customizer.php:184
+#: april/include/customizer.php:184 include/customizer.php:184
 msgid "font-weight for <body>"
 msgstr ""
 
-#: include/customizer.php:188
+#: april/include/customizer.php:188 include/customizer.php:188
 msgid "Display Settings"
 msgstr ""
 
-#: include/customizer.php:189
+#: april/include/customizer.php:189 include/customizer.php:189
 msgid "Limit front page posts to specific categories:"
 msgstr ""
 
-#: include/customizer.php:190
+#: april/include/customizer.php:190 include/customizer.php:190
 msgid "Display author on posts?"
 msgstr ""
 
-#: include/customizer.php:191
+#: april/include/customizer.php:191 include/customizer.php:191
 msgid "Display categories on posts?"
 msgstr ""
 
-#: include/customizer.php:192
+#: april/include/customizer.php:192 include/customizer.php:192
 msgid "Display tags on posts?"
 msgstr ""
 
-#: include/customizer.php:193
+#: april/include/customizer.php:193 include/customizer.php:193
 msgid "Display page titles on pages?"
 msgstr ""
 
-#: include/customizer.php:194
+#: april/include/customizer.php:194 include/customizer.php:194
 msgid "Display additional first level navigation on desktop browser?"
 msgstr ""
 
-#: nggallery/gallery-april.php:19
+#: april/nggallery/gallery-april.php:19 nggallery/gallery-april.php:19
 msgid "Previous"
 msgstr ""
 
-#: nggallery/gallery-april.php:24
+#: april/nggallery/gallery-april.php:24 nggallery/gallery-april.php:24
 msgid "Next"
 msgstr ""
 
-#: search.php:8
+#: april/search.php:8 search.php:8
 msgid "Search Results for: %s"
 msgstr ""
 
-#: sidebar-primary.php:9
+#: april/sidebar-primary.php:9 sidebar-primary.php:9
 msgid "Open sidebar"
 msgstr ""
 
-#: sidebar-primary.php:11
+#: april/sidebar-primary.php:11 sidebar-primary.php:11
 msgid "Open widgets"
 msgstr ""
 
-#: sidebar-primary.php:12
+#: april/sidebar-primary.php:12 sidebar-primary.php:12
 msgid "Close widgets"
 msgstr ""
 
