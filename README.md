@@ -42,7 +42,7 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
-* TBA
+* 1.6.0
     * Enhancements
         * [#40](https://github.com/dArignac/april/pull/40) adjusted tag styling on article page
         * [#42](https://github.com/dArignac/april/pull/42) added previous and next post links to posts page
