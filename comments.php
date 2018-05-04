@@ -67,14 +67,20 @@
 				'<textarea id="comment" class="form-control" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea>' .
 				'</fieldset>';
 			?>
-			<?php comment_form(
-				array(
+			<?php
+				$formCommentsArgs = array(
 					'comment_field'      => $comment_field,
 					'fields'             => $fields,
 					'title_reply_before' => '<h6>',
-					'title_reply_after'  => '</h6>',
-				)
-			); ?>
+					'title_reply_after'  => '</h6>'
+				);
+				// if google recaptcha plugin is active, we have 2 submit buttons and hide the default one
+				include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+				if ( is_plugin_active( 'googles-no-captcha-recaptcha/google-no-captcha-recaptcha.php' ) ) {
+					$formCommentsArgs['class_submit'] = 'd-none';
+				}
+				comment_form( $formCommentsArgs );
+			?>
 		</div>
 	</div>
 </section>
