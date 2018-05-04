@@ -44,7 +44,7 @@ grunt
 ## Changelog
 * TBA
     * Enhancements
-        * TBA limit search results to posts only
+        * [#45](https://github.com/dArignac/april/pull/45) limit search results to posts only
     * Bugfixes
         * [#44](https://github.com/dArignac/april/pull/44) hide comment submit form if plugin _Google's No Captcha reCaptcha_ is installed to avoid two submit buttons
 * 1.6.0
