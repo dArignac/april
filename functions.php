@@ -280,6 +280,11 @@ if ( ! function_exists( 'april_pre_get_posts' ) ) {
 			$query->set( 'post__not_in', $exclude_post_ids );
 		}
 
+		// limit search results to posts
+		if ( $query->is_search && !is_admin() ) {
+			$query->set( 'post_type', array( 'post' ) );
+		}
+
 		// set pagination
 		$query->set( 'paged', $paged );
 	}

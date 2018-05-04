@@ -43,8 +43,10 @@ grunt
 
 ## Changelog
 * TBA
+    * Enhancements
+        * [#45](https://github.com/dArignac/april/pull/45) limit search results to posts only
     * Bugfixes
-        * TBA hide comment submit form if plugin _Google's No Captcha reCaptcha_ is installed to avoid two submit buttons
+        * [#44](https://github.com/dArignac/april/pull/44) hide comment submit form if plugin _Google's No Captcha reCaptcha_ is installed to avoid two submit buttons
 * 1.6.0
     * Enhancements
         * [#40](https://github.com/dArignac/april/pull/40) adjusted tag styling on article page
