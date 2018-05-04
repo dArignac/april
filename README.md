@@ -42,6 +42,9 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
+* TBA
+    * Bugfixes
+        * TBA hide comment submit form if plugin _Google's No Captcha reCaptcha_ is installed to avoid two submit buttons
 * 1.6.0
     * Enhancements
         * [#40](https://github.com/dArignac/april/pull/40) adjusted tag styling on article page
