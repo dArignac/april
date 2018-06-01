@@ -5,6 +5,7 @@ body {
 	& > .overflower {
 		overflow: hidden;
 		padding-top: 1em;
+		padding-bottom: calc(#{$footer-height} + 1em);
 	}
 }
 

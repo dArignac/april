@@ -1,7 +1,8 @@
 footer {
-	margin-bottom: $section-margin;
-	margin-top: $section-margin;
-	padding-top: $section-margin;
+	background-color: $background-color;
+	height: $footer-height;
+	padding-bottom: calc(#{$section-margin} - 1em);
+	padding-top: calc(#{$section-margin} - 1em);
 	position: relative;
 
 	&::before {

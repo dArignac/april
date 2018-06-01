@@ -1,6 +1,6 @@
 				<?php do_action( 'main_after' ); ?>
 
-			<footer>
+			<footer class="fixed-bottom">
 				<?php get_template_part( 'menu/footer' ); ?>
 			</footer>
 
