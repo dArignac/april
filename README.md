@@ -21,6 +21,16 @@ To auto compile the SCSS to CSS, run the following in a terminal from the theme 
 sass -t compact --scss --watch sass/style.scss:style.css
 ```
 
+To create the languages, do the following (needs the `wordpress-core` checked out):
+```
+/home/alex/php /home/alex/projects/wordpress-core/tools/i18n/makepot.php wp-theme /home/alex/projects/github/april/
+```
+`/home/alex/php` in this case references to the Docker image [darignac/php:alpine](https://hub.docker.com/r/darignac/php/):
+```
+#!/bin/bash
+docker run --rm -i -v /home/alex:/home/alex -v $PWD:/code -w /code darignac/php:alpine php "$@"
+```
+
 ## Distribution
 * for distribution, Grunt is used (required npm and Grunt globally)
     * it will copy the theme into a dist folder with all sass and js compiled and minimized (see ``Gruntfile.js`` for more info)

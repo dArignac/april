@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: April 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/april\n"
 "POT-Creation-Date: 2018-05-03 21:49+0200\n"
-"PO-Revision-Date: 2018-05-03 21:49+0200\n"
+"PO-Revision-Date: 2018-06-01 13:40+0200\n"
 "Last-Translator: Alexander Herrmann <darignac@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -100,11 +100,11 @@ msgstr "Seiten:"
 
 #: april/content.php:48 content.php:48
 msgid "Previous post"
-msgstr "Vorheriger Eintrag"
+msgstr "vorheriger Eintrag"
 
 #: april/content.php:49 content.php:49
 msgid "Next post"
-msgstr "Nächster Eintrag"
+msgstr "nächster Eintrag"
 
 #: april/functions.php:18 functions.php:18
 msgid "Primary"
