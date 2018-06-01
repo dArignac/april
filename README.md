@@ -55,6 +55,7 @@ grunt
 * TBA
     * Enhancements
         * [#46](https://github.com/dArignac/april/issues/46) footer is now sticky
+        * [#47](https://github.com/dArignac/april/issues/47) fixed some minor German translations
 * 1.7.0
     * Enhancements
         * [#45](https://github.com/dArignac/april/pull/45) limit search results to posts only
