@@ -52,7 +52,7 @@ grunt
 * To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
 
 ## Changelog
-* TBA
+* 1.8.0
     * Enhancements
         * [#46](https://github.com/dArignac/april/issues/46) footer is now sticky
         * [#47](https://github.com/dArignac/april/issues/47) fixed some minor German translations
