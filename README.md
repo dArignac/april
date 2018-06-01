@@ -44,8 +44,14 @@ grunt
 * *the theme does not meet the Wordpress requirements for a theme yet* (haven't checked them)
 * distribution is automatically done by TravisCI if a tag is created
 
+### Create a release
+* adjust the version in `package.json`
+* ensure that all changes are added to the changelog in the `README.md` file
+* commit with a release message
+* tag and push the tag and wait until TravisCI has released it
+
 ## Continuous Integration
-* each commit will be dealt at TravisCI, the release script is executed (this is not really CI!)
+* each commit will be dealt at TravisCI, the release script is executed
 * [![Build Status](https://travis-ci.org/dArignac/april.svg?branch=master)](https://travis-ci.org/dArignac/april)
 
 ## NextGEN gallery template
