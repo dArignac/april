@@ -26,7 +26,6 @@ module.exports = function(grunt) {
                     {expand: true, src: 'include/**', dest: '<%= dist_target %>'},
                     {expand: true, src: 'languages/*.mo', dest: '<%= dist_target %>'},
                     {expand: true, src: 'menu/*.php', dest: '<%= dist_target %>'},
-                    {expand: true, src: 'nggallery/*.php', dest: '<%= dist_target %>'},
                     {expand: true, src: '*.php', dest: '<%= dist_target %>'},
                     {expand: true, src: '*.jpg', dest: '<%= dist_target %>'},
                     {expand: true, src: 'LICENSE', dest: '<%= dist_target %>'}

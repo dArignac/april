@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: April 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/april\n"
-"POT-Creation-Date: 2018-05-03 21:49+0200\n"
-"PO-Revision-Date: 2018-06-01 13:40+0200\n"
+"POT-Creation-Date: 2018-06-17 18:05+0200\n"
+"PO-Revision-Date: 2018-06-17 18:05+0200\n"
 "Last-Translator: Alexander Herrmann <darignac@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -190,14 +190,6 @@ msgstr "Seitentitel auf Seiten anzeigen?"
 msgid "Display additional first level navigation on desktop browser?"
 msgstr "Zusätzliche First-Level-Navigation bei Desktop-Browsern zeigen?"
 
-#: april/nggallery/gallery-april.php:19 nggallery/gallery-april.php:19
-msgid "Previous"
-msgstr "Vorheriges"
-
-#: april/nggallery/gallery-april.php:24 nggallery/gallery-april.php:24
-msgid "Next"
-msgstr "Nächstes"
-
 #: april/search.php:8 search.php:8
 msgid "Search Results for: %s"
 msgstr "Suchergebnis für: %s"
@@ -233,6 +225,12 @@ msgstr "Alexander Herrmann"
 #. Author URI of the plugin/theme
 msgid "https://github.com/dArignac"
 msgstr "https://github.com/dArignac"
+
+#~ msgid "Previous"
+#~ msgstr "Vorheriges"
+
+#~ msgid "Next"
+#~ msgstr "Nächstes"
 
 #~ msgid "Tagged in:"
 #~ msgstr "Schlagworte:"

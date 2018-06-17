@@ -7,7 +7,6 @@ Wordpress theme based on Bootstrap 4
     * if there are posts marked as sticky, they are displayed as first posts on all pages of a **category** listing (e.g. if you have 5 posts per page and 2 sticky posts the page will show 7 posts)
     * the default post listing (main query/landing page) is not altered (sticky posts will be displayed only on the **first** page)
     * if a post has the tag **sticky** it will have an alternative color and no date displayed
-* Custom NextGEN gallery template
 
 ## Used libraries
 * [Bootstrap 4](https://getbootstrap.com/ "Bootstrap 4")
@@ -54,10 +53,10 @@ grunt
 * each commit will be dealt at TravisCI, the release script is executed
 * [![Build Status](https://travis-ci.org/dArignac/april.svg?branch=master)](https://travis-ci.org/dArignac/april)
 
-## NextGEN gallery template
-* To use the template provided with this theme, choose ``Parent Theme: gallery-april.php`` in the theme selection for ``NextGEN Basic Thumbnails`` within the gallery options.
-
 ## Changelog
+* TBA
+    * **Breaking**
+        * [#49](https://github.com/dArignac/april/issues/49) removed nggallery support
 * 1.8.0
     * Enhancements
         * [#46](https://github.com/dArignac/april/issues/46) footer is now sticky
