@@ -44,8 +44,9 @@ grunt
 * distribution is automatically done by TravisCI if a tag is created
 
 ### Create a release
-* adjust the version in `package.json`
+* adjust the version in `package.json` and `sass/styles.scss`
 * ensure that all changes are added to the changelog in the `README.md` file
+* check if to update translations, if so, update the `pot` file and the translations
 * commit with a release message
 * tag and push the tag and wait until TravisCI has released it
 
