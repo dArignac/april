@@ -34,9 +34,8 @@ docker run --rm -i -v /home/alex:/home/alex -v $PWD:/code -w /code darignac/php:
 * for distribution, Grunt is used (required yarn and Grunt globally)
     * it will copy the theme into a dist folder with all sass and js compiled and minimized (see ``Gruntfile.js`` for more info)
 ```
-yarn install -g grunt-cli
 yarn install
-grunt
+node_modules/.bin/grunt
 ```
 * the version number is the version in ``package.json``
     * as the ``style.css`` is created by sass and then minified, Grunt inserts the required Wordpress header into the minified ``style.css``
@@ -58,6 +57,8 @@ grunt
 * TBA
     * **Breaking**
         * [#49](https://github.com/dArignac/april/issues/49) removed nggallery support
+    * Enhancements
+      * changed from `npm` to `yarn` as package manager
 * 1.8.0
     * Enhancements
         * [#46](https://github.com/dArignac/april/issues/46) footer is now sticky

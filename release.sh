@@ -6,6 +6,6 @@ else
 	version=${TRAVIS_TAG};
 fi
 
-grunt
+node_modules/.bin/grunt
 tar czf "april-${version}.tar.gz" april
 zip -r "april-${version}.zip" april
