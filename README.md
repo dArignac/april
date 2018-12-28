@@ -31,11 +31,11 @@ docker run --rm -i -v /home/alex:/home/alex -v $PWD:/code -w /code darignac/php:
 ```
 
 ## Distribution
-* for distribution, Grunt is used (required npm and Grunt globally)
+* for distribution, Grunt is used (required yarn and Grunt globally)
     * it will copy the theme into a dist folder with all sass and js compiled and minimized (see ``Gruntfile.js`` for more info)
 ```
-npm install -g grunt-cli
-npm install
+yarn install -g grunt-cli
+yarn install
 grunt
 ```
 * the version number is the version in ``package.json``
