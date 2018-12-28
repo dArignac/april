@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <?php
 	$display_first_level_navigation = get_theme_mod( 'april_display_additional_first_level_navigation_on_desktop' );
-	$logo_image =                     get_theme_mod( 'april_logo_image' );
-	$custom_hamburger_image =         get_theme_mod( 'april_hamburger_image' );
+	$logo_image                     = get_theme_mod( 'april_logo_image' );
+	$custom_hamburger_image         = get_theme_mod( 'april_hamburger_image' );
+	$navMenuLocations               = get_nav_menu_locations();
+	$menuPrimaryID                  = $navMenuLocations[ 'primary' ];
+	$menuPrimary                    = wp_get_nav_menu_object( $menuPrimaryID );
+	$hasMenuPrimaryEntries          = is_object( $menuPrimary ) && $menuPrimary->count > 0;
 ?>
 
 <html <?php language_attributes(); ?>>
@@ -13,7 +17,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
+<body id="<?php print get_stylesheet(); ?>" <?php body_class( $hasMenuPrimaryEntries ? 'primary-with-entries' : 'primary-without-entries' ); ?>>
 	<div class="overflower">
 
 		<?php do_action( 'body_top' ); ?>
@@ -42,13 +46,15 @@
 								</div>
 							</div>
 							<div class="col-2 col-sm-2">
-								<button class="navbar-toggler pull-sm-right float-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-									<?php if ( $custom_hamburger_image ): ?>
-										<img src="<?php echo esc_url( $custom_hamburger_image ); ?>" />
-									<?php else: ?>
-										<i class="fa fa-bars"></i>
-									<?php endif; ?>
-								</button>
+								<?php if ( $hasMenuPrimaryEntries ): ?>
+									<button class="navbar-toggler pull-sm-right float-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+										<?php if ( $custom_hamburger_image ): ?>
+											<img src="<?php echo esc_url( $custom_hamburger_image ); ?>" />
+										<?php else: ?>
+											<i class="fa fa-bars"></i>
+										<?php endif; ?>
+									</button>
+								<?php endif; ?>
 							</div>
 						</div>
 						<?php get_template_part( 'menu/primary' ); ?>
@@ -57,9 +63,7 @@
 					</div>
 
 					<?php if ( $display_first_level_navigation ): ?>
-						<div class="col-sm-12 first-level-addon">
-							<?php get_template_part( 'menu/firstleveladdon' ); ?>
-						</div>
+						<?php get_template_part( 'menu/firstleveladdon' ); ?>
 					<?php endif; ?>
 				</header>
 

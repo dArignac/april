@@ -1,6 +1,12 @@
 // some structure
 body {
-	padding-top: 10em;
+	&.primary-with-entries {
+		padding-top: 10em;
+	}
+	
+	&.primary-without-entries {
+		padding-top: 6em;
+	}
 
 	& > .overflower {
 		overflow: hidden;

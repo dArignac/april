@@ -60,6 +60,7 @@ node_modules/.bin/grunt
     * Enhancements
       * changed from `npm` to `yarn` as package manager
     * Bugfixes
+      * [50](https://github.com/dArignac/april/issues/50) fixed menu display if there is no primary menu
       * [48](https://github.com/dArignac/april/issues/48) avoided caching of style upon new release
 * 1.8.0
     * Enhancements
