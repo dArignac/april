@@ -17,7 +17,7 @@ If not yet available, you need to install Sass into it: `gem install sass`.
 
 To auto compile the SCSS to CSS, run the following in a terminal from the theme root:
 ```
-sass -t compact --scss --watch sass/style.scss:style.css
+sass -t compact --scss --watch sass/april.scss:css/april.css
 ```
 
 To create the languages, do the following (needs the `wordpress-core` checked out):
@@ -43,7 +43,7 @@ node_modules/.bin/grunt
 * distribution is automatically done by TravisCI if a tag is created
 
 ### Create a release
-* adjust the version in `package.json` and `sass/styles.scss`
+* adjust the version in `package.json`
 * ensure that all changes are added to the changelog in the `README.md` file
 * check if to update translations, if so, update the `pot` file and the translations
 * commit with a release message
@@ -59,6 +59,8 @@ node_modules/.bin/grunt
         * [#49](https://github.com/dArignac/april/issues/49) removed nggallery support
     * Enhancements
       * changed from `npm` to `yarn` as package manager
+    * Bugfixes
+      * [48](https://github.com/dArignac/april/issues/48) avoided caching of style upon new release
 * 1.8.0
     * Enhancements
         * [#46](https://github.com/dArignac/april/issues/46) footer is now sticky

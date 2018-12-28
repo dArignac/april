@@ -44,7 +44,8 @@ function april_load_scripts_and_styles() {
 	wp_enqueue_style( 'april-font-awesome', get_template_directory_uri() . '/node_modules/font-awesome/css/font-awesome.css' );
 
 	// default stylesheet
-	wp_enqueue_style( 'april-style', get_stylesheet_uri() );
+	// will be replaced with grunt script
+	wp_enqueue_style( 'april-style', get_template_directory_uri() . '/css/april.css' );
 
 	// typekit css depending on settings
 	if ( $typekitKidId ) {

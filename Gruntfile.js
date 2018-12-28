@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    '<%= dist_target %>style.css': 'sass/style.scss'
+                    '<%= dist_target %>css/april-<%= pkg.version %>.css': 'sass/april.scss',
                 }
             }
         },
@@ -56,11 +56,14 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    '<%= dist_target %>style.css': ['<%= dist_target %>style.css']
+                    '<%= dist_target %>css/april-<%= pkg.version %>.css': ['<%= dist_target %>css/april-<%= pkg.version %>.css']
                 }
             }
         },
-        // Worpress version information is within the style.css...
+        touch: {
+            target: ['<%= dist_target %>style.css']
+        },
+        // Wordpress version information is within the style.css
         usebanner: {
             dist: {
                 options: {
@@ -91,6 +94,11 @@ module.exports = function(grunt) {
             }
         },
         sed: {
+            april: {
+                path: '<%= dist_target %>functions.php',
+                pattern: '/css/april.css',
+                replacement: '/css/april-<%= pkg.version %>.css'
+            },
             fontawesome: {
                 path: '<%= dist_target %>functions.php',
                 pattern: '/node_modules/font-awesome/css/font-awesome.css',
@@ -117,6 +125,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-sed');
     grunt.loadNpmTasks('grunt-banner');
+    grunt.loadNpmTasks('grunt-touch');
 
-    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'usebanner', 'concat', 'uglify', 'sed']);
+    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'touch', 'usebanner', 'concat', 'uglify', 'sed']);
 };
