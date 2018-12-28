@@ -44,7 +44,7 @@ node_modules/.bin/grunt
 
 ### Create a release
 * adjust the version in `package.json`
-* ensure that all changes are added to the changelog in the `README.md` file
+* ensure that all changes are added to the changelog in the `README.md` file with the correct version number
 * check if to update translations, if so, update the `pot` file and the translations
 * commit with a release message
 * tag and push the tag and wait until TravisCI has released it
@@ -54,11 +54,11 @@ node_modules/.bin/grunt
 * [![Build Status](https://travis-ci.org/dArignac/april.svg?branch=master)](https://travis-ci.org/dArignac/april)
 
 ## Changelog
-* TBA
+* 2.0.0
     * **Breaking**
         * [#49](https://github.com/dArignac/april/issues/49) removed nggallery support
     * Enhancements
-      * changed from `npm` to `yarn` as package manager
+      * changed from `npm` to `yarn` as package manager for local development
     * Bugfixes
       * [50](https://github.com/dArignac/april/issues/50) fixed menu display if there is no primary menu
       * [48](https://github.com/dArignac/april/issues/48) avoided caching of style upon new release
