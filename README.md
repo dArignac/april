@@ -54,6 +54,9 @@ node_modules/.bin/grunt
 * [![Build Status](https://travis-ci.org/dArignac/april.svg?branch=master)](https://travis-ci.org/dArignac/april)
 
 ## Changelog
+* 2.0.1
+    * Bugfixes
+        * [#51](https://github.com/dArignac/april/issues/51) Article date is always today
 * 2.0.0
     * **Breaking**
         * [#49](https://github.com/dArignac/april/issues/49) removed nggallery support
