@@ -34,7 +34,7 @@ docker run --rm -i -v /home/alex:/home/alex -v $PWD:/code -w /code darignac/php:
 * for distribution, Grunt is used (required yarn and Grunt globally)
     * it will copy the theme into a dist folder with all sass and js compiled and minimized (see ``Gruntfile.js`` for more info)
 ```
-yarn install
+npm install
 node_modules/.bin/grunt
 ```
 * the version number is the version in ``package.json``
