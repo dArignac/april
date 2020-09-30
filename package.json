@@ -7,7 +7,7 @@
         "url": "https://github.com/dArignac/april"
     },
     "scripts": {
-        "sass": "sass -t compact --scss --watch sass/style.scss:style.css"
+        "sass": "sass -t compact --scss --watch sass/april.scss:css/april.css"
     },
     "devDependencies": {
         "grunt": "~1.3.0",
@@ -24,6 +24,9 @@
     "dependencies": {
         "bootstrap": "^4.1.0",
         "font-awesome": "^4.7.0",
+        "lodash": "^4.17.19",
+        "minimatch": "^3.0.2",
+        "minimist": "^1.2.3",
         "tether": "^1.4.4"
     }
 }
