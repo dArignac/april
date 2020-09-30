@@ -12,7 +12,7 @@ Wordpress theme based on Bootstrap 4
 * [Bootstrap 4](https://getbootstrap.com/ "Bootstrap 4")
 
 ## Development
-You need to have Ruby installed. Install [RVM](https://rvm.io/) and enable it: `source ~/.rvm/scripts/rvm`.
+You need to have Ruby installed. Install [RVM](https://rvm.io/), enable it: `source ~/.rvm/scripts/rvm` and use it `rvm use`. You may need to install the proper ruby version.
 If not yet available, you need to install Sass into it: `gem install sass`.
 
 To auto compile the SCSS to CSS, run the following in a terminal from the theme root:
