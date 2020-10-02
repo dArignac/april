@@ -54,6 +54,9 @@ node_modules/.bin/grunt
 * [![Build Status](https://travis-ci.org/dArignac/april.svg?branch=master)](https://travis-ci.org/dArignac/april)
 
 ## Changelog
+* TBA
+  * Bugfixes
+    * fixed invalid escaped selector for anchor scrolling
 * 2.0.2
     * Bugfixes
         * [#51](https://github.com/dArignac/april/issues/51) Article date is always today
